@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AIM-SHIELD — AI Infrastructure Monitor</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+:root {
+  --bg: #020202;
+  --bg2: #0a0a0a;
+  --bg3: #111111;
+
+  --card: #0d0d0d;
+  --border: #1f1f1f;
+  --border2: #2a2a2a;
+
+  --blue: #3b82f6;
+  --blue2: #60a5fa;
+  --cyan: #22d3ee;
+  --green: #22c55e;
+  --yellow: #facc15;
+  --red: #ef4444;
+  --purple: #a855f7;
+
+  --text: #f1f5f9;
+  --text2: #a1a1aa;
+  --text3: #52525b;
+}
+body{background:var(--bg);color:var(--text);font-family:'Space Grotesk',sans-serif;min-height:100vh;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--bg2);}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
+
+/* TOPBAR */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:58px;background:var(--bg2);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
+.logo{display:flex;align-items:center;gap:10px;}
+.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--blue),var(--purple));border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.logo-name{font-size:15px;font-weight:700;letter-spacing:1px;}
+.logo-sub{font-size:9px;color:var(--text3);letter-spacing:2px;text-transform:uppercase;}
+.status-pill{display:flex;align-items:center;gap:6px;padding:5px 14px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:.5px;border:1px solid;}
+.pill-ok{color:var(--green);border-color:rgba(16,185,129,.35);background:rgba(16,185,129,.08);}
+.pill-warn{color:var(--yellow);border-color:rgba(245,158,11,.35);background:rgba(245,158,11,.08);}
+.pill-crit{color:var(--red);border-color:rgba(239,68,68,.35);background:rgba(239,68,68,.1);animation:pulseBorder 1.2s infinite;}
+@keyframes pulseBorder{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.4)}50%{box-shadow:0 0 0 5px rgba(239,68,68,0)}}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor;animation:blink 1.5s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.clock{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text3);}
+
+/* LAYOUT */
+.layout{display:grid;grid-template-columns:220px 1fr;}
+.sidebar{background:var(--bg2);border-right:1px solid var(--border);min-height:calc(100vh - 58px);padding:12px 0;display:flex;flex-direction:column;}
+.nav-sec{padding:10px 16px 4px;font-size:9px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;margin-top:6px;}
+.nav-item{display:flex;align-items:center;gap:10px;padding:9px 16px;font-size:13px;color:var(--text2);cursor:pointer;transition:all .15s;border-left:2px solid transparent;}
+.nav-item:hover{color:var(--text);background:rgba(255,255,255,.03);}
+.nav-item.active{color:var(--blue2);background:rgba(59,130,246,.08);border-left-color:var(--blue);}
+.nav-icon{font-size:14px;width:18px;text-align:center;}
+.model-box{margin-top:auto;padding:14px 16px;border-top:1px solid var(--border);}
+.model-label{font-size:9px;letter-spacing:1.5px;color:var(--text3);text-transform:uppercase;margin-bottom:8px;}
+.model-tags{display:flex;flex-wrap:wrap;gap:5px;}
+.mtag{font-size:9px;padding:3px 8px;border-radius:20px;border:1px solid;font-weight:600;}
+.mtag-cyan{color:var(--cyan);border-color:rgba(6,182,212,.35);background:rgba(6,182,212,.08);}
+.mtag-purple{color:var(--purple);border-color:rgba(139,92,246,.35);background:rgba(139,92,246,.08);}
+.mtag-green{color:var(--green);border-color:rgba(16,185,129,.35);background:rgba(16,185,129,.08);}
+.mtag-yellow{color:var(--yellow);border-color:rgba(245,158,11,.35);background:rgba(245,158,11,.08);}
+
+/* CONTENT */
+.content{padding:18px;display:flex;flex-direction:column;gap:14px;overflow-y:auto;}
+.tab-panel{display:none;flex-direction:column;gap:14px;}
+.tab-panel.active{display:flex;}
+
+/* ===================== CARDS ===================== */
+
+.card{
+  position: relative;
+  overflow: hidden;
+
+  /* glass + dark theme */
+  background: rgba(20,20,20,0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px;
+  padding:16px;
+
+  /* smooth animation */
+  transition: all 0.3s ease;
+
+  /* subtle inner reflection */
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.02);
+}
+
+/* ===================== HOVER EFFECT ===================== */
+
+.card:hover{
+  box-shadow: 
+    0 0 20px rgba(59,130,246,0.12),
+    inset 0 0 12px rgba(255,255,255,0.04);
+
+  border-color: rgba(59,130,246,0.35);
+
+  transform: translateY(-4px);
+}
+
+/* ===================== ANIMATED BORDER ===================== */
+
+.card::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(59,130,246,0.5),
+    transparent
+  );
+
+  background-size: 200% 200%;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+
+  animation: borderMove 4s linear infinite;
+  opacity: 0.25;
+
+  pointer-events: none;  /* 🔥 THIS FIXES IT */
+}
+
+  background-size: 200% 200%;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+
+  animation: borderMove 4s linear infinite;
+  opacity: 0.25;
+}
+
+@keyframes borderMove{
+  0%{background-position: 0% 50%;}
+  100%{background-position: 200% 50%;}
+}
+
+/* ===================== CRITICAL CARD (RED PULSE) ===================== */
+
+.card.critical{
+  border-color: rgba(239,68,68,0.5);
+  animation: pulseRed 1.5s infinite;
+}
+
+@keyframes pulseRed{
+  0%{
+    box-shadow: 0 0 10px rgba(239,68,68,0.2);
+  }
+  50%{
+    box-shadow: 0 0 25px rgba(239,68,68,0.5);
+  }
+  100%{
+    box-shadow: 0 0 10px rgba(239,68,68,0.2);
+  }
+}
+
+/* ===================== HEADER ===================== */
+
+.card-hdr{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:12px;
+}
+
+/* ===================== TITLE ===================== */
+
+.card-title{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  color:var(--text2);
+}
+
+/* ===================== BADGE ===================== */
+
+.card-badge{
+  font-size:10px;
+  font-family:'JetBrains Mono',monospace;
+  padding:2px 8px;
+  border-radius:4px;
+  border:1px solid var(--border2);
+  color:var(--text3);
+  transition: all 0.2s ease;
+}
+
+/* ===================== BADGE BLUE ===================== */
+
+.card-badge-blue{
+  color:var(--blue2);
+  border-color:rgba(59,130,246,.3);
+  background:rgba(59,130,246,.07);
+}
+
+/* badge glow on hover */
+.card:hover .card-badge-blue{
+  background:rgba(59,130,246,.15);
+}
+
+/* METRICS ROW */
+.metrics-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.met{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;position:relative;overflow:hidden;}
+.met::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;border-radius:12px 12px 0 0;}
+.met.blue::before{background:linear-gradient(90deg,var(--blue),var(--cyan));}
+.met.green::before{background:linear-gradient(90deg,var(--green),#34d399);}
+.met.yellow::before{background:linear-gradient(90deg,var(--yellow),#fbbf24);}
+.met.red::before{background:linear-gradient(90deg,var(--red),#f87171);}
+.met.purple::before{background:linear-gradient(90deg,var(--purple),#a78bfa);}
+.met-label{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:7px;}
+.met-val{font-size:28px;font-weight:700;font-family:'JetBrains Mono',monospace;line-height:1;}
+.met-val.blue{color:var(--blue2);}
+.met-val.green{color:var(--green);}
+.met-val.yellow{color:var(--yellow);}
+.met-val.red{color:var(--red);}
+.met-val.purple{color:var(--purple);}
+.met-sub{font-size:10px;color:var(--text3);margin-top:5px;}
+.met-bar{height:4px;background:var(--bg3);border-radius:2px;margin-top:10px;overflow:hidden;}
+.met-bar-fill{height:100%;border-radius:2px;transition:width .7s ease;}
+
+/* 2 col & 3 col grids */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+
+/* Chart */
+.chart-wrap{position:relative;height:155px;}
+
+/* AI Risk */
+.risk-wrap{display:flex;align-items:center;gap:20px;padding:4px 0;}
+.ring-outer{position:relative;width:110px;height:110px;flex-shrink:0;}
+.ring-outer svg{transform:rotate(-90deg);}
+.ring-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;}
+.ring-num{font-size:22px;font-weight:700;font-family:'JetBrains Mono',monospace;}
+.ring-lbl{font-size:9px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;}
+.score-col{flex:1;display:flex;flex-direction:column;gap:10px;}
+.score-row-item{display:flex;flex-direction:column;gap:4px;}
+.score-row-label{font-size:10px;color:var(--text3);letter-spacing:.5px;text-transform:uppercase;}
+.score-row-val{font-size:13px;font-weight:600;font-family:'JetBrains Mono',monospace;}
+.mini-bar{height:5px;background:var(--bg3);border-radius:3px;overflow:hidden;}
+.mini-bar-fill{height:100%;border-radius:3px;transition:width .7s ease;}
+
+/* LOGS */
+.log-feed{display:flex;flex-direction:column;gap:4px;max-height:300px;overflow-y:auto;}
+.log-entry{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:7px;background:var(--bg3);font-size:11px;font-family:'JetBrains Mono',monospace;animation:slideIn .3s ease;}
+@keyframes slideIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.log-lvl{font-weight:700;min-width:52px;font-size:10px;letter-spacing:.5px;}
+.log-lvl.info{color:var(--cyan);}
+.log-lvl.warn{color:var(--yellow);}
+.log-lvl.error{color:var(--red);}
+.log-time{color:var(--text3);min-width:80px;}
+.log-msg{color:var(--text2);flex:1;}
+.log-tag{font-size:9px;padding:2px 7px;border-radius:3px;border:1px solid;margin-left:auto;white-space:nowrap;}
+.tag-normal{color:var(--green);border-color:rgba(16,185,129,.3);background:rgba(16,185,129,.08);}
+.tag-warning{color:var(--yellow);border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.08);}
+.tag-critical{color:var(--red);border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.08);}
+
+/* AI EVENTS */
+.ai-feed{display:flex;flex-direction:column;gap:6px;max-height:260px;overflow-y:auto;}
+.ai-ev{display:flex;gap:10px;padding:9px 12px;border-radius:8px;border-left:3px solid;animation:slideIn .3s ease;}
+.ai-ev.heal{border-color:var(--green);background:rgba(16,185,129,.07);}
+.ai-ev.scale{border-color:var(--blue);background:rgba(59,130,246,.07);}
+.ai-ev.detect{border-color:var(--yellow);background:rgba(245,158,11,.07);}
+.ai-ev.alert{border-color:var(--red);background:rgba(239,68,68,.07);}
+.ai-ev-body{flex:1;}
+.ai-ev-title{font-size:12px;font-weight:700;}
+.ai-ev-title.heal{color:var(--green);}
+.ai-ev-title.scale{color:var(--blue2);}
+.ai-ev-title.detect{color:var(--yellow);}
+.ai-ev-title.alert{color:var(--red);}
+.ai-ev-desc{font-size:11px;color:var(--text2);margin-top:2px;}
+.ai-ev-time{font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace;white-space:nowrap;}
+
+/* SERVERS */
+.servers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;}
+.srv-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:12px;transition:all .3s;}
+.srv-card.active{border-color:rgba(16,185,129,.4);background:rgba(16,185,129,.05);}
+.srv-card.new-srv{border-color:rgba(59,130,246,.5);background:rgba(59,130,246,.07);animation:popIn .5s ease;}
+@keyframes popIn{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+.srv-name{font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text2);margin-bottom:5px;}
+.srv-status{font-size:10px;font-weight:700;}
+.srv-status.active{color:var(--green);}
+.srv-status.new-srv{color:var(--blue2);}
+.srv-cpu{font-size:10px;color:var(--text3);margin-top:4px;}
+.srv-bar{height:3px;background:var(--bg2);border-radius:2px;margin-top:6px;}
+.srv-bar-fill{height:100%;border-radius:2px;transition:width .6s;}
+
+/* LB VIZ */
+.lb-wrap{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 0;flex-wrap:wrap;}
+.lb-box{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:8px 14px;font-size:11px;text-align:center;}
+.lb-center{background:linear-gradient(135deg,rgba(59,130,246,.15),rgba(139,92,246,.15));border-color:var(--blue);color:var(--blue2);font-weight:700;}
+.lb-arrow{color:var(--text3);font-size:14px;padding:0 4px;}
+.lb-srv-list{display:flex;flex-direction:column;gap:4px;}
+.lb-srv-item{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:10px;font-family:'JetBrains Mono',monospace;display:flex;align-items:center;gap:6px;}
+.lb-dot{width:6px;height:6px;border-radius:50%;background:var(--green);}
+.lb-dot.new{background:var(--blue);animation:blink 1s infinite;}
+
+/* CONTROLS */
+.ctrl-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.ctrl-group{display:flex;flex-direction:column;gap:6px;}
+.ctrl-label{font-size:11px;color:var(--text3);display:flex;justify-content:space-between;}
+.ctrl-val{font-family:'JetBrains Mono',monospace;color:var(--blue2);font-weight:600;}
+input[type=range]{width:100%;-webkit-appearance:none;height:5px;border-radius:3px;background:var(--bg3);outline:none;cursor:pointer;}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--blue);border:2px solid var(--bg);cursor:pointer;transition:transform .15s;}
+input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2);}
+.ctrl-hint{font-size:10px;color:var(--text3);}
+.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
+.btn{padding:8px 15px;border-radius:8px;border:1px solid;font-size:12px;font-weight:600;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:all .15s;}
+.btn-blue{color:var(--blue2);border-color:rgba(59,130,246,.4);background:rgba(59,130,246,.1);}
+.btn-blue:hover{background:rgba(59,130,246,.2);}
+.btn-red{color:var(--red);border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.1);}
+.btn-red:hover{background:rgba(239,68,68,.2);}
+.btn-green{color:var(--green);border-color:rgba(16,185,129,.4);background:rgba(16,185,129,.1);}
+.btn-green:hover{background:rgba(16,185,129,.2);}
+.btn-yellow{color:var(--yellow);border-color:rgba(245,158,11,.4);background:rgba(245,158,11,.1);}
+.btn-yellow:hover{background:rgba(245,158,11,.2);}
+.btn-active-red{color:#fff;border-color:var(--red);background:var(--red);}
+.btn-active-yellow{color:#000;border-color:var(--yellow);background:var(--yellow);}
+
+/* USERS TABLE */
+.u-table{width:100%;border-collapse:collapse;font-size:12px;}
+.u-table th{text-align:left;padding:8px 10px;color:var(--text3);font-size:10px;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border);}
+.u-table td{padding:8px 10px;border-bottom:1px solid rgba(30,45,74,.4);color:var(--text2);font-family:'JetBrains Mono',monospace;}
+.u-table tr:hover td{background:rgba(255,255,255,.02);}
+.ubadge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:9px;font-weight:700;}
+.ubadge-active{color:var(--green);background:rgba(16,185,129,.12);}
+.ubadge-idle{color:var(--text3);background:rgba(255,255,255,.05);}
+
+/* HEAL BANNER */
+.heal-banner{padding:11px 16px;border-radius:10px;display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;animation:slideIn .4s ease;}
+.banner-heal{background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.3);color:var(--green);}
+.banner-scale{background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.3);color:var(--blue2);}
+.banner-crit{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);color:var(--red);}
+
+/* TOASTS */
+.toast-container{position:fixed;top:66px;right:18px;z-index:999;display:flex;flex-direction:column;gap:7px;}
+.toast{padding:11px 14px;border-radius:10px;border-left:4px solid;max-width:300px;animation:toastIn .3s ease;box-shadow:0 8px 32px rgba(0,0,0,.5);}
+@keyframes toastIn{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+.toast.info{background:#0a1628;border-color:var(--blue);}
+.toast.warn{background:#1a1200;border-color:var(--yellow);}
+.toast.crit{background:#1a0505;border-color:var(--red);}
+.toast.heal{background:#031a0f;border-color:var(--green);}
+.toast-title{font-weight:700;font-size:11px;letter-spacing:.5px;text-transform:uppercase;}
+.toast.info .toast-title{color:var(--blue2);}
+.toast.warn .toast-title{color:var(--yellow);}
+.toast.crit .toast-title{color:var(--red);}
+.toast.heal .toast-title{color:var(--green);}
+.toast-msg{font-size:11px;color:var(--text2);margin-top:3px;}
+
+/* PIPELINE */
+.pipeline-step{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;background:var(--bg3);border-radius:8px;}
+.pip-num{font-size:11px;font-family:'JetBrains Mono',monospace;font-weight:700;min-width:28px;}
+.pip-title{font-size:13px;font-weight:600;margin-bottom:3px;}
+.pip-desc{font-size:11px;color:var(--text2);}
+</style>
+</head>
+<body>
+
+<!-- TOAST CONTAINER -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="logo">
+    <div class="logo-icon">🛡</div>
+    <div>
+      <div class="logo-name">AIM-SHIELD</div>
+      <div class="logo-sub">AI-Managed Intelligent Self-Healing & Predictive Infrastructure System</div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:14px;">
+    <span id="backendBadge" style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text3);">⏳ Connecting to AI...</span>
+    <div class="status-pill pill-ok" id="statusPill"><div class="dot"></div><span id="statusText">SYSTEM HEALTHY</span></div>
+    <div class="clock" id="clockEl"></div>
+  </div>
+</header>
+
+<div class="layout">
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="nav-sec">Monitor</div>
+    <div class="nav-item active" onclick="switchTab('overview',this)"><span class="nav-icon">📊</span>Overview</div>
+    <div class="nav-item" onclick="switchTab('servers',this)"><span class="nav-icon">🖥</span>Servers</div>
+    <div class="nav-item" onclick="switchTab('logs',this)"><span class="nav-icon">📜</span>Log Feed</div>
+    <div class="nav-item" onclick="switchTab('ai',this)"><span class="nav-icon">🤖</span>AI Events</div>
+    <div class="nav-sec">Control</div>
+    <div class="nav-item" onclick="switchTab('sim',this)"><span class="nav-icon">⚙</span>Load Simulator</div>
+    <div class="nav-item" onclick="switchTab('users',this)"><span class="nav-icon">👥</span>Active Users</div>
+    <div class="nav-item" onclick="switchTab('analytics',this)"><span class="nav-icon">📈</span>Analytics</div>
+    <div class="nav-item" onclick="switchTab('aws',this)">
+  <span class="nav-icon">☁️</span>AWS Integration
+</div>
+    <div class="model-box">
+      <div class="model-label">AI Models Active</div>
+      <div class="model-tags">
+        <span class="mtag mtag-cyan">Isolation Forest</span>
+        <span class="mtag mtag-purple">Random Forest</span>
+        <span class="mtag mtag-green">Logistic Reg.</span>
+        <span class="mtag mtag-yellow">TF-IDF</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="content" id="mainContent">
+
+    <!-- HEAL BANNER -->
+    <div id="healBanner" style="display:none;"></div>
+
+    <!-- ── OVERVIEW TAB ── -->
+    <div class="tab-panel active" id="tab-overview">
+      <div class="metrics-row">
+        <div class="met blue" id="met-cpu">
+          <div class="met-label">CPU Usage</div>
+          <div class="met-val blue" id="val-cpu">32%</div>
+          <div class="met-sub" id="sub-cpu">3 nodes averaging</div>
+          <div class="met-bar"><div class="met-bar-fill" id="bar-cpu" style="width:32%;background:var(--blue);"></div></div>
+        </div>
+        <div class="met purple">
+          <div class="met-label">Memory Usage</div>
+          <div class="met-val purple" id="val-mem">45%</div>
+          <div class="met-sub">RAM allocated</div>
+          <div class="met-bar"><div class="met-bar-fill" id="bar-mem" style="width:45%;background:var(--purple);"></div></div>
+        </div>
+        <div class="met blue">
+          <div class="met-label">Requests / sec</div>
+          <div class="met-val blue" id="val-rps">180</div>
+          <div class="met-sub">current traffic</div>
+          <div class="met-bar"><div class="met-bar-fill" id="bar-rps" style="width:30%;background:var(--cyan);"></div></div>
+        </div>
+        <div class="met green" id="met-lat">
+          <div class="met-label">Avg Latency</div>
+          <div class="met-val green" id="val-lat">42ms</div>
+          <div class="met-sub" id="sub-lat">✓ Healthy</div>
+          <div class="met-bar"><div class="met-bar-fill" id="bar-lat" style="width:8%;background:var(--green);"></div></div>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="met green">
+          <div class="met-label">Active Users</div>
+          <div class="met-val green" id="val-users">120</div>
+          <div class="met-sub">connected sessions</div>
+        </div>
+        <div class="met blue">
+          <div class="met-label">Server Instances</div>
+          <div class="met-val blue" id="val-srvs">3</div>
+          <div class="met-sub" id="sub-srvs">3 active</div>
+        </div>
+        <div class="met green">
+          <div class="met-label">System Uptime</div>
+          <div class="met-val green">99.98%</div>
+          <div class="met-sub">last 30 days</div>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <div class="card-hdr"><span class="card-title">CPU Usage %</span><span class="card-badge">Isolation Forest</span></div>
+          <div class="chart-wrap"><canvas id="cpuChart"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="card-hdr"><span class="card-title">Memory Usage %</span><span class="card-badge">Live</span></div>
+          <div class="chart-wrap"><canvas id="memChart"></canvas></div>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <div class="card-hdr"><span class="card-title">Requests Per Second</span><span class="card-badge">Traffic</span></div>
+          <div class="chart-wrap"><canvas id="rpsChart"></canvas></div>
+        </div>
+        <div class="card critical">
+          <div class="card-hdr"><span class="card-title">AI Risk Assessment</span><span class="card-badge card-badge-blue">Random Forest</span></div>
+          <div class="risk-wrap">
+            <div class="ring-outer">
+              <svg viewBox="0 0 110 110" width="110" height="110">
+                <circle cx="55" cy="55" r="46" fill="none" stroke="#0f1629" stroke-width="10"/>
+                <circle cx="55" cy="55" r="46" fill="none" stroke="#10b981" stroke-width="10"
+                  stroke-dasharray="0 289" stroke-linecap="round" id="probRing" style="transition:stroke-dasharray .8s ease,stroke .5s;"/>
+              </svg>
+              <div class="ring-center">
+                <div class="ring-num" id="probNum" style="color:var(--green);">18%</div>
+                <div class="ring-lbl">FAIL PROB</div>
+              </div>
+            </div>
+            <div class="score-col">
+              <div class="score-row-item">
+                <div class="score-row-label">Anomaly Score (Isolation Forest)</div>
+                <div class="score-row-val" id="isoVal" style="color:var(--green);">0.18</div>
+                <div class="mini-bar"><div class="mini-bar-fill" id="isoBar" style="width:18%;background:var(--green);"></div></div>
+              </div>
+              <div class="score-row-item">
+                <div class="score-row-label">Log Severity (Logistic Regression)</div>
+                <div class="score-row-val" id="sevVal" style="color:var(--green);">NORMAL</div>
+              </div>
+              <div class="score-row-item">
+                <div class="score-row-label">Critical Log Events (TF-IDF)</div>
+                <div class="score-row-val" id="critVal" style="color:var(--text);">0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr"><span class="card-title">Recent Log Events</span><span class="card-badge">TF-IDF Classified</span></div>
+        <div class="log-feed" id="logFeedOverview"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr"><span class="card-title">AI Decision Log</span><span class="card-badge">Self-Healing Engine</span></div>
+        <div class="ai-feed" id="aiFeedOverview"></div>
+      </div>
+    </div>
+
+    <!-- ── SERVERS TAB ── -->
+    <div class="tab-panel" id="tab-servers">
+      <div class="card">
+        <div class="card-hdr"><span class="card-title">Load Balancer & Server Pool</span><span class="card-badge" id="srvCountBadge">3 instances</span></div>
+        <div class="lb-wrap">
+          <div class="lb-box" style="text-align:center;">
+            <div style="font-size:10px;color:var(--text3);margin-bottom:3px;">Incoming Traffic</div>
+            <div style="font-size:18px;font-weight:700;color:var(--cyan);font-family:'JetBrains Mono',monospace;" id="lb-rps">180 RPS</div>
+          </div>
+          <div class="lb-arrow">→</div>
+          <div class="lb-box lb-center">
+            <div style="font-size:10px;margin-bottom:2px;">LOAD BALANCER</div>
+            <div style="font-size:11px;">AI-managed routing</div>
+          </div>
+          <div class="lb-arrow">→</div>
+          <div class="lb-srv-list" id="lbSrvList"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hdr"><span class="card-title">Server Instances</span><span class="card-badge card-badge-blue">AI Auto-Managed</span></div>
+        <div class="servers-grid" id="serversGrid"></div>
+        <div style="margin-top:12px;padding:10px;background:var(--bg3);border-radius:8px;font-size:12px;color:var(--text3);line-height:1.7;">
+          💡 <strong style="color:var(--blue2);">AI Auto-Scale Logic:</strong> When failure probability (Random Forest) &gt; 70%, AIM-SHIELD provisions new server instances automatically. When load normalises, excess instances are deallocated to save cost.
+        </div>
+      </div>
+    </div>
+
+    <!-- ── LOGS TAB ── -->
+    <div class="tab-panel" id="tab-logs">
+      <div class="card">
+        <div class="card-hdr">
+          <span class="card-title">System Log Feed</span>
+          <div style="display:flex;gap:8px;">
+            <span class="card-badge">TF-IDF + Logistic Regression</span>
+            <span class="card-badge" id="logCountBadge">0 entries</span>
+          </div>
+        </div>
+        <div style="padding:8px 12px;background:var(--bg3);border-radius:8px;font-size:11px;color:var(--text3);margin-bottom:10px;line-height:1.7;">
+          Each log is processed by <strong style="color:var(--yellow);">TF-IDF</strong> to extract keyword features, then classified by <strong style="color:var(--green);">Logistic Regression</strong> into <span style="color:var(--green);">Normal</span> / <span style="color:var(--yellow);">Warning</span> / <span style="color:var(--red);">Critical</span>.
+        </div>
+        <div class="log-feed" id="logFeedFull" style="max-height:450px;"></div>
+      </div>
+    </div>
+
+    <!-- ── AI EVENTS TAB ── -->
+    <div class="tab-panel" id="tab-ai">
+      <div class="card">
+        <div class="card-hdr"><span class="card-title">AI Model Status</span></div>
+        <div class="grid2">
+          <div style="background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--cyan);border-radius:10px;padding:13px;">
+            <div style="font-size:12px;font-weight:700;color:var(--cyan);">Isolation Forest</div>
+            <div style="font-size:11px;color:var(--text3);margin-top:2px;">Anomaly Detection</div>
+            <div style="font-size:11px;color:var(--text2);margin-top:7px;font-family:'JetBrains Mono',monospace;" id="isoStatus">Score: 0.18</div>
+            <div style="margin-top:6px;display:inline-block;font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(16,185,129,.12);color:var(--green);font-weight:700;">● ACTIVE</div>
+          </div>
+          <div style="background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--purple);border-radius:10px;padding:13px;">
+            <div style="font-size:12px;font-weight:700;color:var(--purple);">Random Forest</div>
+            <div style="font-size:11px;color:var(--text3);margin-top:2px;">Failure Prediction</div>
+            <div style="font-size:11px;color:var(--text2);margin-top:7px;font-family:'JetBrains Mono',monospace;" id="rfStatus">Prob: 18%</div>
+            <div style="margin-top:6px;display:inline-block;font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(16,185,129,.12);color:var(--green);font-weight:700;">● ACTIVE</div>
+          </div>
+          <div style="background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--green);border-radius:10px;padding:13px;">
+            <div style="font-size:12px;font-weight:700;color:var(--green);">Logistic Regression</div>
+            <div style="font-size:11px;color:var(--text3);margin-top:2px;">Log Classification</div>
+            <div style="font-size:11px;color:var(--text2);margin-top:7px;font-family:'JetBrains Mono',monospace;" id="lrStatus">Severity: NORMAL</div>
+            <div style="margin-top:6px;display:inline-block;font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(16,185,129,.12);color:var(--green);font-weight:700;">● ACTIVE</div>
+          </div>
+          <div style="background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--yellow);border-radius:10px;padding:13px;">
+            <div style="font-size:12px;font-weight:700;color:var(--yellow);">TF-IDF Vectorizer</div>
+            <div style="font-size:11px;color:var(--text3);margin-top:2px;">NLP Feature Extraction</div>
+            <div style="font-size:11px;color:var(--text2);margin-top:7px;font-family:'JetBrains Mono',monospace;" id="tfidfStatus">Logs processed: 0</div>
+            <div style="margin-top:6px;display:inline-block;font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(16,185,129,.12);color:var(--green);font-weight:700;">● ACTIVE</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hdr"><span class="card-title">AI Decision History</span></div>
+        <div class="ai-feed" id="aiFeedFull" style="max-height:400px;"></div>
+      </div>
+    </div>
+
+    <!-- ── SIMULATOR TAB ── -->
+    <div class="tab-panel" id="tab-sim">
+      <div class="card">
+        <div class="card-hdr"><span class="card-title">⚙ Load Simulator</span><span class="card-badge">Control traffic & test AI response</span></div>
+        <div class="ctrl-grid">
+          <div class="ctrl-group">
+            <div class="ctrl-label">Traffic Load <span class="ctrl-val" id="loadPct">40%</span></div>
+            <input type="range" min="0" max="100" value="40" id="loadSlider" oninput="onLoadChange(this.value)"/>
+            <div class="ctrl-hint">Simulates website load intensity</div>
+          </div>
+          <div class="ctrl-group">
+            <div class="ctrl-label">Active Users <span class="ctrl-val" id="userPct">120</span></div>
+            <input type="range" min="10" max="500" value="120" id="userSlider" oninput="onUserChange(this.value)"/>
+            <div class="ctrl-hint">Number of concurrent sessions</div>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-yellow" id="spikeBtn" onclick="toggleSpike()">⚡ Simulate Traffic Spike</button>
+          <button class="btn btn-red" id="crashBtn" onclick="toggleCrash()">💥 Simulate Server Crash</button>
+          <button class="btn btn-green" id="healBtn" onclick="toggleHeal()">🛡 Auto-Heal: ON</button>
+          <button class="btn btn-blue" onclick="resetAll()">↺ Reset</button>
+        </div>
+        <div style="margin-top:16px;padding:14px;background:var(--bg3);border-radius:8px;font-size:12px;color:var(--text2);line-height:1.9;">
+          <strong style="color:var(--blue2);">How the AI Brain Responds:</strong><br/>
+          • <span style="color:var(--cyan);">Isolation Forest</span> — detects anomalies in CPU / Memory / RPS patterns<br/>
+          • <span style="color:var(--purple);">Random Forest</span> — predicts failure probability from all combined features<br/>
+          • If probability &gt; 70% → <span style="color:var(--green);">Self-Heal Engine</span> auto-restarts or provisions new servers<br/>
+          • <span style="color:var(--yellow);">TF-IDF + Logistic Regression</span> — classifies all incoming logs in real-time<br/>
+          • Load Balancer redistributes traffic across all healthy server instances
+        </div>
+      </div>
+    </div>
+
+    <!-- ── USERS TAB ── -->
+    <div class="tab-panel" id="tab-users">
+      <div class="card">
+        <div class="card-hdr"><span class="card-title">Active User Sessions</span><span class="card-badge" id="userTotalBadge">120 total</span></div>
+        <table class="u-table">
+          <thead><tr><th>User</th><th>Endpoint</th><th>Region</th><th>Load</th><th>Session</th><th>Status</th></tr></thead>
+          <tbody id="usersTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ── ANALYTICS TAB ── -->
+    <div class="tab-panel" id="tab-analytics">
+      <div class="grid3">
+        <div class="card" style="text-align:center;">
+          <div class="card-title" style="margin-bottom:8px;">Total AI Decisions</div>
+          <div style="font-size:36px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--blue2);" id="statTotal">0</div>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div class="card-title" style="margin-bottom:8px;">Auto-Heals Triggered</div>
+          <div style="font-size:36px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--green);" id="statHeals">0</div>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div class="card-title" style="margin-bottom:8px;">Scale Events</div>
+          <div style="font-size:36px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--cyan);" id="statScales">0</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hdr"><span class="card-title">AI Pipeline — Step by Step</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div class="pipeline-step"><span class="pip-num" style="color:var(--cyan);">01</span><div><div class="pip-title" style="color:var(--cyan);">Data Collection</div><div class="pip-desc">CPU, Memory, RPS, Latency, Logs collected every 2 seconds from infrastructure</div></div></div>
+          <div class="pipeline-step"><span class="pip-num" style="color:var(--yellow);">02</span><div><div class="pip-title" style="color:var(--yellow);">TF-IDF Vectorization</div><div class="pip-desc">Log text converted into numerical feature vectors — keywords like "error", "timeout", "overflow" get high weights</div></div></div>
+          <div class="pipeline-step"><span class="pip-num" style="color:var(--blue2);">03</span><div><div class="pip-title" style="color:var(--blue2);">Isolation Forest</div><div class="pip-desc">Detects anomalies in system metrics — data points deviating from normal baseline are flagged immediately</div></div></div>
+          <div class="pipeline-step"><span class="pip-num" style="color:var(--green);">04</span><div><div class="pip-title" style="color:var(--green);">Logistic Regression</div><div class="pip-desc">Classifies each log entry as Normal, Warning, or Critical using TF-IDF features</div></div></div>
+          <div class="pipeline-step"><span class="pip-num" style="color:var(--purple);">05</span><div><div class="pip-title" style="color:var(--purple);">Random Forest</div><div class="pip-desc">Combines all features — CPU trend, memory, RPS, anomaly score, log severity — to predict failure probability</div></div></div>
+          <div class="pipeline-step"><span class="pip-num" style="color:var(--red);">06</span><div><div class="pip-title" style="color:var(--red);">Decision Engine</div><div class="pip-desc">If failure probability &gt; 70% → triggers self-healing. If &gt; 45% → escalates monitoring and alerts</div></div></div>
+          <div class="pipeline-step"><span class="pip-num" style="color:var(--green);">07</span><div><div class="pip-title" style="color:var(--green);">Self-Healing & Auto-Scale</div><div class="pip-desc">New server provisioned via cloud API OR failed container restarted. Load balancer updated automatically</div></div></div>
+        </div>
+      </div>
+    </div>
+    <!-- ── AWS INTEGRATION TAB ── -->
+<div class="tab-panel" id="tab-aws">
+
+  <div class="card">
+    <div class="card-hdr">
+      <span class="card-title">☁️ AWS Integration Status</span>
+      <span class="card-badge card-badge-blue">Cloud-Ready Prototype</span>
+    </div>
+
+    <div class="grid3">
+      <div class="met blue">
+        <div class="met-label">CloudWatch Metrics</div>
+        <div class="met-val yellow" style="font-size:20px;">SIMULATED</div>
+        <div class="met-sub">Ready for real AWS metrics</div>
+      </div>
+
+      <div class="met blue">
+        <div class="met-label">EC2 Auto Scaling</div>
+        <div class="met-val blue" style="font-size:20px;">PLANNED</div>
+        <div class="met-sub">Scale-out API integration</div>
+      </div>
+
+      <div class="met purple">
+        <div class="met-label">ECS / EKS Recovery</div>
+        <div class="met-val green" style="font-size:20px;">READY</div>
+        <div class="met-sub">Container restart integration point</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-hdr">
+      <span class="card-title">DevOps / AIOps Pipeline</span>
+      <span class="card-badge">Future Deployment Flow</span>
+    </div>
+
+    <div class="lb-wrap">
+      <div class="lb-box">GitHub</div>
+      <div class="lb-arrow">→</div>
+      <div class="lb-box">CI/CD</div>
+      <div class="lb-arrow">→</div>
+      <div class="lb-box">Docker Image</div>
+      <div class="lb-arrow">→</div>
+      <div class="lb-box">AWS</div>
+      <div class="lb-arrow">→</div>
+      <div class="lb-box lb-center">AIM-SHIELD AI</div>
+      <div class="lb-arrow">→</div>
+      <div class="lb-box">Auto-Healing</div>
+    </div>
+
+    <div style="margin-top:14px;padding:12px;background:var(--bg3);border-radius:8px;font-size:12px;color:var(--text2);line-height:1.7;">
+      AIM-SHIELD acts as an <strong style="color:var(--blue2);">AIOps layer</strong> for DevOps teams.
+      CloudWatch can provide real metrics and logs, while AIM-SHIELD predicts failures and triggers EC2 Auto Scaling or ECS/EKS recovery actions.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-hdr">
+      <span class="card-title">AWS Service Mapping</span>
+      <span class="card-badge">Integration Roadmap</span>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:8px;">
+
+      <div class="pipeline-step">
+        <span class="pip-num" style="color:var(--yellow);">01</span>
+        <div>
+          <div class="pip-title" style="color:var(--yellow);">Amazon CloudWatch</div>
+          <div class="pip-desc">Replaces simulated CPU, memory, latency, and log data with real AWS monitoring data.</div>
+        </div>
+      </div>
+
+      <div class="pipeline-step">
+        <span class="pip-num" style="color:var(--blue2);">02</span>
+        <div>
+          <div class="pip-title" style="color:var(--blue2);">EC2 Auto Scaling</div>
+          <div class="pip-desc">Provisions new virtual servers when failure probability crosses the threshold.</div>
+        </div>
+      </div>
+
+      <div class="pipeline-step">
+        <span class="pip-num" style="color:var(--green);">03</span>
+        <div>
+          <div class="pip-title" style="color:var(--green);">ECS / EKS</div>
+          <div class="pip-desc">Restarts failed containers or scales containerized services based on AI decisions.</div>
+        </div>
+      </div>
+
+      <div class="pipeline-step">
+        <span class="pip-num" style="color:var(--red);">04</span>
+        <div>
+          <div class="pip-title" style="color:var(--red);">IAM Permissions</div>
+          <div class="pip-desc">Required for securely reading AWS metrics and triggering infrastructure actions.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+  </main>
+</div>
+
+<script>
+// ── STATE ──────────────────────────────────────────────────────────────────
+let state = {
+  cpu: 32, mem: 45, rps: 180, lat: 42,
+  iso: 0.18, failProb: 0.18, severity: 'NORMAL', critLogs: 0,
+  activeUsers: 120,
+  loadSlider: 40, userSlider: 120,
+  spike: false, crash: false, autoHeal: true,
+  servers: [
+    {id:'srv-001', name:'node-primary', region:'US-EAST', cpu:30, status:'active'},
+    {id:'srv-002', name:'node-replica', region:'EU-WEST', cpu:28, status:'active'},
+    {id:'srv-003', name:'node-ap',      region:'AP-SOUTH',cpu:32, status:'active'},
+  ],
+  logs: [], aiEvents: [],
+  statHeals: 0, statScales: 0,
+  logCount: 0,
+};
+
+// ── UTILS ─────────────────────────────────────────────────────────────────
+const rnd = (a,b) => Math.random()*(b-a)+a;
+const clamp = (v,a,b) => Math.max(a,Math.min(b,v));
+const nowStr = () => new Date().toLocaleTimeString('en-GB');
+const uid = () => Math.random().toString(36).slice(2,7);
+const FIRST = ['Aiko','Ravi','Chen','Sofia','Omar','Priya','Luca','Jin','Amara','Ethan','Nadia','Dev','Mei','Carlos','Sara'];
+const LAST  = ['Tanaka','Kumar','Wei','Rossi','Hassan','Patel','Ferrari','Park','Diallo','Brooks','Kovac','Sharma','Liu','Torres','Ali'];
+const ENDPOINTS = ['/api/auth','/api/products','/api/checkout','/api/user/profile','/api/cart','/api/search','/api/orders'];
+const REGIONS = ['US-EAST','EU-WEST','AP-SOUTH','US-WEST'];
+const LOG_TEMPLATES = [
+  {level:'info',  msg:'Service health check passed',              tag:'normal'},
+  {level:'info',  msg:'Request processed successfully',           tag:'normal'},
+  {level:'info',  msg:'Cache hit ratio: 94%',                     tag:'normal'},
+  {level:'info',  msg:'Database query optimised — 12ms',          tag:'normal'},
+  {level:'warn',  msg:'Memory usage approaching threshold',        tag:'warning'},
+  {level:'warn',  msg:'Response latency spike detected',          tag:'warning'},
+  {level:'warn',  msg:'Database connection pool near limit',      tag:'warning'},
+  {level:'warn',  msg:'Traffic spike: 3x normal baseline',        tag:'warning'},
+  {level:'error', msg:'Connection timeout on service-auth',        tag:'critical'},
+  {level:'error', msg:'Memory overflow — container restarting',   tag:'critical'},
+  {level:'error', msg:'Disk I/O exceeded safe limit',             tag:'critical'},
+  {level:'error', msg:'CPU throttling detected on node-2',        tag:'critical'},
+  {level:'info',  msg:'[CloudWatch] EC2 instance health check passed', tag:'normal'},
+  {level:'warn',  msg:'[CloudWatch] CPUUtilization threshold warning', tag:'warning'},
+  {level:'warn',  msg:'[AutoScaling] Scale-out policy evaluation triggered', tag:'warning'},
+  {level:'error', msg:'[ECS] Container restart recommended by AI engine', tag:'critical'},
+  {level:'warn',  msg:'[ALB] Target response time increased', tag:'warning'},
+];
+
+// ── BACKEND API CONFIG ────────────────────────────────────────────────────
+const API = "http://127.0.0.1:5000/api";
+let backendOnline = false;
+
+// Check if backend is running
+async function checkBackend() {
+  try {
+    const r = await fetch(`${API}/health`, {signal: AbortSignal.timeout(5000)});
+    if (r.ok) {
+      backendOnline = true;
+      showToast('heal','BACKEND CONNECTED','Real AI models active — Isolation Forest, Random Forest, TF-IDF');
+      qs('#backendBadge').textContent = '🟢 Real AI Active';
+      qs('#backendBadge').style.color = 'var(--green)';
+    }
+  } catch(e) {
+    backendOnline = false;
+    qs('#backendBadge').textContent = '🔴 Offline — Simulated Mode';
+    qs('#backendBadge').style.color = 'var(--red)';
+  }
+}
+
+// Push current slider state to backend
+async function syncStateToBackend() {
+  if (!backendOnline) return;
+  try {
+    await fetch(`${API}/state`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        load_factor:  state.loadSlider / 100,
+        active_users: state.activeUsers,
+        spike:        state.spike,
+        crash:        state.crash,
+      }),
+      signal: AbortSignal.timeout(2000)
+    });
+  } catch(e) { backendOnline = false; }
+}
+
+// Fallback simulation (used when backend is offline)
+function tfidfClassify(msg) {
+  const m = msg.toLowerCase();
+  const crit = ['timeout','overflow','crash','error','fail','throttl','exceeded','restart'];
+  const warn = ['spike','high','limit','slow','approaching','latency','near','pool'];
+  if (crit.some(k=>m.includes(k))) return 'critical';
+  if (warn.some(k=>m.includes(k)))  return 'warning';
+  return 'normal';
+}
+function simulateIsoForest(cpu, mem, rps) {
+  return clamp((cpu/100)*0.5 + (mem/100)*0.3 + (rps/600)*0.2 + rnd(-0.04,0.04), 0, 1);
+}
+function simulateRandomForest(cpu, mem, rps, iso) {
+  return clamp((cpu/100)*0.35 + (mem/100)*0.25 + (rps/600)*0.15 + iso*0.2 + rnd(-0.03,0.03), 0, 1);
+}
+function simulateLR(iso, fp) {
+  if (fp > 0.70) return 'CRITICAL';
+  if (fp > 0.45 || iso > 0.6) return 'WARNING';
+  return 'NORMAL';
+}
+
+// ── CHARTS ────────────────────────────────────────────────────────────────
+const HIST = 20;
+let cpuHist = Array(HIST).fill(32);
+let memHist = Array(HIST).fill(45);
+let rpsHist = Array(HIST).fill(180);
+let tLabels = Array(HIST).fill('').map((_,i)=>{const d=new Date();d.setSeconds(d.getSeconds()-((HIST-1-i)*3));return d.toLocaleTimeString('en-GB');});
+
+function mkChart(id, color, data, maxY) {
+  const ctx = document.getElementById(id).getContext('2d');
+  const grad = ctx.createLinearGradient(0,0,0,155);
+  grad.addColorStop(0, color+'44'); grad.addColorStop(1, color+'00');
+  return new Chart(ctx, {
+    type:'line',
+    data:{
+      labels:[...tLabels],
+      datasets:[{data:[...data],borderColor:color,backgroundColor:grad,borderWidth:2,pointRadius:0,fill:true,tension:.4}]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,animation:{duration:300},
+      plugins:{legend:{display:false},tooltip:{mode:'index',intersect:false,
+        backgroundColor:'#111827',borderColor:'#1e2d4a',borderWidth:1,
+        bodyFont:{family:'JetBrains Mono',size:11},titleFont:{family:'Space Grotesk',size:11}
+      }},
+      scales:{
+        x:{display:false},
+        y:{display:true,max:maxY||100,min:0,
+           grid:{color:'rgba(30,45,74,.4)',drawBorder:false},
+           ticks:{color:'#64748b',font:{size:10,family:'JetBrains Mono'},maxTicksLimit:4},
+           border:{display:false}}
+      }
+    }
+  });
+}
+
+let cpuChart, memChart, rpsChart;
+window.addEventListener('load', ()=>{
+  cpuChart = mkChart('cpuChart','#3b82f6',cpuHist,100);
+  memChart = mkChart('memChart','#8b5cf6',memHist,100);
+  rpsChart = mkChart('rpsChart','#06b6d4',rpsHist,600);
+  renderAll();
+  startTick();
+});
+
+function updateCharts() {
+  const t = nowStr();
+  tLabels = [...tLabels.slice(1), t];
+  cpuHist = [...cpuHist.slice(1), state.cpu];
+  memHist = [...memHist.slice(1), state.mem];
+  rpsHist = [...rpsHist.slice(1), state.rps];
+  [cpuChart, memChart, rpsChart].forEach((c,i)=>{
+    if(!c) return;
+    c.data.labels = [...tLabels];
+    c.data.datasets[0].data = [cpuHist,memHist,rpsHist][i].map(v=>v);
+    c.update('none');
+  });
+}
+
+// ── TICK — calls real backend if online, falls back to simulation ─────────
+function startTick() {
+  checkBackend();
+  setInterval(checkBackend, 15000); // re-check backend every 15s
+
+  setInterval(async ()=>{
+
+    let newCpu, newMem, newRps, newLat, newUsers;
+
+    if (backendOnline) {
+      // ── REAL BACKEND PATH ─────────────────────────────────────────────
+      await syncStateToBackend();
+
+      try {
+        // Fetch metrics + AI scores from Flask
+        const mRes  = await fetch(`${API}/metrics`, {signal: AbortSignal.timeout(5000)});
+        const mData = await mRes.json();
+
+        newCpu   = mData.cpu;
+        newMem   = mData.memory;
+        newRps   = mData.rps;
+        newLat   = mData.latency;
+        newUsers = mData.active_users;
+
+        // These come from REAL trained models on the server
+        state.iso      = mData.iso_score;
+        state.failProb = mData.fail_prob;
+        state.severity = mData.severity;
+        state.critLogs = mData.is_anomaly ? 2 : 0;
+
+        // Fetch a real log classified by TF-IDF + Logistic Regression
+        if (Math.random() < 0.6) {
+          const lRes  = await fetch(`${API}/log`, {signal: AbortSignal.timeout(3000)});
+          const lData = await lRes.json();
+          const entry = {
+            id:  uid(),
+            level: lData.level,
+            msg:   lData.message + ` [AI: ${lData.confidence}% confident]`,
+            tag:   lData.tag,
+            time:  lData.timestamp
+          };
+          state.logs = [entry, ...state.logs.slice(0,49)];
+          state.logCount++;
+        }
+
+      } catch(e) {
+        backendOnline = false;
+        qs('#backendBadge').textContent = '🔴 Backend lost — Fallback mode';
+        qs('#backendBadge').style.color = 'var(--red)';
+        // Fall through to simulation below
+        newCpu = state.cpu; newMem = state.mem; newRps = state.rps; newLat = state.lat; newUsers = state.activeUsers;
+      }
+
+    }
+
+    if (!backendOnline) {
+      // ── FALLBACK SIMULATION PATH ──────────────────────────────────────
+      const lf    = state.loadSlider/100;
+      const spike = state.spike, crash = state.crash;
+      newCpu   = clamp(15 + lf*55 + (spike?28:0) + (crash?38:0) + rnd(-5,5), 0, 100);
+      newMem   = clamp(25 + lf*45 + (spike?15:0) + (crash?20:0) + rnd(-4,4), 0, 100);
+      newRps   = clamp(50 + lf*380 + (spike?190:0) + (crash?-40:0) + rnd(-20,20), 0, 600);
+      newLat   = clamp(18 + lf*80 + (spike?130:0) + (crash?320:0) + rnd(-8,8), 5, 900);
+      newUsers = Math.round(clamp(state.activeUsers + rnd(-5,8) + (spike?30:0), 10, 500));
+      state.iso      = simulateIsoForest(newCpu, newMem, newRps);
+      state.failProb = simulateRandomForest(newCpu, newMem, newRps, state.iso);
+      state.severity = simulateLR(state.iso, state.failProb);
+      state.critLogs = state.crash ? 4 : state.spike ? 2 : 0;
+
+      if (Math.random() < 0.55) {
+        const lf2  = state.loadSlider/100;
+        const pool = state.crash ? LOG_TEMPLATES.filter(l=>l.level==='error')
+                   : state.spike ? LOG_TEMPLATES.filter(l=>l.level!=='info')
+                   : LOG_TEMPLATES;
+        const tmpl = pool[Math.floor(rnd(0,pool.length))];
+        const entry = {id:uid(), level:tmpl.level, msg:tmpl.msg, tag:tfidfClassify(tmpl.msg), time:nowStr()};
+        state.logs = [entry, ...state.logs.slice(0,49)];
+        state.logCount++;
+      }
+    }
+
+    // Update state
+    state.cpu  = Math.round(newCpu);
+    state.mem  = Math.round(newMem);
+    state.rps  = Math.round(newRps);
+    state.lat  = Math.round(newLat);
+    state.activeUsers = Math.round(newUsers || state.activeUsers);
+
+    // Server CPU distribution
+    state.servers = state.servers.map(s=>({...s,
+      cpu: Math.round(clamp(state.cpu/state.servers.length*(0.8+rnd(0,.4))+rnd(-3,3),5,95))
+    }));
+
+    // AI self-healing logic (same for both paths)
+    if (state.autoHeal && state.failProb > 0.70 && Math.random() < 0.3) {
+      if (Math.random() < 0.5) {
+        state.aiEvents = [{id:uid(),type:'heal',title:'🛡 Self-Heal Triggered',desc:'Restarting overloaded container — restoring service health',time:nowStr()},...state.aiEvents.slice(0,29)];
+        state.statHeals++;
+        showHealBanner('banner-heal','🛡 AIM-SHIELD: Self-healing initiated — Restarting container node-2');
+        showToast('heal','SELF-HEAL','Container restarted automatically by real AI engine');
+        state.logs = [{id:uid(),level:'info',msg:'[AI] Container node-2 restarted by self-healing engine',tag:'normal',time:nowStr()},...state.logs.slice(0,49)];
+      } else {
+        if (state.servers.length < 6) {
+          const ns = {id:`srv-${uid()}`,name:`node-dyn-${state.servers.length+1}`,region:REGIONS[Math.floor(rnd(0,4))],cpu:15,status:'new-srv'};
+          state.servers = [...state.servers, ns];
+          setTimeout(()=>{ state.servers = state.servers.map(s=>s.id===ns.id?{...s,status:'active'}:s); renderAll(); }, 4000);
+        }
+        state.aiEvents = [{id:uid(),type:'scale',title:'⚡ Auto-Scale Triggered',desc:`New server provisioned — RPS: ${state.rps}, CPU: ${state.cpu}%`,time:nowStr()},...state.aiEvents.slice(0,29)];
+        state.statScales++;
+        showHealBanner('banner-scale',`⚡ AIM-SHIELD: Auto-scaling — New server provisioned (${state.rps} RPS)`);
+        showToast('heal','AUTO-SCALE','New server instance provisioned by AI');
+        state.logs = [{id:uid(),level:'info',msg:'[AI] New server provisioned via Auto-Scale API',tag:'normal',time:nowStr()},...state.logs.slice(0,49)];
+      }
+    } else if (state.failProb > 0.45 && Math.random() < 0.15) {
+      state.aiEvents = [{id:uid(),type:'detect',title:'⚠ Anomaly Detected',desc:`Isolation Forest score: ${state.iso.toFixed(2)} — CPU: ${state.cpu}% — escalated`,time:nowStr()},...state.aiEvents.slice(0,29)];
+      showToast('warn','ANOMALY DETECTED',`Real model score: ${state.iso.toFixed(2)}`);
+    }
+
+    if (state.failProb < 0.25 && state.servers.length > 3 && Math.random() < 0.08) {
+      state.servers = state.servers.slice(0,-1);
+      state.aiEvents = [{id:uid(),type:'scale',title:'📉 Scale Down',desc:'Excess instance removed — load normalised',time:nowStr()},...state.aiEvents.slice(0,29)];
+    }
+
+    updateCharts();
+    renderAll();
+  }, 2000);
+}
+
+// ── RENDER ────────────────────────────────────────────────────────────────
+function renderAll() {
+  updateClock();
+  renderMetrics();
+  renderAIRisk();
+  renderLogs();
+  renderAIEvents();
+  renderServers();
+  renderUsers();
+  renderAnalytics();
+  updateStatus();
+}
+
+function updateClock() {
+  document.getElementById('clockEl').textContent = nowStr();
+}
+
+function updateStatus() {
+  const pill = document.getElementById('statusPill');
+  const txt  = document.getElementById('statusText');
+  pill.className = 'status-pill';
+  if (state.failProb > 0.70) { pill.classList.add('pill-crit'); txt.textContent = 'CRITICAL — AI HEALING'; }
+  else if (state.failProb > 0.45) { pill.classList.add('pill-warn'); txt.textContent = 'ELEVATED RISK'; }
+  else { pill.classList.add('pill-ok'); txt.textContent = 'SYSTEM HEALTHY'; }
+}
+
+function renderMetrics() {
+  const cpuColor = state.cpu>80?'red':state.cpu>60?'yellow':'blue';
+  const latColor = state.lat>300?'red':state.lat>150?'yellow':'green';
+  setMet('cpu', state.cpu+'%', cpuColor, `${state.servers.length} nodes averaging`, state.cpu, state.cpu>80?'var(--red)':state.cpu>60?'var(--yellow)':'var(--blue)');
+  setMet('mem', state.mem+'%', null, null, state.mem, 'var(--purple)');
+  setMet('rps', state.rps, null, null, state.rps/6, 'var(--cyan)');
+  setMet('lat', state.lat+'ms', latColor, state.lat>200?'⚠ Degraded':'✓ Healthy', clamp(state.lat/900*100,0,100), state.lat>300?'var(--red)':state.lat>150?'var(--yellow)':'var(--green)');
+  qs('#val-users').textContent = state.activeUsers;
+  qs('#val-srvs').textContent = state.servers.length;
+  qs('#sub-srvs').textContent = state.servers.filter(s=>s.status==='active').length + ' active';
+}
+function setMet(k, val, colorClass, sub, pct, barColor) {
+  const v = qs(`#val-${k}`); if(v&&val!==null) v.textContent = val;
+  if(colorClass) { v.className='met-val '+colorClass; }
+  if(sub) { const s=qs(`#sub-${k}`); if(s) s.textContent=sub; }
+  const b = qs(`#bar-${k}`); if(b) { b.style.width=pct+'%'; if(barColor) b.style.background=barColor; }
+}
+
+function renderAIRisk() {
+  const fp = state.failProb;
+  const color = fp>0.70?'var(--red)':fp>0.45?'var(--yellow)':'var(--green)';
+  const circ = 289;
+  qs('#probRing').style.strokeDasharray = `${fp*circ} ${circ}`;
+  qs('#probRing').style.stroke = fp>0.70?'#ef4444':fp>0.45?'#f59e0b':'#10b981';
+  qs('#probNum').textContent = Math.round(fp*100)+'%';
+  qs('#probNum').style.color = color;
+  const isoColor = state.iso>0.6?'var(--red)':state.iso>0.4?'var(--yellow)':'var(--green)';
+  qs('#isoVal').textContent = state.iso.toFixed(2); qs('#isoVal').style.color = isoColor;
+  qs('#isoBar').style.width = (state.iso*100)+'%'; qs('#isoBar').style.background = isoColor;
+  const sevColor = state.severity==='CRITICAL'?'var(--red)':state.severity==='WARNING'?'var(--yellow)':'var(--green)';
+  qs('#sevVal').textContent = state.severity; qs('#sevVal').style.color = sevColor;
+  qs('#critVal').textContent = state.critLogs; qs('#critVal').style.color = state.critLogs>2?'var(--red)':'var(--text)';
+  // AI tab
+  qs('#isoStatus').textContent = `Score: ${state.iso.toFixed(3)}`;
+  qs('#rfStatus').textContent  = `Prob: ${Math.round(state.failProb*100)}%`;
+  qs('#lrStatus').textContent  = `Severity: ${state.severity}`;
+  qs('#tfidfStatus').textContent = `Logs processed: ${state.logCount}`;
+}
+
+function renderLogs() {
+  const html = state.logs.slice(0,8).map(l=>logHtml(l)).join('');
+  const full = state.logs.map(l=>logHtml(l)).join('');
+  const fo = qs('#logFeedOverview'); if(fo) fo.innerHTML = html || emptyMsg('Waiting for log events…');
+  const ff = qs('#logFeedFull'); if(ff) ff.innerHTML = full || emptyMsg('No logs yet. Increase load to generate events…');
+  const lb = qs('#logCountBadge'); if(lb) lb.textContent = state.logs.length + ' entries';
+}
+function logHtml(l) {
+  return `<div class="log-entry">
+    <span class="log-lvl ${l.level}">[${l.level.toUpperCase()}]</span>
+    <span class="log-time">${l.time}</span>
+    <span class="log-msg">${l.msg}</span>
+    <span class="log-tag tag-${l.tag}">${l.tag}</span>
+  </div>`;
+}
+
+function renderAIEvents() {
+  const html = state.aiEvents.slice(0,5).map(aiHtml).join('');
+  const full = state.aiEvents.map(aiHtml).join('');
+  const fo = qs('#aiFeedOverview'); if(fo) fo.innerHTML = html || emptyMsg('System normal. AI monitoring active…');
+  const ff = qs('#aiFeedFull'); if(ff) ff.innerHTML = full || emptyMsg('No AI events yet. Increase load to trigger detection…');
+}
+function aiHtml(e) {
+  return `<div class="ai-ev ${e.type}">
+    <div class="ai-ev-body">
+      <div class="ai-ev-title ${e.type}">${e.title}</div>
+      <div class="ai-ev-desc">${e.desc}</div>
+    </div>
+    <div class="ai-ev-time">${e.time}</div>
+  </div>`;
+}
+
+function renderServers() {
+  // Grid
+  const sg = qs('#serversGrid');
+  if(sg) sg.innerHTML = state.servers.map(s=>`
+    <div class="srv-card ${s.status}">
+      <div class="srv-name">${s.name}</div>
+      <div class="srv-status ${s.status}">${s.status==='new-srv'?'🔵 PROVISIONING':'✓ ACTIVE'}</div>
+      <div class="srv-cpu">CPU: ${s.cpu}% | ${s.region}</div>
+      <div class="srv-bar"><div class="srv-bar-fill" style="width:${s.cpu}%;background:${s.cpu>80?'var(--red)':s.cpu>60?'var(--yellow)':'var(--green)'}"></div></div>
+    </div>`).join('');
+  // LB list
+  const lb = qs('#lbSrvList');
+  if(lb) lb.innerHTML = state.servers.map(s=>`
+    <div class="lb-srv-item">
+      <div class="lb-dot ${s.status==='new-srv'?'new':''}"></div>
+      ${s.name} <span style="color:var(--text3);">${s.region}</span>
+      <span style="margin-left:auto;color:${s.cpu>80?'var(--red)':s.cpu>60?'var(--yellow)':'var(--green)'};">${s.cpu}%</span>
+    </div>`).join('');
+  const lb2 = qs('#lb-rps'); if(lb2) lb2.textContent = state.rps + ' RPS';
+  const bc = qs('#srvCountBadge'); if(bc) bc.textContent = state.servers.length + ' instances';
+}
+
+function renderUsers() {
+  const tbody = qs('#usersTableBody');
+  if(!tbody) return;
+  const count = Math.min(8, Math.max(3, Math.round(state.activeUsers/20)));
+  let html = '';
+  for(let i=0;i<count;i++){
+    const name = FIRST[i%FIRST.length]+' '+LAST[(i+4)%LAST.length];
+    const ep = ENDPOINTS[i%ENDPOINTS.length];
+    const reg = REGIONS[i%4];
+    const load = Math.round(rnd(10,80));
+    const active = Math.random()>0.25;
+    const since = Math.floor(rnd(1,30))+'m ago';
+    const lc = load>70?'var(--red)':load>50?'var(--yellow)':'var(--green)';
+    html += `<tr>
+      <td>${name}</td>
+      <td style="color:var(--blue2);">${ep}</td>
+      <td>${reg}</td>
+      <td><div style="display:flex;align-items:center;gap:6px;"><div style="width:50px;height:4px;background:var(--bg3);border-radius:2px;overflow:hidden;"><div style="width:${load}%;height:100%;background:${lc};border-radius:2px;"></div></div>${load}%</div></td>
+      <td style="color:var(--text3);">${since}</td>
+      <td><span class="ubadge ${active?'ubadge-active':'ubadge-idle'}">${active?'ACTIVE':'IDLE'}</span></td>
+    </tr>`;
+  }
+  tbody.innerHTML = html;
+  const ub = qs('#userTotalBadge'); if(ub) ub.textContent = state.activeUsers + ' total';
+  qs('#val-users').textContent = state.activeUsers;
+}
+
+function renderAnalytics() {
+  const st = qs('#statTotal'); if(st) st.textContent = state.aiEvents.length;
+  const sh = qs('#statHeals'); if(sh) sh.textContent = state.statHeals;
+  const ss = qs('#statScales'); if(ss) ss.textContent = state.statScales;
+}
+
+// ── HEAL BANNER ───────────────────────────────────────────────────────────
+function showHealBanner(cls, msg) {
+  const b = qs('#healBanner');
+  b.style.display = 'flex';
+  b.className = 'heal-banner ' + cls;
+  b.innerHTML = `<span style="font-size:18px;">✦</span>${msg}`;
+  setTimeout(()=>{ b.style.display='none'; }, 7000);
+}
+
+// ── TOASTS ────────────────────────────────────────────────────────────────
+function showToast(type, title, msg) {
+  const c = qs('#toastContainer');
+  const div = document.createElement('div');
+  div.className = `toast ${type}`;
+  div.innerHTML = `<div class="toast-title">${title}</div><div class="toast-msg">${msg}</div>`;
+  c.prepend(div);
+  setTimeout(()=>div.remove(), 5000);
+}
+
+// ── CONTROLS ──────────────────────────────────────────────────────────────
+function onLoadChange(v) { state.loadSlider=+v; qs('#loadPct').textContent=v+'%'; syncStateToBackend(); }
+function onUserChange(v) { state.userSlider=+v; state.activeUsers=+v; qs('#userPct').textContent=v; syncStateToBackend(); }
+function toggleSpike() {
+  state.spike=!state.spike;
+  const b=qs('#spikeBtn');
+  b.className=state.spike?'btn btn-active-yellow':'btn btn-yellow';
+  b.textContent=state.spike?'⚡ SPIKE ACTIVE — Click to Stop':'⚡ Simulate Traffic Spike';
+  syncStateToBackend();
+}
+function toggleCrash() {
+  state.crash=!state.crash;
+  const b=qs('#crashBtn');
+  b.className=state.crash?'btn btn-active-red':'btn btn-red';
+  b.textContent=state.crash?'💥 CRASH ACTIVE — Click to Stop':'💥 Simulate Server Crash';
+  syncStateToBackend();
+}
+function toggleHeal() {
+  state.autoHeal=!state.autoHeal;
+  const b=qs('#healBtn');
+  b.className=state.autoHeal?'btn btn-green':'btn btn-blue';
+  b.textContent=state.autoHeal?'🛡 Auto-Heal: ON':'🛡 Auto-Heal: OFF';
+}
+function resetAll() {
+  state.spike=false; state.crash=false;
+  state.loadSlider=40; state.userSlider=120; state.activeUsers=120;
+  qs('#loadSlider').value=40; qs('#userSlider').value=120;
+  qs('#loadPct').textContent='40%'; qs('#userPct').textContent='120';
+  qs('#spikeBtn').className='btn btn-yellow'; qs('#spikeBtn').textContent='⚡ Simulate Traffic Spike';
+  qs('#crashBtn').className='btn btn-red'; qs('#crashBtn').textContent='💥 Simulate Server Crash';
+}
+
+// ── TAB SWITCHING ─────────────────────────────────────────────────────────
+function switchTab(name, el) {
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  qs('#tab-'+name).classList.add('active');
+  el.classList.add('active');
+}
+
+// ── HELPERS ───────────────────────────────────────────────────────────────
+function qs(sel) { return document.querySelector(sel); }
+function emptyMsg(msg) { return `<div style="color:var(--text3);font-size:12px;padding:12px;">${msg}</div>`; }
+
+// Clock every second
+setInterval(updateClock, 1000);
+</script>
+</body>
+</html>
