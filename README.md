@@ -4,19 +4,15 @@
 
 > Real-time anomaly detection, failure prediction, and intelligent alerting powered by machine learning.
 
+### 🚀 Live Demo
+
+**[🌐 Open AIM-SHIELD Dashboard](https://devanarayan68.github.io/AIM-SHIELD/)**
+
+**[📂 View Source Code](https://github.com/devanarayan68/AIM-SHIELD)**
+
+> The live dashboard is deployed using GitHub Pages with a Flask + ML backend hosted on Render.
+
 ---
-
-## 🚀 Quick Start (30 seconds)
-
-```bash
-# Start the demo
-chmod +x demo.sh
-./demo.sh
-
-# That's it! Browser opens to your dashboard automatically
-```
-
-Your dashboard is now running at: **http://localhost:8000/frontend_advanced.html**
 
 ---
 
