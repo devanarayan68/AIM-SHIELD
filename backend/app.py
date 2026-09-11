@@ -187,5 +187,5 @@ def health():
 
 
 if __name__ == '__main__':
-    print("\nAIM-SHIELD Backend running on http://localhost:5000")
-    app.run(debug=True, port=5000)
+    print("\nAIM-SHIELD Backend starting...")
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False)
