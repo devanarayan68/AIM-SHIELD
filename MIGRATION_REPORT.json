@@ -1,0 +1,36 @@
+{
+  "version": {
+    "from": "v1",
+    "to": "v2"
+  },
+  "new_features": [
+    "\u2728 WebSocket real-time streaming",
+    "\u2728 SQLite database with persistence",
+    "\u2728 Advanced alert management system",
+    "\u2728 Historical data explorer",
+    "\u2728 System statistics dashboard",
+    "\u2728 Docker & Kubernetes support",
+    "\u2728 CI/CD pipeline (GitHub Actions)",
+    "\u2728 Configurable thresholds via .env"
+  ],
+  "breaking_changes": [
+    "\u26a0\ufe0f  Backend changed: app.py \u2192 app_advanced.py",
+    "\u26a0\ufe0f  Frontend changed: frontend.html \u2192 frontend_advanced.html",
+    "\u26a0\ufe0f  API signature changes (backward compatible with REST)",
+    "\u26a0\ufe0f  WebSocket required for real-time features"
+  ],
+  "migration_checklist": [
+    "\u2713 Backed up old files",
+    "\u2713 Updated requirements.txt",
+    "\u2713 Created .env configuration",
+    "\u2713 Initialized database",
+    "\u2713 Set up directory structure"
+  ],
+  "next_steps": [
+    "1. Review .env and customize settings",
+    "2. Install new dependencies: pip install -r requirements.txt",
+    "3. Start backend: python backend/app_advanced.py",
+    "4. Open frontend: http://localhost:8000/frontend_advanced.html",
+    "5. (Optional) Deploy with Docker: docker-compose up --build"
+  ]
+}

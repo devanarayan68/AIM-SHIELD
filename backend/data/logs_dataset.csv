@@ -1,0 +1,3001 @@
+log_message,severity
+Scheduled backup completed successfully,normal
+API gateway responded 200 OK on node-2,normal
+Service restart completed normally on node-1,normal
+Scheduled backup completed successfully,normal
+Database query optimised response 8ms service-api,normal
+Service crashed exit code 137 OOM killed,critical
+CPU throttling starting at 68 percent on node-1,warning
+Cache hit ratio 94 percent on node-1,normal
+Disk IO exceeded safe limit critical failure at 14:32,critical
+Service health check passed,normal
+Memory usage approaching threshold 72 percent,warning
+Service health check passed service-api,normal
+Response latency spike detected 180ms,warning
+Disk usage high 78 percent service-api,warning
+Service crashed exit code 137 OOM killed at 14:32,critical
+Configuration reload successful,normal
+Connection pool exhausted retrying service-api,warning
+API gateway responded 200 OK on node-2,normal
+Memory overflow container restarting service-api,critical
+User authentication successful service-api,normal
+Load balancer health check OK on node-2,normal
+Request processed successfully in 12ms on node-2,normal
+Slow query detected taking 450ms at 14:32,warning
+Request processed successfully in 12ms service-api,normal
+Retry attempt number 2 for service auth service-api,warning
+Service health check passed on node-2,normal
+High memory pressure swap usage increased at 14:32,warning
+API gateway responded 200 OK service-api,normal
+Fatal error segmentation fault core dumped,critical
+Database connection pool near limit 85 percent on node-2,warning
+Configuration reload successful service-api,normal
+Service restart completed normally,normal
+Disk usage high 78 percent,warning
+Database query optimised response 8ms,normal
+Cache hit ratio 94 percent service-api,normal
+Slow query detected taking 450ms at 14:32,warning
+Connection timeout on service auth ERROR on node-2,critical
+Load balancer health check OK,normal
+Service restart completed normally at 14:32,normal
+Cache hit ratio 94 percent,normal
+User authentication successful,normal
+Request processed successfully in 12ms service-api,normal
+Service health check passed on node-2,normal
+Load balancer health check OK on node-1,normal
+Configuration reload successful,normal
+Service restart completed normally on node-2,normal
+Load balancer health check OK on node-2,normal
+Disk IO exceeded safe limit critical failure,critical
+Configuration reload successful on node-2,normal
+Service health check passed,normal
+Disk IO exceeded safe limit critical failure,critical
+Service restart completed normally at 14:32,normal
+CPU throttling starting at 68 percent,warning
+API gateway responded 200 OK at 14:32,normal
+Load balancer health check OK at 14:32,normal
+Database query optimised response 8ms,normal
+Service crashed exit code 137 OOM killed,critical
+Database query optimised response 8ms,normal
+Service restart completed normally on node-2,normal
+API gateway responded 200 OK on node-2,normal
+Request processed successfully in 12ms on node-2,normal
+Configuration reload successful service-api,normal
+CPU throttling starting at 68 percent,warning
+Request processed successfully in 12ms at 14:32,normal
+User authentication successful on node-2,normal
+Fatal error segmentation fault core dumped,critical
+Connection pool exhausted retrying on node-2,warning
+Response latency spike detected 180ms on node-1,warning
+Network interface down packet loss 100 percent at 14:32,critical
+Service restart completed normally,normal
+User authentication successful service-api,normal
+Service restart completed normally on node-1,normal
+Memory overflow container restarting service-api,critical
+Service restart completed normally service-api,normal
+Service health check passed,normal
+Database query optimised response 8ms service-api,normal
+Scheduled backup completed successfully at 14:32,normal
+Cache hit ratio 94 percent,normal
+Database connection pool near limit 85 percent on node-2,warning
+Memory overflow container restarting,critical
+CPU throttling starting at 68 percent service-api,warning
+Database query optimised response 8ms,normal
+Response latency spike detected 180ms on node-1,warning
+User authentication successful on node-1,normal
+Database query optimised response 8ms on node-2,normal
+Request processed successfully in 12ms on node-2,normal
+Response latency spike detected 180ms on node-1,warning
+User authentication successful,normal
+Database query optimised response 8ms,normal
+Service crashed exit code 137 OOM killed on node-1,critical
+Service health check passed on node-2,normal
+Load balancer health check OK at 14:32,normal
+Request processed successfully in 12ms,normal
+Retry attempt number 2 for service auth on node-2,warning
+Disk usage high 78 percent,warning
+CPU throttling starting at 68 percent at 14:32,warning
+API gateway responded 200 OK on node-1,normal
+Disk usage high 78 percent on node-2,warning
+Database connection failed timeout exceeded,critical
+Database connection pool near limit 85 percent service-api,warning
+Cache hit ratio 94 percent at 14:32,normal
+Fatal error segmentation fault core dumped on node-2,critical
+Service health check passed at 14:32,normal
+Request processed successfully in 12ms service-api,normal
+Memory overflow container restarting,critical
+Request processed successfully in 12ms,normal
+Retry attempt number 2 for service auth,warning
+Memory usage approaching threshold 72 percent,warning
+Network interface down packet loss 100 percent,critical
+Scheduled backup completed successfully on node-1,normal
+Response latency spike detected 180ms at 14:32,warning
+API gateway responded 200 OK service-api,normal
+Disk IO exceeded safe limit critical failure,critical
+Load balancer health check OK on node-2,normal
+Health check failed 3 consecutive failures on node-1,critical
+Retry attempt number 2 for service auth service-api,warning
+API gateway responded 200 OK on node-1,normal
+Database query optimised response 8ms,normal
+Configuration reload successful,normal
+Service health check passed,normal
+Database query optimised response 8ms on node-1,normal
+CPU throttling starting at 68 percent at 14:32,warning
+Cache hit ratio 94 percent service-api,normal
+Memory usage approaching threshold 72 percent,warning
+Cache hit ratio 94 percent,normal
+Load balancer health check OK on node-2,normal
+Configuration reload successful at 14:32,normal
+Disk usage high 78 percent on node-1,warning
+Request processed successfully in 12ms on node-1,normal
+Response latency spike detected 180ms on node-2,warning
+Service health check passed on node-2,normal
+Connection pool exhausted retrying,warning
+Cache hit ratio 94 percent,normal
+Health check failed 3 consecutive failures,critical
+Memory usage approaching threshold 72 percent on node-2,warning
+Cache hit ratio 94 percent on node-1,normal
+API gateway responded 200 OK on node-2,normal
+Slow query detected taking 450ms on node-2,warning
+API gateway responded 200 OK,normal
+Service crashed exit code 137 OOM killed,critical
+Memory usage approaching threshold 72 percent on node-2,warning
+Network interface down packet loss 100 percent,critical
+User authentication successful at 14:32,normal
+Scheduled backup completed successfully on node-1,normal
+API gateway responded 200 OK on node-2,normal
+CPU throttling starting at 68 percent at 14:32,warning
+Traffic spike detected 3x normal baseline service-api,warning
+Service restart completed normally service-api,normal
+Kernel panic detected system unstable,critical
+Service crashed exit code 137 OOM killed at 14:32,critical
+High memory pressure swap usage increased service-api,warning
+Response latency spike detected 180ms on node-1,warning
+Service health check passed at 14:32,normal
+Database connection pool near limit 85 percent service-api,warning
+Request processed successfully in 12ms,normal
+Traffic spike detected 3x normal baseline service-api,warning
+Scheduled backup completed successfully at 14:32,normal
+Disk usage high 78 percent,warning
+Response latency spike detected 180ms service-api,warning
+Traffic spike detected 3x normal baseline service-api,warning
+User authentication successful,normal
+Disk usage high 78 percent service-api,warning
+User authentication successful,normal
+Cache hit ratio 94 percent,normal
+Scheduled backup completed successfully,normal
+Request processed successfully in 12ms on node-2,normal
+Configuration reload successful,normal
+User authentication successful on node-1,normal
+Cache hit ratio 94 percent service-api,normal
+User authentication successful,normal
+Health check failed 3 consecutive failures at 14:32,critical
+Service health check passed service-api,normal
+Database query optimised response 8ms on node-1,normal
+Retry attempt number 2 for service auth at 14:32,warning
+Service restart completed normally on node-2,normal
+Network interface down packet loss 100 percent at 14:32,critical
+Connection pool exhausted retrying,warning
+CPU throttling starting at 68 percent at 14:32,warning
+Database connection pool near limit 85 percent service-api,warning
+Service crashed exit code 137 OOM killed,critical
+Network interface down packet loss 100 percent,critical
+Cache hit ratio 94 percent service-api,normal
+Network interface down packet loss 100 percent,critical
+Response latency spike detected 180ms service-api,warning
+Database query optimised response 8ms on node-2,normal
+API gateway responded 200 OK service-api,normal
+API gateway responded 200 OK service-api,normal
+Retry attempt number 2 for service auth at 14:32,warning
+Kernel panic detected system unstable service-api,critical
+API gateway responded 200 OK on node-2,normal
+Service restart completed normally on node-1,normal
+Scheduled backup completed successfully,normal
+User authentication successful service-api,normal
+Cache hit ratio 94 percent,normal
+Database query optimised response 8ms,normal
+Service crashed exit code 137 OOM killed on node-2,critical
+CPU throttling starting at 68 percent service-api,warning
+Connection pool exhausted retrying,warning
+Disk usage high 78 percent service-api,warning
+Disk usage high 78 percent,warning
+Memory overflow container restarting,critical
+Connection pool exhausted retrying at 14:32,warning
+Database connection pool near limit 85 percent at 14:32,warning
+Request processed successfully in 12ms,normal
+High memory pressure swap usage increased service-api,warning
+Scheduled backup completed successfully on node-2,normal
+Configuration reload successful at 14:32,normal
+User authentication successful,normal
+Retry attempt number 2 for service auth on node-2,warning
+Fatal error segmentation fault core dumped at 14:32,critical
+Configuration reload successful at 14:32,normal
+Service health check passed,normal
+Database query optimised response 8ms on node-2,normal
+Database connection pool near limit 85 percent,warning
+Retry attempt number 2 for service auth on node-1,warning
+Response latency spike detected 180ms,warning
+Load balancer health check OK,normal
+Database connection pool near limit 85 percent on node-2,warning
+Service restart completed normally on node-2,normal
+Traffic spike detected 3x normal baseline on node-2,warning
+High memory pressure swap usage increased on node-1,warning
+API gateway responded 200 OK service-api,normal
+Service restart completed normally on node-2,normal
+Service health check passed,normal
+Connection pool exhausted retrying,warning
+Database query optimised response 8ms on node-1,normal
+Network interface down packet loss 100 percent,critical
+User authentication successful on node-1,normal
+Database query optimised response 8ms on node-2,normal
+Connection pool exhausted retrying at 14:32,warning
+Load balancer health check OK,normal
+Service crashed exit code 137 OOM killed on node-2,critical
+Service health check passed on node-2,normal
+Cache hit ratio 94 percent at 14:32,normal
+API gateway responded 200 OK at 14:32,normal
+Health check failed 3 consecutive failures,critical
+Slow query detected taking 450ms on node-1,warning
+User authentication successful,normal
+Scheduled backup completed successfully service-api,normal
+Request processed successfully in 12ms service-api,normal
+Connection pool exhausted retrying on node-2,warning
+Cache hit ratio 94 percent service-api,normal
+Service health check passed on node-1,normal
+Service crashed exit code 137 OOM killed on node-2,critical
+Traffic spike detected 3x normal baseline service-api,warning
+Service health check passed,normal
+User authentication successful on node-2,normal
+Request processed successfully in 12ms on node-1,normal
+API gateway responded 200 OK on node-2,normal
+Configuration reload successful on node-2,normal
+Service restart completed normally on node-2,normal
+API gateway responded 200 OK,normal
+Configuration reload successful,normal
+CPU throttling starting at 68 percent,warning
+High memory pressure swap usage increased,warning
+Request processed successfully in 12ms service-api,normal
+Load balancer health check OK at 14:32,normal
+Request processed successfully in 12ms on node-1,normal
+Scheduled backup completed successfully on node-2,normal
+Scheduled backup completed successfully service-api,normal
+CPU throttling starting at 68 percent on node-1,warning
+Retry attempt number 2 for service auth on node-2,warning
+Database connection pool near limit 85 percent service-api,warning
+Traffic spike detected 3x normal baseline service-api,warning
+CPU throttling starting at 68 percent,warning
+Scheduled backup completed successfully at 14:32,normal
+User authentication successful at 14:32,normal
+High memory pressure swap usage increased,warning
+User authentication successful on node-2,normal
+Configuration reload successful on node-2,normal
+Traffic spike detected 3x normal baseline,warning
+Traffic spike detected 3x normal baseline at 14:32,warning
+Load balancer health check OK,normal
+API gateway responded 200 OK service-api,normal
+Cache hit ratio 94 percent,normal
+Configuration reload successful on node-2,normal
+Memory usage approaching threshold 72 percent at 14:32,warning
+Database query optimised response 8ms on node-2,normal
+Service crashed exit code 137 OOM killed on node-1,critical
+Load balancer health check OK at 14:32,normal
+Service health check passed,normal
+Request processed successfully in 12ms on node-2,normal
+Slow query detected taking 450ms at 14:32,warning
+Database connection failed timeout exceeded service-api,critical
+CPU throttling critical node crash imminent,critical
+Scheduled backup completed successfully,normal
+Cache hit ratio 94 percent on node-1,normal
+User authentication successful at 14:32,normal
+Service crashed exit code 137 OOM killed at 14:32,critical
+Database query optimised response 8ms on node-2,normal
+Load balancer health check OK on node-2,normal
+Service restart completed normally on node-2,normal
+Service crashed exit code 137 OOM killed at 14:32,critical
+User authentication successful on node-1,normal
+Cache hit ratio 94 percent service-api,normal
+User authentication successful on node-2,normal
+Configuration reload successful on node-2,normal
+Configuration reload successful on node-2,normal
+CPU throttling starting at 68 percent service-api,warning
+API gateway responded 200 OK at 14:32,normal
+Service restart completed normally on node-2,normal
+Response latency spike detected 180ms on node-1,warning
+Database query optimised response 8ms on node-1,normal
+Disk usage high 78 percent at 14:32,warning
+Service health check passed at 14:32,normal
+API gateway responded 200 OK service-api,normal
+Kernel panic detected system unstable,critical
+Disk usage high 78 percent,warning
+Fatal error segmentation fault core dumped at 14:32,critical
+Traffic spike detected 3x normal baseline on node-2,warning
+User authentication successful,normal
+User authentication successful,normal
+Database query optimised response 8ms at 14:32,normal
+Service crashed exit code 137 OOM killed,critical
+Memory usage approaching threshold 72 percent,warning
+Database query optimised response 8ms service-api,normal
+Response latency spike detected 180ms,warning
+User authentication successful service-api,normal
+Memory usage approaching threshold 72 percent,warning
+Service health check passed at 14:32,normal
+Scheduled backup completed successfully service-api,normal
+Service restart completed normally at 14:32,normal
+Database connection pool near limit 85 percent service-api,warning
+Request processed successfully in 12ms at 14:32,normal
+Disk IO exceeded safe limit critical failure,critical
+CPU throttling starting at 68 percent service-api,warning
+Traffic spike detected 3x normal baseline,warning
+Configuration reload successful at 14:32,normal
+Database query optimised response 8ms on node-2,normal
+Health check failed 3 consecutive failures at 14:32,critical
+Service crashed exit code 137 OOM killed,critical
+Connection pool exhausted retrying service-api,warning
+Load balancer health check OK,normal
+Cache hit ratio 94 percent service-api,normal
+Scheduled backup completed successfully,normal
+CPU throttling critical node crash imminent on node-2,critical
+Traffic spike detected 3x normal baseline service-api,warning
+Scheduled backup completed successfully on node-1,normal
+Load balancer health check OK on node-2,normal
+Scheduled backup completed successfully service-api,normal
+API gateway responded 200 OK,normal
+Service crashed exit code 137 OOM killed at 14:32,critical
+High memory pressure swap usage increased at 14:32,warning
+Request processed successfully in 12ms,normal
+Service health check passed on node-1,normal
+Memory usage approaching threshold 72 percent,warning
+Load balancer health check OK,normal
+CPU throttling starting at 68 percent,warning
+User authentication successful service-api,normal
+Retry attempt number 2 for service auth,warning
+User authentication successful on node-1,normal
+Health check failed 3 consecutive failures on node-1,critical
+Kernel panic detected system unstable service-api,critical
+Memory overflow container restarting on node-1,critical
+Network interface down packet loss 100 percent at 14:32,critical
+Configuration reload successful,normal
+Cache hit ratio 94 percent,normal
+Database query optimised response 8ms on node-1,normal
+Cache hit ratio 94 percent on node-2,normal
+Health check failed 3 consecutive failures,critical
+Fatal error segmentation fault core dumped at 14:32,critical
+Connection pool exhausted retrying service-api,warning
+Database connection pool near limit 85 percent on node-2,warning
+Disk usage high 78 percent at 14:32,warning
+Service crashed exit code 137 OOM killed at 14:32,critical
+Database connection failed timeout exceeded at 14:32,critical
+CPU throttling critical node crash imminent on node-1,critical
+User authentication successful on node-2,normal
+Request processed successfully in 12ms,normal
+Service restart completed normally,normal
+Service crashed exit code 137 OOM killed,critical
+Load balancer health check OK on node-1,normal
+Service health check passed,normal
+Service health check passed on node-1,normal
+Service restart completed normally,normal
+Traffic spike detected 3x normal baseline at 14:32,warning
+Retry attempt number 2 for service auth service-api,warning
+Request processed successfully in 12ms service-api,normal
+Disk usage high 78 percent at 14:32,warning
+Database connection failed timeout exceeded at 14:32,critical
+Database connection pool near limit 85 percent,warning
+Database connection failed timeout exceeded,critical
+Database query optimised response 8ms on node-1,normal
+Service health check passed,normal
+Load balancer health check OK on node-1,normal
+API gateway responded 200 OK,normal
+Service restart completed normally at 14:32,normal
+Health check failed 3 consecutive failures on node-2,critical
+Load balancer health check OK,normal
+Memory usage approaching threshold 72 percent at 14:32,warning
+Slow query detected taking 450ms at 14:32,warning
+Service restart completed normally on node-1,normal
+Retry attempt number 2 for service auth on node-1,warning
+CPU throttling starting at 68 percent,warning
+Load balancer health check OK,normal
+Retry attempt number 2 for service auth on node-1,warning
+Kernel panic detected system unstable on node-1,critical
+Service restart completed normally service-api,normal
+Retry attempt number 2 for service auth service-api,warning
+Scheduled backup completed successfully,normal
+Configuration reload successful on node-1,normal
+Cache hit ratio 94 percent at 14:32,normal
+CPU throttling starting at 68 percent at 14:32,warning
+API gateway responded 200 OK at 14:32,normal
+Configuration reload successful service-api,normal
+Service health check passed on node-2,normal
+Traffic spike detected 3x normal baseline service-api,warning
+Retry attempt number 2 for service auth on node-2,warning
+High memory pressure swap usage increased,warning
+Kernel panic detected system unstable,critical
+Scheduled backup completed successfully on node-1,normal
+Request processed successfully in 12ms,normal
+Kernel panic detected system unstable,critical
+Service restart completed normally,normal
+CPU throttling starting at 68 percent service-api,warning
+Database query optimised response 8ms at 14:32,normal
+Disk IO exceeded safe limit critical failure service-api,critical
+Service health check passed at 14:32,normal
+Request processed successfully in 12ms on node-2,normal
+Memory overflow container restarting service-api,critical
+API gateway responded 200 OK,normal
+User authentication successful on node-1,normal
+Service health check passed on node-1,normal
+API gateway responded 200 OK service-api,normal
+Memory usage approaching threshold 72 percent service-api,warning
+Slow query detected taking 450ms on node-2,warning
+Connection pool exhausted retrying,warning
+Configuration reload successful on node-1,normal
+User authentication successful service-api,normal
+Service restart completed normally on node-2,normal
+Configuration reload successful,normal
+API gateway responded 200 OK on node-2,normal
+User authentication successful,normal
+User authentication successful on node-2,normal
+Database query optimised response 8ms,normal
+Response latency spike detected 180ms,warning
+Memory overflow container restarting on node-2,critical
+Request processed successfully in 12ms on node-1,normal
+CPU throttling critical node crash imminent on node-1,critical
+User authentication successful on node-2,normal
+Configuration reload successful,normal
+Configuration reload successful,normal
+Service crashed exit code 137 OOM killed service-api,critical
+Load balancer health check OK at 14:32,normal
+Load balancer health check OK,normal
+Service health check passed on node-2,normal
+Load balancer health check OK,normal
+Database connection failed timeout exceeded,critical
+API gateway responded 200 OK,normal
+API gateway responded 200 OK on node-2,normal
+Database query optimised response 8ms,normal
+High memory pressure swap usage increased on node-2,warning
+Load balancer health check OK at 14:32,normal
+Request processed successfully in 12ms service-api,normal
+API gateway responded 200 OK at 14:32,normal
+API gateway responded 200 OK,normal
+Scheduled backup completed successfully on node-1,normal
+Configuration reload successful,normal
+Database query optimised response 8ms,normal
+Slow query detected taking 450ms on node-1,warning
+Database query optimised response 8ms on node-1,normal
+API gateway responded 200 OK,normal
+Slow query detected taking 450ms on node-2,warning
+Kernel panic detected system unstable on node-2,critical
+Service crashed exit code 137 OOM killed,critical
+Disk usage high 78 percent service-api,warning
+Service restart completed normally,normal
+Load balancer health check OK,normal
+Response latency spike detected 180ms service-api,warning
+User authentication successful at 14:32,normal
+User authentication successful on node-2,normal
+Service health check passed at 14:32,normal
+Configuration reload successful on node-2,normal
+Disk usage high 78 percent at 14:32,warning
+Request processed successfully in 12ms,normal
+Load balancer health check OK service-api,normal
+Scheduled backup completed successfully at 14:32,normal
+User authentication successful at 14:32,normal
+Cache hit ratio 94 percent service-api,normal
+Load balancer health check OK on node-1,normal
+Configuration reload successful on node-1,normal
+User authentication successful on node-2,normal
+Connection timeout on service auth ERROR on node-1,critical
+Configuration reload successful service-api,normal
+API gateway responded 200 OK service-api,normal
+Health check failed 3 consecutive failures,critical
+Retry attempt number 2 for service auth,warning
+Configuration reload successful on node-1,normal
+Health check failed 3 consecutive failures,critical
+Cache hit ratio 94 percent at 14:32,normal
+Slow query detected taking 450ms,warning
+Slow query detected taking 450ms at 14:32,warning
+Kernel panic detected system unstable service-api,critical
+Service health check passed,normal
+Configuration reload successful at 14:32,normal
+Database query optimised response 8ms at 14:32,normal
+Cache hit ratio 94 percent,normal
+Slow query detected taking 450ms,warning
+Response latency spike detected 180ms,warning
+CPU throttling critical node crash imminent on node-2,critical
+Service restart completed normally service-api,normal
+Cache hit ratio 94 percent,normal
+Retry attempt number 2 for service auth service-api,warning
+Disk IO exceeded safe limit critical failure on node-2,critical
+Database query optimised response 8ms on node-1,normal
+Traffic spike detected 3x normal baseline,warning
+Traffic spike detected 3x normal baseline service-api,warning
+Database query optimised response 8ms on node-2,normal
+Service health check passed at 14:32,normal
+Memory usage approaching threshold 72 percent at 14:32,warning
+Scheduled backup completed successfully,normal
+Service health check passed at 14:32,normal
+Database connection pool near limit 85 percent on node-1,warning
+Service restart completed normally at 14:32,normal
+Cache hit ratio 94 percent service-api,normal
+Cache hit ratio 94 percent service-api,normal
+Load balancer health check OK,normal
+Memory usage approaching threshold 72 percent at 14:32,warning
+Database connection failed timeout exceeded on node-2,critical
+Service restart completed normally on node-2,normal
+Load balancer health check OK on node-2,normal
+Request processed successfully in 12ms service-api,normal
+Connection pool exhausted retrying,warning
+User authentication successful on node-2,normal
+Disk IO exceeded safe limit critical failure service-api,critical
+CPU throttling starting at 68 percent on node-1,warning
+Health check failed 3 consecutive failures on node-2,critical
+Service crashed exit code 137 OOM killed on node-2,critical
+Slow query detected taking 450ms service-api,warning
+Health check failed 3 consecutive failures service-api,critical
+Load balancer health check OK service-api,normal
+Cache hit ratio 94 percent,normal
+Configuration reload successful on node-1,normal
+Database query optimised response 8ms,normal
+Connection timeout on service auth ERROR,critical
+CPU throttling starting at 68 percent service-api,warning
+API gateway responded 200 OK on node-1,normal
+Fatal error segmentation fault core dumped,critical
+Load balancer health check OK service-api,normal
+Load balancer health check OK on node-1,normal
+Network interface down packet loss 100 percent at 14:32,critical
+Request processed successfully in 12ms on node-2,normal
+Disk usage high 78 percent service-api,warning
+API gateway responded 200 OK on node-1,normal
+Request processed successfully in 12ms at 14:32,normal
+Fatal error segmentation fault core dumped at 14:32,critical
+Request processed successfully in 12ms at 14:32,normal
+Database query optimised response 8ms on node-1,normal
+Service restart completed normally,normal
+Service health check passed on node-2,normal
+Service health check passed on node-1,normal
+Scheduled backup completed successfully on node-2,normal
+Database connection pool near limit 85 percent,warning
+Cache hit ratio 94 percent,normal
+Memory usage approaching threshold 72 percent,warning
+Slow query detected taking 450ms on node-2,warning
+Scheduled backup completed successfully,normal
+Service restart completed normally at 14:32,normal
+Response latency spike detected 180ms,warning
+Database connection failed timeout exceeded at 14:32,critical
+Load balancer health check OK on node-2,normal
+Memory usage approaching threshold 72 percent,warning
+API gateway responded 200 OK,normal
+Slow query detected taking 450ms on node-2,warning
+Service health check passed on node-1,normal
+Health check failed 3 consecutive failures,critical
+User authentication successful on node-2,normal
+Traffic spike detected 3x normal baseline on node-1,warning
+User authentication successful service-api,normal
+Disk IO exceeded safe limit critical failure on node-1,critical
+Traffic spike detected 3x normal baseline at 14:32,warning
+Service health check passed at 14:32,normal
+Request processed successfully in 12ms on node-2,normal
+Configuration reload successful on node-1,normal
+API gateway responded 200 OK at 14:32,normal
+Service restart completed normally on node-2,normal
+Request processed successfully in 12ms service-api,normal
+Memory usage approaching threshold 72 percent,warning
+Request processed successfully in 12ms service-api,normal
+Configuration reload successful at 14:32,normal
+Memory usage approaching threshold 72 percent service-api,warning
+Request processed successfully in 12ms service-api,normal
+Request processed successfully in 12ms service-api,normal
+User authentication successful on node-1,normal
+Cache hit ratio 94 percent service-api,normal
+Service health check passed on node-2,normal
+Database query optimised response 8ms at 14:32,normal
+Service restart completed normally on node-1,normal
+Request processed successfully in 12ms on node-2,normal
+User authentication successful on node-2,normal
+Response latency spike detected 180ms at 14:32,warning
+High memory pressure swap usage increased,warning
+Scheduled backup completed successfully service-api,normal
+Service health check passed at 14:32,normal
+Load balancer health check OK on node-2,normal
+Response latency spike detected 180ms on node-2,warning
+Database connection failed timeout exceeded service-api,critical
+Traffic spike detected 3x normal baseline service-api,warning
+API gateway responded 200 OK on node-1,normal
+Request processed successfully in 12ms service-api,normal
+CPU throttling critical node crash imminent,critical
+Scheduled backup completed successfully,normal
+Load balancer health check OK,normal
+API gateway responded 200 OK,normal
+Slow query detected taking 450ms on node-1,warning
+Database connection failed timeout exceeded on node-2,critical
+Scheduled backup completed successfully on node-1,normal
+CPU throttling starting at 68 percent on node-2,warning
+Slow query detected taking 450ms service-api,warning
+Configuration reload successful at 14:32,normal
+Request processed successfully in 12ms on node-2,normal
+Database connection failed timeout exceeded on node-1,critical
+Connection timeout on service auth ERROR on node-1,critical
+High memory pressure swap usage increased,warning
+Traffic spike detected 3x normal baseline on node-2,warning
+Connection timeout on service auth ERROR,critical
+Scheduled backup completed successfully at 14:32,normal
+API gateway responded 200 OK,normal
+Memory usage approaching threshold 72 percent service-api,warning
+Configuration reload successful,normal
+User authentication successful at 14:32,normal
+API gateway responded 200 OK on node-1,normal
+Cache hit ratio 94 percent at 14:32,normal
+Cache hit ratio 94 percent on node-1,normal
+Configuration reload successful on node-1,normal
+CPU throttling critical node crash imminent at 14:32,critical
+Traffic spike detected 3x normal baseline,warning
+Request processed successfully in 12ms,normal
+Connection timeout on service auth ERROR,critical
+Database connection pool near limit 85 percent at 14:32,warning
+Request processed successfully in 12ms at 14:32,normal
+Cache hit ratio 94 percent at 14:32,normal
+Request processed successfully in 12ms on node-2,normal
+User authentication successful at 14:32,normal
+Service health check passed,normal
+Connection pool exhausted retrying on node-2,warning
+Configuration reload successful on node-1,normal
+User authentication successful service-api,normal
+Scheduled backup completed successfully at 14:32,normal
+Database connection pool near limit 85 percent on node-1,warning
+Database query optimised response 8ms,normal
+High memory pressure swap usage increased at 14:32,warning
+Slow query detected taking 450ms at 14:32,warning
+Response latency spike detected 180ms on node-2,warning
+Configuration reload successful,normal
+Database connection pool near limit 85 percent at 14:32,warning
+Database connection pool near limit 85 percent,warning
+Database query optimised response 8ms at 14:32,normal
+Service health check passed,normal
+Configuration reload successful service-api,normal
+Service health check passed,normal
+Connection timeout on service auth ERROR at 14:32,critical
+Load balancer health check OK at 14:32,normal
+Scheduled backup completed successfully on node-2,normal
+Service restart completed normally at 14:32,normal
+User authentication successful on node-2,normal
+Service health check passed,normal
+Disk IO exceeded safe limit critical failure,critical
+API gateway responded 200 OK service-api,normal
+Cache hit ratio 94 percent,normal
+Memory usage approaching threshold 72 percent,warning
+User authentication successful on node-2,normal
+CPU throttling critical node crash imminent service-api,critical
+Database query optimised response 8ms,normal
+Configuration reload successful,normal
+Database query optimised response 8ms,normal
+High memory pressure swap usage increased on node-1,warning
+CPU throttling starting at 68 percent on node-1,warning
+Service restart completed normally,normal
+Load balancer health check OK on node-1,normal
+Service restart completed normally,normal
+CPU throttling critical node crash imminent,critical
+CPU throttling critical node crash imminent on node-2,critical
+Database query optimised response 8ms,normal
+Database query optimised response 8ms at 14:32,normal
+Cache hit ratio 94 percent on node-1,normal
+Load balancer health check OK on node-2,normal
+Configuration reload successful service-api,normal
+Load balancer health check OK on node-1,normal
+Database query optimised response 8ms on node-2,normal
+Request processed successfully in 12ms at 14:32,normal
+Database query optimised response 8ms on node-1,normal
+Service health check passed at 14:32,normal
+CPU throttling starting at 68 percent on node-2,warning
+Load balancer health check OK,normal
+Disk usage high 78 percent,warning
+Connection timeout on service auth ERROR on node-2,critical
+Scheduled backup completed successfully on node-2,normal
+Request processed successfully in 12ms,normal
+Cache hit ratio 94 percent on node-2,normal
+Response latency spike detected 180ms on node-1,warning
+Service restart completed normally,normal
+Network interface down packet loss 100 percent,critical
+Database query optimised response 8ms,normal
+Service crashed exit code 137 OOM killed,critical
+Database query optimised response 8ms,normal
+High memory pressure swap usage increased on node-2,warning
+Memory overflow container restarting service-api,critical
+Slow query detected taking 450ms,warning
+Load balancer health check OK on node-2,normal
+Request processed successfully in 12ms at 14:32,normal
+Database query optimised response 8ms on node-1,normal
+Disk IO exceeded safe limit critical failure on node-2,critical
+Service health check passed at 14:32,normal
+API gateway responded 200 OK on node-1,normal
+Response latency spike detected 180ms,warning
+Connection pool exhausted retrying,warning
+API gateway responded 200 OK on node-1,normal
+Service health check passed,normal
+Request processed successfully in 12ms on node-2,normal
+Cache hit ratio 94 percent,normal
+Service restart completed normally,normal
+User authentication successful,normal
+High memory pressure swap usage increased at 14:32,warning
+Request processed successfully in 12ms on node-2,normal
+Database query optimised response 8ms,normal
+Connection timeout on service auth ERROR service-api,critical
+Configuration reload successful,normal
+Request processed successfully in 12ms on node-2,normal
+Retry attempt number 2 for service auth,warning
+Service health check passed,normal
+Cache hit ratio 94 percent at 14:32,normal
+Connection pool exhausted retrying service-api,warning
+Service restart completed normally service-api,normal
+Scheduled backup completed successfully at 14:32,normal
+Retry attempt number 2 for service auth on node-1,warning
+Request processed successfully in 12ms at 14:32,normal
+Kernel panic detected system unstable,critical
+User authentication successful,normal
+User authentication successful at 14:32,normal
+Connection timeout on service auth ERROR on node-2,critical
+High memory pressure swap usage increased at 14:32,warning
+API gateway responded 200 OK service-api,normal
+Cache hit ratio 94 percent at 14:32,normal
+Service restart completed normally,normal
+Cache hit ratio 94 percent,normal
+Service health check passed,normal
+Connection pool exhausted retrying,warning
+Disk usage high 78 percent at 14:32,warning
+Database query optimised response 8ms at 14:32,normal
+API gateway responded 200 OK on node-2,normal
+Service restart completed normally on node-1,normal
+Memory usage approaching threshold 72 percent service-api,warning
+API gateway responded 200 OK service-api,normal
+Service restart completed normally service-api,normal
+Configuration reload successful on node-2,normal
+Scheduled backup completed successfully on node-2,normal
+Fatal error segmentation fault core dumped service-api,critical
+Load balancer health check OK,normal
+Load balancer health check OK on node-2,normal
+API gateway responded 200 OK at 14:32,normal
+API gateway responded 200 OK at 14:32,normal
+Service restart completed normally on node-2,normal
+Response latency spike detected 180ms,warning
+User authentication successful at 14:32,normal
+Configuration reload successful on node-2,normal
+Traffic spike detected 3x normal baseline on node-2,warning
+Request processed successfully in 12ms service-api,normal
+Load balancer health check OK on node-1,normal
+Cache hit ratio 94 percent,normal
+Database connection pool near limit 85 percent on node-2,warning
+User authentication successful at 14:32,normal
+Database query optimised response 8ms on node-1,normal
+Slow query detected taking 450ms at 14:32,warning
+Memory usage approaching threshold 72 percent,warning
+API gateway responded 200 OK at 14:32,normal
+Slow query detected taking 450ms,warning
+Cache hit ratio 94 percent at 14:32,normal
+Scheduled backup completed successfully service-api,normal
+Cache hit ratio 94 percent,normal
+Disk IO exceeded safe limit critical failure on node-2,critical
+Database connection pool near limit 85 percent on node-2,warning
+Database connection failed timeout exceeded on node-2,critical
+Service health check passed on node-2,normal
+Service health check passed service-api,normal
+Connection timeout on service auth ERROR,critical
+Service restart completed normally on node-1,normal
+Load balancer health check OK at 14:32,normal
+Traffic spike detected 3x normal baseline service-api,warning
+Cache hit ratio 94 percent on node-2,normal
+API gateway responded 200 OK on node-1,normal
+Scheduled backup completed successfully on node-1,normal
+Service health check passed,normal
+Request processed successfully in 12ms on node-2,normal
+Cache hit ratio 94 percent service-api,normal
+Database query optimised response 8ms,normal
+Scheduled backup completed successfully,normal
+Configuration reload successful service-api,normal
+Health check failed 3 consecutive failures on node-2,critical
+Health check failed 3 consecutive failures at 14:32,critical
+Configuration reload successful at 14:32,normal
+CPU throttling starting at 68 percent,warning
+API gateway responded 200 OK on node-1,normal
+Cache hit ratio 94 percent at 14:32,normal
+Retry attempt number 2 for service auth,warning
+Cache hit ratio 94 percent on node-1,normal
+Database query optimised response 8ms on node-2,normal
+API gateway responded 200 OK,normal
+Request processed successfully in 12ms on node-1,normal
+User authentication successful service-api,normal
+Service health check passed on node-2,normal
+Service restart completed normally,normal
+Service restart completed normally,normal
+API gateway responded 200 OK at 14:32,normal
+Service restart completed normally,normal
+Traffic spike detected 3x normal baseline service-api,warning
+Service restart completed normally service-api,normal
+Scheduled backup completed successfully at 14:32,normal
+Memory usage approaching threshold 72 percent service-api,warning
+Database query optimised response 8ms at 14:32,normal
+Cache hit ratio 94 percent at 14:32,normal
+User authentication successful service-api,normal
+Disk usage high 78 percent on node-2,warning
+Service health check passed on node-1,normal
+Scheduled backup completed successfully,normal
+Scheduled backup completed successfully service-api,normal
+API gateway responded 200 OK on node-1,normal
+Traffic spike detected 3x normal baseline at 14:32,warning
+Request processed successfully in 12ms on node-2,normal
+Database query optimised response 8ms,normal
+Response latency spike detected 180ms service-api,warning
+Cache hit ratio 94 percent at 14:32,normal
+High memory pressure swap usage increased,warning
+Memory overflow container restarting service-api,critical
+High memory pressure swap usage increased at 14:32,warning
+Request processed successfully in 12ms,normal
+Request processed successfully in 12ms service-api,normal
+Request processed successfully in 12ms,normal
+High memory pressure swap usage increased on node-1,warning
+Retry attempt number 2 for service auth,warning
+Database connection pool near limit 85 percent on node-2,warning
+Retry attempt number 2 for service auth service-api,warning
+Database query optimised response 8ms on node-2,normal
+Service health check passed on node-1,normal
+Scheduled backup completed successfully,normal
+Request processed successfully in 12ms service-api,normal
+Service restart completed normally,normal
+Service health check passed on node-2,normal
+CPU throttling critical node crash imminent on node-1,critical
+Request processed successfully in 12ms at 14:32,normal
+Connection timeout on service auth ERROR on node-2,critical
+Service health check passed service-api,normal
+Service health check passed service-api,normal
+Memory usage approaching threshold 72 percent at 14:32,warning
+Scheduled backup completed successfully,normal
+Slow query detected taking 450ms service-api,warning
+Service health check passed on node-1,normal
+User authentication successful at 14:32,normal
+Load balancer health check OK on node-1,normal
+Disk IO exceeded safe limit critical failure at 14:32,critical
+Load balancer health check OK service-api,normal
+Service health check passed at 14:32,normal
+Memory usage approaching threshold 72 percent on node-1,warning
+Load balancer health check OK on node-2,normal
+Configuration reload successful service-api,normal
+Network interface down packet loss 100 percent at 14:32,critical
+Database query optimised response 8ms on node-1,normal
+Traffic spike detected 3x normal baseline at 14:32,warning
+High memory pressure swap usage increased on node-2,warning
+API gateway responded 200 OK on node-2,normal
+API gateway responded 200 OK,normal
+API gateway responded 200 OK at 14:32,normal
+Request processed successfully in 12ms,normal
+Memory usage approaching threshold 72 percent on node-2,warning
+API gateway responded 200 OK on node-1,normal
+Service health check passed,normal
+Service restart completed normally service-api,normal
+User authentication successful on node-2,normal
+Request processed successfully in 12ms on node-1,normal
+API gateway responded 200 OK,normal
+Scheduled backup completed successfully,normal
+Load balancer health check OK on node-2,normal
+Health check failed 3 consecutive failures at 14:32,critical
+Service restart completed normally at 14:32,normal
+High memory pressure swap usage increased service-api,warning
+Service restart completed normally on node-2,normal
+Load balancer health check OK,normal
+CPU throttling critical node crash imminent at 14:32,critical
+Memory usage approaching threshold 72 percent,warning
+Kernel panic detected system unstable at 14:32,critical
+Request processed successfully in 12ms at 14:32,normal
+Database query optimised response 8ms,normal
+Configuration reload successful on node-2,normal
+Database query optimised response 8ms,normal
+Request processed successfully in 12ms,normal
+Memory overflow container restarting at 14:32,critical
+API gateway responded 200 OK,normal
+Database connection failed timeout exceeded service-api,critical
+Request processed successfully in 12ms on node-2,normal
+Request processed successfully in 12ms on node-2,normal
+Configuration reload successful at 14:32,normal
+Database query optimised response 8ms on node-1,normal
+Service restart completed normally on node-2,normal
+Retry attempt number 2 for service auth,warning
+Service crashed exit code 137 OOM killed on node-1,critical
+Request processed successfully in 12ms at 14:32,normal
+Memory usage approaching threshold 72 percent on node-1,warning
+CPU throttling starting at 68 percent on node-1,warning
+Connection timeout on service auth ERROR on node-2,critical
+High memory pressure swap usage increased service-api,warning
+API gateway responded 200 OK on node-2,normal
+API gateway responded 200 OK,normal
+Configuration reload successful at 14:32,normal
+Slow query detected taking 450ms on node-1,warning
+Load balancer health check OK on node-1,normal
+Database connection failed timeout exceeded at 14:32,critical
+Database connection pool near limit 85 percent on node-2,warning
+Cache hit ratio 94 percent on node-1,normal
+Connection pool exhausted retrying on node-2,warning
+Retry attempt number 2 for service auth on node-2,warning
+CPU throttling critical node crash imminent service-api,critical
+Load balancer health check OK,normal
+Connection pool exhausted retrying at 14:32,warning
+Disk usage high 78 percent,warning
+Database query optimised response 8ms on node-2,normal
+Request processed successfully in 12ms at 14:32,normal
+Health check failed 3 consecutive failures at 14:32,critical
+Health check failed 3 consecutive failures,critical
+Service restart completed normally,normal
+Database query optimised response 8ms on node-2,normal
+Cache hit ratio 94 percent,normal
+Memory overflow container restarting at 14:32,critical
+Service health check passed at 14:32,normal
+High memory pressure swap usage increased service-api,warning
+CPU throttling starting at 68 percent on node-2,warning
+API gateway responded 200 OK on node-1,normal
+Connection pool exhausted retrying,warning
+Service health check passed,normal
+Service crashed exit code 137 OOM killed on node-2,critical
+Database query optimised response 8ms service-api,normal
+Disk usage high 78 percent,warning
+Request processed successfully in 12ms,normal
+API gateway responded 200 OK at 14:32,normal
+Fatal error segmentation fault core dumped on node-1,critical
+Cache hit ratio 94 percent service-api,normal
+Memory usage approaching threshold 72 percent on node-2,warning
+Cache hit ratio 94 percent at 14:32,normal
+Connection timeout on service auth ERROR,critical
+Response latency spike detected 180ms,warning
+Memory usage approaching threshold 72 percent,warning
+Retry attempt number 2 for service auth,warning
+Configuration reload successful at 14:32,normal
+Scheduled backup completed successfully on node-2,normal
+Fatal error segmentation fault core dumped,critical
+Cache hit ratio 94 percent,normal
+Connection timeout on service auth ERROR,critical
+Connection pool exhausted retrying service-api,warning
+Database query optimised response 8ms service-api,normal
+Health check failed 3 consecutive failures service-api,critical
+Connection pool exhausted retrying at 14:32,warning
+Database query optimised response 8ms,normal
+Memory overflow container restarting,critical
+Scheduled backup completed successfully service-api,normal
+Load balancer health check OK,normal
+API gateway responded 200 OK on node-2,normal
+Health check failed 3 consecutive failures,critical
+Database connection pool near limit 85 percent,warning
+Connection pool exhausted retrying service-api,warning
+Cache hit ratio 94 percent,normal
+Request processed successfully in 12ms service-api,normal
+Retry attempt number 2 for service auth on node-2,warning
+API gateway responded 200 OK,normal
+Traffic spike detected 3x normal baseline,warning
+API gateway responded 200 OK on node-2,normal
+Retry attempt number 2 for service auth service-api,warning
+Service restart completed normally on node-1,normal
+Configuration reload successful service-api,normal
+Load balancer health check OK at 14:32,normal
+Database query optimised response 8ms on node-1,normal
+Configuration reload successful,normal
+Configuration reload successful,normal
+Cache hit ratio 94 percent on node-2,normal
+Service restart completed normally on node-1,normal
+Health check failed 3 consecutive failures at 14:32,critical
+Disk IO exceeded safe limit critical failure at 14:32,critical
+CPU throttling critical node crash imminent at 14:32,critical
+Configuration reload successful service-api,normal
+Cache hit ratio 94 percent on node-1,normal
+Configuration reload successful at 14:32,normal
+Disk usage high 78 percent on node-2,warning
+Disk usage high 78 percent on node-1,warning
+Retry attempt number 2 for service auth,warning
+Retry attempt number 2 for service auth service-api,warning
+Request processed successfully in 12ms,normal
+Database query optimised response 8ms on node-1,normal
+Scheduled backup completed successfully,normal
+Connection pool exhausted retrying,warning
+Load balancer health check OK at 14:32,normal
+User authentication successful on node-2,normal
+High memory pressure swap usage increased,warning
+Memory usage approaching threshold 72 percent,warning
+Disk IO exceeded safe limit critical failure at 14:32,critical
+Configuration reload successful,normal
+User authentication successful service-api,normal
+Cache hit ratio 94 percent,normal
+Disk usage high 78 percent at 14:32,warning
+Kernel panic detected system unstable on node-1,critical
+Cache hit ratio 94 percent,normal
+Health check failed 3 consecutive failures,critical
+Cache hit ratio 94 percent on node-1,normal
+Scheduled backup completed successfully,normal
+Service health check passed on node-1,normal
+CPU throttling starting at 68 percent,warning
+High memory pressure swap usage increased at 14:32,warning
+Database query optimised response 8ms,normal
+Configuration reload successful on node-1,normal
+CPU throttling starting at 68 percent at 14:32,warning
+Service crashed exit code 137 OOM killed on node-2,critical
+Cache hit ratio 94 percent on node-2,normal
+Disk usage high 78 percent,warning
+Request processed successfully in 12ms at 14:32,normal
+Retry attempt number 2 for service auth at 14:32,warning
+Service restart completed normally at 14:32,normal
+User authentication successful at 14:32,normal
+Kernel panic detected system unstable at 14:32,critical
+Cache hit ratio 94 percent on node-2,normal
+Database connection failed timeout exceeded,critical
+CPU throttling critical node crash imminent on node-1,critical
+Service health check passed service-api,normal
+API gateway responded 200 OK on node-1,normal
+Service restart completed normally,normal
+Cache hit ratio 94 percent,normal
+Service restart completed normally on node-1,normal
+Database query optimised response 8ms on node-1,normal
+Memory usage approaching threshold 72 percent at 14:32,warning
+Connection pool exhausted retrying service-api,warning
+Cache hit ratio 94 percent,normal
+API gateway responded 200 OK on node-2,normal
+Disk usage high 78 percent service-api,warning
+Cache hit ratio 94 percent,normal
+Service health check passed,normal
+Memory usage approaching threshold 72 percent service-api,warning
+Service restart completed normally at 14:32,normal
+Request processed successfully in 12ms at 14:32,normal
+Database connection pool near limit 85 percent at 14:32,warning
+Retry attempt number 2 for service auth on node-1,warning
+CPU throttling starting at 68 percent,warning
+User authentication successful on node-2,normal
+Service health check passed,normal
+Memory overflow container restarting,critical
+Configuration reload successful on node-2,normal
+Disk usage high 78 percent,warning
+API gateway responded 200 OK on node-1,normal
+Service health check passed,normal
+Service health check passed at 14:32,normal
+Database query optimised response 8ms on node-2,normal
+Service restart completed normally on node-1,normal
+Database query optimised response 8ms,normal
+Cache hit ratio 94 percent,normal
+Load balancer health check OK on node-2,normal
+High memory pressure swap usage increased,warning
+Fatal error segmentation fault core dumped on node-1,critical
+Connection pool exhausted retrying,warning
+Memory overflow container restarting at 14:32,critical
+Traffic spike detected 3x normal baseline,warning
+API gateway responded 200 OK service-api,normal
+Service restart completed normally at 14:32,normal
+Disk usage high 78 percent,warning
+Service health check passed on node-2,normal
+Scheduled backup completed successfully,normal
+Health check failed 3 consecutive failures,critical
+Scheduled backup completed successfully service-api,normal
+Service health check passed,normal
+Scheduled backup completed successfully,normal
+Service health check passed,normal
+Request processed successfully in 12ms at 14:32,normal
+Cache hit ratio 94 percent service-api,normal
+Disk IO exceeded safe limit critical failure service-api,critical
+Cache hit ratio 94 percent on node-2,normal
+User authentication successful,normal
+Service health check passed,normal
+Retry attempt number 2 for service auth service-api,warning
+API gateway responded 200 OK,normal
+Traffic spike detected 3x normal baseline,warning
+Cache hit ratio 94 percent,normal
+Cache hit ratio 94 percent,normal
+Cache hit ratio 94 percent on node-1,normal
+Connection pool exhausted retrying,warning
+Service restart completed normally on node-1,normal
+Kernel panic detected system unstable,critical
+User authentication successful on node-2,normal
+Disk usage high 78 percent at 14:32,warning
+Disk IO exceeded safe limit critical failure on node-2,critical
+Traffic spike detected 3x normal baseline service-api,warning
+Request processed successfully in 12ms,normal
+User authentication successful on node-1,normal
+CPU throttling starting at 68 percent service-api,warning
+Database connection pool near limit 85 percent at 14:32,warning
+Service restart completed normally service-api,normal
+API gateway responded 200 OK,normal
+Load balancer health check OK on node-2,normal
+Service health check passed on node-1,normal
+User authentication successful service-api,normal
+Network interface down packet loss 100 percent,critical
+High memory pressure swap usage increased at 14:32,warning
+Service restart completed normally at 14:32,normal
+Scheduled backup completed successfully on node-1,normal
+Database query optimised response 8ms on node-2,normal
+Service crashed exit code 137 OOM killed,critical
+CPU throttling starting at 68 percent service-api,warning
+Connection timeout on service auth ERROR on node-2,critical
+CPU throttling starting at 68 percent service-api,warning
+User authentication successful at 14:32,normal
+Configuration reload successful,normal
+Database query optimised response 8ms at 14:32,normal
+Network interface down packet loss 100 percent on node-1,critical
+Scheduled backup completed successfully on node-2,normal
+Cache hit ratio 94 percent at 14:32,normal
+Service crashed exit code 137 OOM killed,critical
+API gateway responded 200 OK,normal
+User authentication successful service-api,normal
+Service health check passed,normal
+Disk IO exceeded safe limit critical failure on node-1,critical
+Database query optimised response 8ms on node-1,normal
+Service restart completed normally service-api,normal
+Memory usage approaching threshold 72 percent,warning
+CPU throttling critical node crash imminent on node-2,critical
+Request processed successfully in 12ms on node-1,normal
+High memory pressure swap usage increased service-api,warning
+Database query optimised response 8ms,normal
+Slow query detected taking 450ms on node-2,warning
+Request processed successfully in 12ms,normal
+Database query optimised response 8ms,normal
+High memory pressure swap usage increased,warning
+Configuration reload successful on node-1,normal
+User authentication successful,normal
+Service health check passed on node-1,normal
+Load balancer health check OK,normal
+Service restart completed normally,normal
+Cache hit ratio 94 percent service-api,normal
+Service restart completed normally service-api,normal
+Service restart completed normally,normal
+Scheduled backup completed successfully on node-1,normal
+Kernel panic detected system unstable at 14:32,critical
+Memory usage approaching threshold 72 percent,warning
+Fatal error segmentation fault core dumped,critical
+Slow query detected taking 450ms on node-1,warning
+Scheduled backup completed successfully service-api,normal
+Configuration reload successful,normal
+Disk usage high 78 percent on node-2,warning
+Scheduled backup completed successfully on node-2,normal
+Service health check passed at 14:32,normal
+Cache hit ratio 94 percent,normal
+API gateway responded 200 OK,normal
+CPU throttling starting at 68 percent on node-2,warning
+Disk usage high 78 percent at 14:32,warning
+High memory pressure swap usage increased,warning
+Memory usage approaching threshold 72 percent,warning
+User authentication successful service-api,normal
+Connection pool exhausted retrying on node-1,warning
+Network interface down packet loss 100 percent on node-2,critical
+Fatal error segmentation fault core dumped,critical
+Configuration reload successful,normal
+Retry attempt number 2 for service auth on node-2,warning
+User authentication successful at 14:32,normal
+Database query optimised response 8ms,normal
+API gateway responded 200 OK,normal
+Network interface down packet loss 100 percent,critical
+Service restart completed normally on node-2,normal
+CPU throttling critical node crash imminent on node-2,critical
+Slow query detected taking 450ms,warning
+Load balancer health check OK,normal
+Slow query detected taking 450ms at 14:32,warning
+Memory overflow container restarting,critical
+Traffic spike detected 3x normal baseline on node-2,warning
+Memory usage approaching threshold 72 percent at 14:32,warning
+Database query optimised response 8ms at 14:32,normal
+Cache hit ratio 94 percent on node-1,normal
+Service restart completed normally on node-2,normal
+Database query optimised response 8ms on node-1,normal
+Configuration reload successful service-api,normal
+Service restart completed normally on node-2,normal
+Memory usage approaching threshold 72 percent,warning
+Request processed successfully in 12ms on node-1,normal
+Health check failed 3 consecutive failures on node-2,critical
+Load balancer health check OK on node-1,normal
+User authentication successful,normal
+Load balancer health check OK on node-1,normal
+Service health check passed on node-1,normal
+Cache hit ratio 94 percent on node-1,normal
+Load balancer health check OK,normal
+Configuration reload successful on node-2,normal
+Fatal error segmentation fault core dumped on node-1,critical
+CPU throttling starting at 68 percent on node-2,warning
+Load balancer health check OK,normal
+Disk IO exceeded safe limit critical failure,critical
+Request processed successfully in 12ms at 14:32,normal
+Database query optimised response 8ms at 14:32,normal
+Database connection failed timeout exceeded on node-2,critical
+Load balancer health check OK at 14:32,normal
+Cache hit ratio 94 percent,normal
+Database query optimised response 8ms,normal
+Cache hit ratio 94 percent at 14:32,normal
+Memory usage approaching threshold 72 percent at 14:32,warning
+Load balancer health check OK,normal
+Cache hit ratio 94 percent on node-1,normal
+Network interface down packet loss 100 percent,critical
+Service health check passed on node-2,normal
+Scheduled backup completed successfully at 14:32,normal
+User authentication successful on node-1,normal
+Disk usage high 78 percent on node-2,warning
+User authentication successful service-api,normal
+Cache hit ratio 94 percent at 14:32,normal
+User authentication successful at 14:32,normal
+Load balancer health check OK at 14:32,normal
+High memory pressure swap usage increased,warning
+Database query optimised response 8ms on node-1,normal
+Slow query detected taking 450ms at 14:32,warning
+CPU throttling critical node crash imminent service-api,critical
+Memory usage approaching threshold 72 percent on node-2,warning
+Retry attempt number 2 for service auth,warning
+Cache hit ratio 94 percent,normal
+Traffic spike detected 3x normal baseline at 14:32,warning
+Cache hit ratio 94 percent at 14:32,normal
+Fatal error segmentation fault core dumped,critical
+Cache hit ratio 94 percent on node-1,normal
+Load balancer health check OK on node-2,normal
+Connection timeout on service auth ERROR at 14:32,critical
+Configuration reload successful,normal
+Load balancer health check OK,normal
+Memory overflow container restarting on node-2,critical
+Database connection pool near limit 85 percent,warning
+Configuration reload successful on node-1,normal
+Configuration reload successful,normal
+Configuration reload successful at 14:32,normal
+Memory overflow container restarting at 14:32,critical
+Request processed successfully in 12ms service-api,normal
+Traffic spike detected 3x normal baseline,warning
+High memory pressure swap usage increased,warning
+Response latency spike detected 180ms,warning
+Configuration reload successful at 14:32,normal
+High memory pressure swap usage increased on node-1,warning
+User authentication successful on node-1,normal
+Request processed successfully in 12ms on node-1,normal
+API gateway responded 200 OK,normal
+Network interface down packet loss 100 percent on node-1,critical
+Network interface down packet loss 100 percent on node-1,critical
+Slow query detected taking 450ms,warning
+Load balancer health check OK,normal
+Configuration reload successful service-api,normal
+Service restart completed normally service-api,normal
+Disk IO exceeded safe limit critical failure service-api,critical
+Connection timeout on service auth ERROR at 14:32,critical
+Cache hit ratio 94 percent,normal
+Memory usage approaching threshold 72 percent,warning
+Disk IO exceeded safe limit critical failure at 14:32,critical
+Network interface down packet loss 100 percent,critical
+Database connection failed timeout exceeded at 14:32,critical
+CPU throttling starting at 68 percent service-api,warning
+Cache hit ratio 94 percent,normal
+Kernel panic detected system unstable at 14:32,critical
+Configuration reload successful at 14:32,normal
+Memory usage approaching threshold 72 percent,warning
+Scheduled backup completed successfully at 14:32,normal
+Scheduled backup completed successfully on node-2,normal
+Load balancer health check OK on node-1,normal
+Load balancer health check OK,normal
+Load balancer health check OK service-api,normal
+Database connection failed timeout exceeded,critical
+Configuration reload successful on node-2,normal
+Load balancer health check OK at 14:32,normal
+Service health check passed at 14:32,normal
+Configuration reload successful service-api,normal
+Load balancer health check OK on node-1,normal
+Cache hit ratio 94 percent at 14:32,normal
+Configuration reload successful on node-1,normal
+Cache hit ratio 94 percent at 14:32,normal
+Response latency spike detected 180ms,warning
+Retry attempt number 2 for service auth on node-2,warning
+Service health check passed,normal
+Load balancer health check OK,normal
+Retry attempt number 2 for service auth,warning
+API gateway responded 200 OK service-api,normal
+Database query optimised response 8ms,normal
+Retry attempt number 2 for service auth at 14:32,warning
+Load balancer health check OK service-api,normal
+Response latency spike detected 180ms on node-1,warning
+Service restart completed normally on node-1,normal
+Disk IO exceeded safe limit critical failure on node-2,critical
+User authentication successful on node-1,normal
+Database connection failed timeout exceeded,critical
+Memory usage approaching threshold 72 percent,warning
+Request processed successfully in 12ms service-api,normal
+Scheduled backup completed successfully service-api,normal
+Load balancer health check OK,normal
+Memory overflow container restarting at 14:32,critical
+Service restart completed normally,normal
+Slow query detected taking 450ms,warning
+Service health check passed at 14:32,normal
+Request processed successfully in 12ms,normal
+Kernel panic detected system unstable on node-2,critical
+Database query optimised response 8ms on node-1,normal
+Service restart completed normally service-api,normal
+Load balancer health check OK service-api,normal
+Cache hit ratio 94 percent,normal
+Health check failed 3 consecutive failures,critical
+CPU throttling starting at 68 percent,warning
+Configuration reload successful,normal
+Load balancer health check OK,normal
+Slow query detected taking 450ms service-api,warning
+Memory usage approaching threshold 72 percent,warning
+User authentication successful,normal
+Scheduled backup completed successfully service-api,normal
+Database query optimised response 8ms,normal
+Database connection pool near limit 85 percent,warning
+Cache hit ratio 94 percent service-api,normal
+Kernel panic detected system unstable on node-2,critical
+Fatal error segmentation fault core dumped at 14:32,critical
+Load balancer health check OK,normal
+CPU throttling starting at 68 percent,warning
+Configuration reload successful at 14:32,normal
+Load balancer health check OK,normal
+Cache hit ratio 94 percent on node-2,normal
+Configuration reload successful,normal
+Cache hit ratio 94 percent,normal
+API gateway responded 200 OK on node-2,normal
+Database query optimised response 8ms at 14:32,normal
+User authentication successful,normal
+CPU throttling critical node crash imminent on node-1,critical
+Configuration reload successful on node-1,normal
+Health check failed 3 consecutive failures at 14:32,critical
+High memory pressure swap usage increased at 14:32,warning
+Request processed successfully in 12ms,normal
+Retry attempt number 2 for service auth,warning
+CPU throttling starting at 68 percent on node-2,warning
+Request processed successfully in 12ms at 14:32,normal
+Service health check passed on node-2,normal
+Configuration reload successful,normal
+Service restart completed normally,normal
+Configuration reload successful service-api,normal
+Service health check passed on node-1,normal
+Service crashed exit code 137 OOM killed service-api,critical
+Scheduled backup completed successfully,normal
+User authentication successful at 14:32,normal
+User authentication successful,normal
+Configuration reload successful service-api,normal
+Cache hit ratio 94 percent on node-2,normal
+Database query optimised response 8ms on node-2,normal
+Load balancer health check OK,normal
+Request processed successfully in 12ms,normal
+Service health check passed,normal
+Request processed successfully in 12ms service-api,normal
+API gateway responded 200 OK service-api,normal
+CPU throttling starting at 68 percent service-api,warning
+Cache hit ratio 94 percent,normal
+Configuration reload successful at 14:32,normal
+Database query optimised response 8ms,normal
+Slow query detected taking 450ms,warning
+Disk usage high 78 percent,warning
+Network interface down packet loss 100 percent,critical
+Connection timeout on service auth ERROR on node-1,critical
+API gateway responded 200 OK on node-2,normal
+Configuration reload successful at 14:32,normal
+Database connection pool near limit 85 percent,warning
+User authentication successful on node-2,normal
+Cache hit ratio 94 percent service-api,normal
+Load balancer health check OK service-api,normal
+Fatal error segmentation fault core dumped on node-1,critical
+Database connection failed timeout exceeded at 14:32,critical
+Database connection failed timeout exceeded service-api,critical
+Disk usage high 78 percent at 14:32,warning
+Service health check passed on node-2,normal
+Database query optimised response 8ms at 14:32,normal
+Kernel panic detected system unstable,critical
+Scheduled backup completed successfully,normal
+Cache hit ratio 94 percent,normal
+Request processed successfully in 12ms at 14:32,normal
+User authentication successful service-api,normal
+Scheduled backup completed successfully on node-2,normal
+High memory pressure swap usage increased on node-1,warning
+API gateway responded 200 OK service-api,normal
+Network interface down packet loss 100 percent,critical
+High memory pressure swap usage increased service-api,warning
+Load balancer health check OK on node-2,normal
+User authentication successful service-api,normal
+Load balancer health check OK on node-2,normal
+CPU throttling critical node crash imminent on node-2,critical
+Configuration reload successful on node-1,normal
+High memory pressure swap usage increased,warning
+Health check failed 3 consecutive failures,critical
+High memory pressure swap usage increased at 14:32,warning
+Load balancer health check OK on node-2,normal
+Response latency spike detected 180ms,warning
+Scheduled backup completed successfully at 14:32,normal
+Network interface down packet loss 100 percent service-api,critical
+Cache hit ratio 94 percent on node-2,normal
+Connection pool exhausted retrying on node-2,warning
+Slow query detected taking 450ms service-api,warning
+User authentication successful at 14:32,normal
+Request processed successfully in 12ms on node-2,normal
+API gateway responded 200 OK on node-1,normal
+Traffic spike detected 3x normal baseline,warning
+Kernel panic detected system unstable,critical
+CPU throttling starting at 68 percent service-api,warning
+Service health check passed on node-2,normal
+Memory overflow container restarting at 14:32,critical
+Cache hit ratio 94 percent at 14:32,normal
+Disk usage high 78 percent on node-1,warning
+Database query optimised response 8ms at 14:32,normal
+Disk IO exceeded safe limit critical failure,critical
+Slow query detected taking 450ms,warning
+Cache hit ratio 94 percent on node-2,normal
+User authentication successful at 14:32,normal
+Request processed successfully in 12ms,normal
+Request processed successfully in 12ms on node-1,normal
+Service health check passed at 14:32,normal
+Cache hit ratio 94 percent service-api,normal
+Network interface down packet loss 100 percent,critical
+Health check failed 3 consecutive failures,critical
+Scheduled backup completed successfully on node-2,normal
+Connection pool exhausted retrying on node-2,warning
+API gateway responded 200 OK on node-1,normal
+User authentication successful,normal
+Response latency spike detected 180ms service-api,warning
+Disk IO exceeded safe limit critical failure,critical
+Network interface down packet loss 100 percent on node-1,critical
+Request processed successfully in 12ms on node-1,normal
+Network interface down packet loss 100 percent,critical
+API gateway responded 200 OK service-api,normal
+User authentication successful service-api,normal
+Configuration reload successful,normal
+Disk usage high 78 percent on node-1,warning
+Cache hit ratio 94 percent,normal
+Disk usage high 78 percent at 14:32,warning
+Service crashed exit code 137 OOM killed on node-1,critical
+Request processed successfully in 12ms,normal
+Cache hit ratio 94 percent service-api,normal
+Load balancer health check OK,normal
+Database connection pool near limit 85 percent on node-1,warning
+Memory usage approaching threshold 72 percent on node-1,warning
+Health check failed 3 consecutive failures service-api,critical
+Scheduled backup completed successfully on node-1,normal
+Slow query detected taking 450ms service-api,warning
+API gateway responded 200 OK service-api,normal
+CPU throttling starting at 68 percent on node-1,warning
+Service restart completed normally at 14:32,normal
+Memory usage approaching threshold 72 percent,warning
+Service health check passed service-api,normal
+Kernel panic detected system unstable at 14:32,critical
+Scheduled backup completed successfully at 14:32,normal
+Connection timeout on service auth ERROR at 14:32,critical
+Service restart completed normally on node-1,normal
+Disk usage high 78 percent,warning
+CPU throttling starting at 68 percent at 14:32,warning
+API gateway responded 200 OK on node-1,normal
+Cache hit ratio 94 percent at 14:32,normal
+Service health check passed,normal
+Database query optimised response 8ms on node-2,normal
+Configuration reload successful at 14:32,normal
+Cache hit ratio 94 percent at 14:32,normal
+Cache hit ratio 94 percent on node-1,normal
+Load balancer health check OK,normal
+Cache hit ratio 94 percent on node-2,normal
+Cache hit ratio 94 percent on node-2,normal
+Scheduled backup completed successfully at 14:32,normal
+Database query optimised response 8ms service-api,normal
+Slow query detected taking 450ms,warning
+Request processed successfully in 12ms,normal
+Service restart completed normally service-api,normal
+Memory overflow container restarting on node-2,critical
+Retry attempt number 2 for service auth,warning
+Disk usage high 78 percent at 14:32,warning
+Kernel panic detected system unstable on node-1,critical
+User authentication successful at 14:32,normal
+Disk usage high 78 percent on node-2,warning
+Scheduled backup completed successfully,normal
+Slow query detected taking 450ms,warning
+Cache hit ratio 94 percent,normal
+Request processed successfully in 12ms,normal
+Service restart completed normally service-api,normal
+Service restart completed normally at 14:32,normal
+Kernel panic detected system unstable,critical
+API gateway responded 200 OK on node-1,normal
+Configuration reload successful on node-2,normal
+Fatal error segmentation fault core dumped service-api,critical
+Disk usage high 78 percent on node-1,warning
+Service health check passed at 14:32,normal
+Service restart completed normally service-api,normal
+Service health check passed,normal
+Service health check passed on node-1,normal
+CPU throttling critical node crash imminent service-api,critical
+Request processed successfully in 12ms on node-1,normal
+Connection pool exhausted retrying at 14:32,warning
+API gateway responded 200 OK on node-1,normal
+Database query optimised response 8ms on node-2,normal
+Configuration reload successful,normal
+Service restart completed normally,normal
+Service health check passed,normal
+Database query optimised response 8ms on node-1,normal
+Database query optimised response 8ms on node-2,normal
+Service health check passed on node-1,normal
+Slow query detected taking 450ms at 14:32,warning
+Load balancer health check OK,normal
+Health check failed 3 consecutive failures on node-2,critical
+High memory pressure swap usage increased on node-2,warning
+Configuration reload successful,normal
+Service crashed exit code 137 OOM killed at 14:32,critical
+User authentication successful service-api,normal
+User authentication successful,normal
+Service crashed exit code 137 OOM killed,critical
+API gateway responded 200 OK on node-1,normal
+Request processed successfully in 12ms at 14:32,normal
+Service restart completed normally on node-2,normal
+Database connection failed timeout exceeded,critical
+Configuration reload successful on node-2,normal
+Service crashed exit code 137 OOM killed on node-1,critical
+CPU throttling starting at 68 percent on node-1,warning
+Memory usage approaching threshold 72 percent at 14:32,warning
+Network interface down packet loss 100 percent,critical
+Disk IO exceeded safe limit critical failure,critical
+User authentication successful,normal
+Fatal error segmentation fault core dumped,critical
+Response latency spike detected 180ms on node-2,warning
+CPU throttling starting at 68 percent at 14:32,warning
+Scheduled backup completed successfully on node-2,normal
+Database query optimised response 8ms,normal
+Database connection pool near limit 85 percent at 14:32,warning
+High memory pressure swap usage increased on node-2,warning
+Service health check passed service-api,normal
+Connection pool exhausted retrying on node-1,warning
+Service health check passed on node-1,normal
+CPU throttling starting at 68 percent,warning
+Disk IO exceeded safe limit critical failure,critical
+Disk IO exceeded safe limit critical failure,critical
+Database connection failed timeout exceeded,critical
+Database connection pool near limit 85 percent service-api,warning
+API gateway responded 200 OK on node-1,normal
+Service health check passed service-api,normal
+Cache hit ratio 94 percent,normal
+Service restart completed normally,normal
+Cache hit ratio 94 percent on node-2,normal
+User authentication successful service-api,normal
+Service health check passed on node-2,normal
+Kernel panic detected system unstable service-api,critical
+Memory overflow container restarting on node-1,critical
+Traffic spike detected 3x normal baseline on node-1,warning
+API gateway responded 200 OK,normal
+Configuration reload successful,normal
+Memory overflow container restarting on node-1,critical
+Traffic spike detected 3x normal baseline on node-2,warning
+CPU throttling starting at 68 percent at 14:32,warning
+Database query optimised response 8ms service-api,normal
+High memory pressure swap usage increased at 14:32,warning
+Slow query detected taking 450ms at 14:32,warning
+Request processed successfully in 12ms on node-1,normal
+Scheduled backup completed successfully on node-1,normal
+Request processed successfully in 12ms on node-1,normal
+Cache hit ratio 94 percent service-api,normal
+Database query optimised response 8ms service-api,normal
+Database query optimised response 8ms,normal
+Configuration reload successful on node-2,normal
+Cache hit ratio 94 percent service-api,normal
+Configuration reload successful,normal
+Service restart completed normally,normal
+API gateway responded 200 OK,normal
+User authentication successful on node-1,normal
+Configuration reload successful,normal
+High memory pressure swap usage increased,warning
+Request processed successfully in 12ms,normal
+User authentication successful at 14:32,normal
+CPU throttling critical node crash imminent,critical
+Cache hit ratio 94 percent on node-1,normal
+Retry attempt number 2 for service auth at 14:32,warning
+Scheduled backup completed successfully,normal
+Memory overflow container restarting at 14:32,critical
+Database query optimised response 8ms,normal
+Configuration reload successful,normal
+Connection pool exhausted retrying at 14:32,warning
+User authentication successful,normal
+Database query optimised response 8ms on node-1,normal
+Database query optimised response 8ms on node-2,normal
+Database connection failed timeout exceeded service-api,critical
+Service health check passed at 14:32,normal
+Service restart completed normally at 14:32,normal
+CPU throttling starting at 68 percent,warning
+Slow query detected taking 450ms at 14:32,warning
+Cache hit ratio 94 percent on node-2,normal
+Slow query detected taking 450ms on node-1,warning
+API gateway responded 200 OK,normal
+API gateway responded 200 OK,normal
+Slow query detected taking 450ms,warning
+Request processed successfully in 12ms,normal
+Memory usage approaching threshold 72 percent on node-2,warning
+Slow query detected taking 450ms,warning
+Fatal error segmentation fault core dumped service-api,critical
+Database query optimised response 8ms,normal
+Load balancer health check OK,normal
+Configuration reload successful service-api,normal
+Configuration reload successful at 14:32,normal
+Configuration reload successful on node-1,normal
+Disk IO exceeded safe limit critical failure on node-1,critical
+Load balancer health check OK,normal
+Request processed successfully in 12ms,normal
+Connection pool exhausted retrying,warning
+High memory pressure swap usage increased at 14:32,warning
+Memory overflow container restarting on node-2,critical
+Connection pool exhausted retrying at 14:32,warning
+Cache hit ratio 94 percent on node-1,normal
+Service health check passed at 14:32,normal
+Service restart completed normally at 14:32,normal
+Service restart completed normally,normal
+Database query optimised response 8ms service-api,normal
+Disk IO exceeded safe limit critical failure on node-1,critical
+Configuration reload successful,normal
+Configuration reload successful at 14:32,normal
+Service restart completed normally on node-2,normal
+Disk IO exceeded safe limit critical failure,critical
+User authentication successful,normal
+User authentication successful,normal
+Request processed successfully in 12ms service-api,normal
+Connection timeout on service auth ERROR on node-1,critical
+Network interface down packet loss 100 percent on node-1,critical
+Traffic spike detected 3x normal baseline at 14:32,warning
+Service restart completed normally on node-1,normal
+Load balancer health check OK on node-1,normal
+Configuration reload successful,normal
+Database query optimised response 8ms service-api,normal
+Scheduled backup completed successfully,normal
+Scheduled backup completed successfully at 14:32,normal
+Scheduled backup completed successfully at 14:32,normal
+Scheduled backup completed successfully service-api,normal
+Load balancer health check OK,normal
+API gateway responded 200 OK on node-1,normal
+Request processed successfully in 12ms on node-1,normal
+Database query optimised response 8ms,normal
+User authentication successful on node-1,normal
+Load balancer health check OK at 14:32,normal
+Scheduled backup completed successfully on node-2,normal
+Service health check passed service-api,normal
+Scheduled backup completed successfully on node-2,normal
+CPU throttling starting at 68 percent at 14:32,warning
+Request processed successfully in 12ms,normal
+Database query optimised response 8ms,normal
+Request processed successfully in 12ms,normal
+API gateway responded 200 OK,normal
+API gateway responded 200 OK,normal
+Health check failed 3 consecutive failures,critical
+Configuration reload successful on node-1,normal
+Service health check passed on node-2,normal
+Scheduled backup completed successfully at 14:32,normal
+Database connection failed timeout exceeded on node-1,critical
+Connection pool exhausted retrying on node-1,warning
+Scheduled backup completed successfully on node-1,normal
+Request processed successfully in 12ms on node-2,normal
+Traffic spike detected 3x normal baseline on node-2,warning
+Database connection failed timeout exceeded,critical
+Disk usage high 78 percent on node-2,warning
+CPU throttling starting at 68 percent,warning
+API gateway responded 200 OK,normal
+Service health check passed,normal
+API gateway responded 200 OK,normal
+Disk IO exceeded safe limit critical failure at 14:32,critical
+Traffic spike detected 3x normal baseline service-api,warning
+Configuration reload successful at 14:32,normal
+Disk IO exceeded safe limit critical failure,critical
+Load balancer health check OK,normal
+CPU throttling critical node crash imminent at 14:32,critical
+Traffic spike detected 3x normal baseline service-api,warning
+Service health check passed service-api,normal
+Load balancer health check OK,normal
+Fatal error segmentation fault core dumped on node-1,critical
+Configuration reload successful service-api,normal
+User authentication successful,normal
+Request processed successfully in 12ms on node-1,normal
+Scheduled backup completed successfully,normal
+Service restart completed normally,normal
+Scheduled backup completed successfully on node-1,normal
+Kernel panic detected system unstable at 14:32,critical
+API gateway responded 200 OK on node-1,normal
+High memory pressure swap usage increased on node-2,warning
+High memory pressure swap usage increased on node-2,warning
+Memory overflow container restarting on node-2,critical
+High memory pressure swap usage increased on node-2,warning
+Configuration reload successful,normal
+Configuration reload successful on node-2,normal
+Request processed successfully in 12ms,normal
+Slow query detected taking 450ms,warning
+CPU throttling starting at 68 percent at 14:32,warning
+User authentication successful on node-1,normal
+Service health check passed,normal
+Request processed successfully in 12ms,normal
+CPU throttling critical node crash imminent on node-2,critical
+Configuration reload successful,normal
+CPU throttling starting at 68 percent service-api,warning
+User authentication successful,normal
+API gateway responded 200 OK,normal
+Database query optimised response 8ms on node-1,normal
+Service restart completed normally service-api,normal
+Request processed successfully in 12ms,normal
+Connection timeout on service auth ERROR,critical
+Service health check passed at 14:32,normal
+Request processed successfully in 12ms on node-1,normal
+High memory pressure swap usage increased on node-2,warning
+CPU throttling starting at 68 percent at 14:32,warning
+Request processed successfully in 12ms,normal
+Memory usage approaching threshold 72 percent on node-2,warning
+Fatal error segmentation fault core dumped on node-2,critical
+Request processed successfully in 12ms,normal
+Database connection failed timeout exceeded on node-1,critical
+Traffic spike detected 3x normal baseline on node-2,warning
+Database connection pool near limit 85 percent service-api,warning
+Database query optimised response 8ms at 14:32,normal
+Service restart completed normally at 14:32,normal
+Retry attempt number 2 for service auth,warning
+Service restart completed normally,normal
+Memory usage approaching threshold 72 percent on node-1,warning
+User authentication successful at 14:32,normal
+Load balancer health check OK,normal
+Request processed successfully in 12ms on node-2,normal
+Cache hit ratio 94 percent,normal
+Response latency spike detected 180ms service-api,warning
+Kernel panic detected system unstable,critical
+Connection pool exhausted retrying service-api,warning
+Service health check passed at 14:32,normal
+Response latency spike detected 180ms,warning
+Memory overflow container restarting,critical
+API gateway responded 200 OK on node-2,normal
+Request processed successfully in 12ms,normal
+Network interface down packet loss 100 percent on node-1,critical
+Configuration reload successful at 14:32,normal
+Scheduled backup completed successfully on node-1,normal
+Disk usage high 78 percent at 14:32,warning
+Service restart completed normally service-api,normal
+Service crashed exit code 137 OOM killed,critical
+Load balancer health check OK,normal
+Disk usage high 78 percent service-api,warning
+Slow query detected taking 450ms at 14:32,warning
+Load balancer health check OK service-api,normal
+Request processed successfully in 12ms,normal
+Database query optimised response 8ms on node-1,normal
+Request processed successfully in 12ms on node-1,normal
+Service restart completed normally,normal
+Cache hit ratio 94 percent on node-1,normal
+Configuration reload successful service-api,normal
+API gateway responded 200 OK,normal
+Service health check passed on node-1,normal
+User authentication successful,normal
+Connection pool exhausted retrying on node-1,warning
+CPU throttling starting at 68 percent at 14:32,warning
+Scheduled backup completed successfully at 14:32,normal
+Connection pool exhausted retrying on node-1,warning
+Connection timeout on service auth ERROR,critical
+Load balancer health check OK,normal
+High memory pressure swap usage increased,warning
+Database query optimised response 8ms at 14:32,normal
+Service health check passed service-api,normal
+Retry attempt number 2 for service auth,warning
+Retry attempt number 2 for service auth service-api,warning
+Service health check passed at 14:32,normal
+Memory usage approaching threshold 72 percent service-api,warning
+Network interface down packet loss 100 percent on node-1,critical
+Scheduled backup completed successfully service-api,normal
+API gateway responded 200 OK at 14:32,normal
+Connection pool exhausted retrying at 14:32,warning
+Disk IO exceeded safe limit critical failure service-api,critical
+Service health check passed at 14:32,normal
+Disk usage high 78 percent on node-2,warning
+Load balancer health check OK on node-1,normal
+API gateway responded 200 OK on node-2,normal
+Response latency spike detected 180ms service-api,warning
+Service restart completed normally,normal
+Configuration reload successful on node-2,normal
+Configuration reload successful on node-2,normal
+Service health check passed on node-1,normal
+Cache hit ratio 94 percent on node-1,normal
+API gateway responded 200 OK on node-1,normal
+Database query optimised response 8ms,normal
+API gateway responded 200 OK,normal
+Database connection failed timeout exceeded on node-2,critical
+User authentication successful at 14:32,normal
+Service health check passed service-api,normal
+Connection timeout on service auth ERROR at 14:32,critical
+Disk usage high 78 percent,warning
+Traffic spike detected 3x normal baseline on node-2,warning
+Service restart completed normally on node-2,normal
+Cache hit ratio 94 percent on node-2,normal
+Load balancer health check OK on node-2,normal
+User authentication successful,normal
+Load balancer health check OK,normal
+Service health check passed,normal
+CPU throttling starting at 68 percent on node-1,warning
+API gateway responded 200 OK service-api,normal
+CPU throttling critical node crash imminent on node-1,critical
+Database query optimised response 8ms on node-1,normal
+Disk IO exceeded safe limit critical failure on node-1,critical
+User authentication successful,normal
+Service restart completed normally on node-1,normal
+Database query optimised response 8ms at 14:32,normal
+Database connection pool near limit 85 percent on node-2,warning
+Traffic spike detected 3x normal baseline,warning
+Database query optimised response 8ms,normal
+Service health check passed,normal
+Configuration reload successful on node-2,normal
+Database query optimised response 8ms on node-2,normal
+Connection timeout on service auth ERROR on node-1,critical
+Memory usage approaching threshold 72 percent on node-2,warning
+Database query optimised response 8ms on node-1,normal
+Connection pool exhausted retrying service-api,warning
+Scheduled backup completed successfully on node-2,normal
+Request processed successfully in 12ms on node-1,normal
+Load balancer health check OK service-api,normal
+Memory usage approaching threshold 72 percent on node-2,warning
+Load balancer health check OK,normal
+User authentication successful,normal
+Slow query detected taking 450ms at 14:32,warning
+API gateway responded 200 OK service-api,normal
+API gateway responded 200 OK on node-2,normal
+User authentication successful on node-2,normal
+Cache hit ratio 94 percent,normal
+Service restart completed normally on node-1,normal
+Cache hit ratio 94 percent at 14:32,normal
+User authentication successful on node-1,normal
+Slow query detected taking 450ms on node-1,warning
+High memory pressure swap usage increased at 14:32,warning
+User authentication successful service-api,normal
+Cache hit ratio 94 percent service-api,normal
+CPU throttling critical node crash imminent,critical
+Memory usage approaching threshold 72 percent on node-1,warning
+High memory pressure swap usage increased service-api,warning
+Service restart completed normally on node-1,normal
+Response latency spike detected 180ms,warning
+Database query optimised response 8ms on node-1,normal
+Service restart completed normally on node-2,normal
+Retry attempt number 2 for service auth on node-2,warning
+Response latency spike detected 180ms,warning
+Memory usage approaching threshold 72 percent on node-1,warning
+API gateway responded 200 OK at 14:32,normal
+Service restart completed normally at 14:32,normal
+Memory usage approaching threshold 72 percent at 14:32,warning
+Traffic spike detected 3x normal baseline on node-2,warning
+Load balancer health check OK,normal
+Fatal error segmentation fault core dumped service-api,critical
+Retry attempt number 2 for service auth on node-1,warning
+Configuration reload successful on node-2,normal
+Response latency spike detected 180ms,warning
+Service restart completed normally on node-2,normal
+Cache hit ratio 94 percent at 14:32,normal
+Cache hit ratio 94 percent,normal
+Configuration reload successful at 14:32,normal
+Load balancer health check OK on node-2,normal
+API gateway responded 200 OK on node-1,normal
+Scheduled backup completed successfully service-api,normal
+Configuration reload successful on node-2,normal
+Service restart completed normally service-api,normal
+Scheduled backup completed successfully at 14:32,normal
+User authentication successful on node-1,normal
+Service health check passed service-api,normal
+Service health check passed,normal
+Request processed successfully in 12ms,normal
+Slow query detected taking 450ms on node-1,warning
+API gateway responded 200 OK on node-1,normal
+Database connection pool near limit 85 percent on node-2,warning
+Slow query detected taking 450ms on node-1,warning
+Database connection pool near limit 85 percent on node-1,warning
+CPU throttling critical node crash imminent on node-2,critical
+Kernel panic detected system unstable on node-2,critical
+Configuration reload successful,normal
+API gateway responded 200 OK,normal
+High memory pressure swap usage increased,warning
+Service health check passed on node-2,normal
+API gateway responded 200 OK at 14:32,normal
+Memory usage approaching threshold 72 percent,warning
+Cache hit ratio 94 percent at 14:32,normal
+Load balancer health check OK service-api,normal
+CPU throttling critical node crash imminent,critical
+User authentication successful service-api,normal
+Scheduled backup completed successfully,normal
+API gateway responded 200 OK,normal
+High memory pressure swap usage increased,warning
+Database query optimised response 8ms at 14:32,normal
+API gateway responded 200 OK on node-2,normal
+Service crashed exit code 137 OOM killed,critical
+Memory overflow container restarting,critical
+Load balancer health check OK on node-1,normal
+Retry attempt number 2 for service auth at 14:32,warning
+Database connection failed timeout exceeded on node-2,critical
+CPU throttling critical node crash imminent,critical
+CPU throttling critical node crash imminent service-api,critical
+Service restart completed normally,normal
+CPU throttling starting at 68 percent on node-1,warning
+Configuration reload successful,normal
+Retry attempt number 2 for service auth at 14:32,warning
+Request processed successfully in 12ms service-api,normal
+Service restart completed normally on node-2,normal
+Slow query detected taking 450ms,warning
+Service restart completed normally service-api,normal
+Load balancer health check OK on node-2,normal
+Scheduled backup completed successfully on node-2,normal
+API gateway responded 200 OK service-api,normal
+Database query optimised response 8ms service-api,normal
+Cache hit ratio 94 percent,normal
+Cache hit ratio 94 percent on node-1,normal
+Configuration reload successful,normal
+API gateway responded 200 OK on node-2,normal
+Configuration reload successful,normal
+Database query optimised response 8ms on node-2,normal
+Traffic spike detected 3x normal baseline on node-2,warning
+API gateway responded 200 OK service-api,normal
+Request processed successfully in 12ms on node-1,normal
+CPU throttling starting at 68 percent at 14:32,warning
+Database query optimised response 8ms service-api,normal
+Service health check passed service-api,normal
+Database query optimised response 8ms on node-2,normal
+Health check failed 3 consecutive failures service-api,critical
+API gateway responded 200 OK,normal
+Fatal error segmentation fault core dumped,critical
+API gateway responded 200 OK on node-2,normal
+Load balancer health check OK at 14:32,normal
+High memory pressure swap usage increased,warning
+Response latency spike detected 180ms at 14:32,warning
+Cache hit ratio 94 percent,normal
+Memory usage approaching threshold 72 percent on node-1,warning
+Retry attempt number 2 for service auth,warning
+User authentication successful service-api,normal
+Connection pool exhausted retrying,warning
+Memory overflow container restarting,critical
+Service health check passed,normal
+Disk usage high 78 percent,warning
+Configuration reload successful on node-1,normal
+User authentication successful on node-1,normal
+Retry attempt number 2 for service auth,warning
+Retry attempt number 2 for service auth,warning
+Database query optimised response 8ms service-api,normal
+Service health check passed,normal
+User authentication successful at 14:32,normal
+Service restart completed normally,normal
+Service health check passed,normal
+Scheduled backup completed successfully on node-2,normal
+Memory overflow container restarting service-api,critical
+User authentication successful service-api,normal
+Request processed successfully in 12ms service-api,normal
+Configuration reload successful service-api,normal
+API gateway responded 200 OK,normal
+CPU throttling starting at 68 percent,warning
+Service crashed exit code 137 OOM killed,critical
+Configuration reload successful on node-1,normal
+High memory pressure swap usage increased at 14:32,warning
+Request processed successfully in 12ms service-api,normal
+Load balancer health check OK,normal
+Service restart completed normally,normal
+High memory pressure swap usage increased on node-1,warning
+Database query optimised response 8ms,normal
+Service restart completed normally,normal
+Service crashed exit code 137 OOM killed,critical
+Request processed successfully in 12ms service-api,normal
+Cache hit ratio 94 percent service-api,normal
+Cache hit ratio 94 percent,normal
+Disk usage high 78 percent service-api,warning
+Cache hit ratio 94 percent,normal
+Scheduled backup completed successfully,normal
+Traffic spike detected 3x normal baseline at 14:32,warning
+Memory overflow container restarting at 14:32,critical
+Service restart completed normally service-api,normal
+Cache hit ratio 94 percent,normal
+Service restart completed normally,normal
+Request processed successfully in 12ms,normal
+Database connection pool near limit 85 percent at 14:32,warning
+Database connection pool near limit 85 percent,warning
+Database query optimised response 8ms,normal
+Fatal error segmentation fault core dumped on node-2,critical
+Health check failed 3 consecutive failures on node-2,critical
+Request processed successfully in 12ms on node-1,normal
+Service restart completed normally at 14:32,normal
+Request processed successfully in 12ms service-api,normal
+Request processed successfully in 12ms,normal
+Traffic spike detected 3x normal baseline,warning
+High memory pressure swap usage increased on node-1,warning
+Cache hit ratio 94 percent on node-2,normal
+Service restart completed normally at 14:32,normal
+Cache hit ratio 94 percent,normal
+Cache hit ratio 94 percent on node-1,normal
+Scheduled backup completed successfully,normal
+API gateway responded 200 OK service-api,normal
+Connection pool exhausted retrying,warning
+Response latency spike detected 180ms,warning
+Health check failed 3 consecutive failures,critical
+API gateway responded 200 OK service-api,normal
+Scheduled backup completed successfully on node-2,normal
+Cache hit ratio 94 percent,normal
+Service health check passed on node-1,normal
+Memory usage approaching threshold 72 percent service-api,warning
+Scheduled backup completed successfully,normal
+Network interface down packet loss 100 percent,critical
+API gateway responded 200 OK,normal
+Memory overflow container restarting,critical
+Response latency spike detected 180ms on node-2,warning
+Service restart completed normally on node-1,normal
+Configuration reload successful on node-2,normal
+Configuration reload successful on node-2,normal
+API gateway responded 200 OK,normal
+User authentication successful service-api,normal
+Cache hit ratio 94 percent,normal
+Database connection failed timeout exceeded on node-2,critical
+Configuration reload successful service-api,normal
+Configuration reload successful,normal
+User authentication successful service-api,normal
+Slow query detected taking 450ms on node-2,warning
+Scheduled backup completed successfully,normal
+Configuration reload successful,normal
+Configuration reload successful on node-2,normal
+Load balancer health check OK at 14:32,normal
+Database query optimised response 8ms,normal
+Connection pool exhausted retrying on node-2,warning
+API gateway responded 200 OK service-api,normal
+Configuration reload successful on node-2,normal
+Request processed successfully in 12ms at 14:32,normal
+Database connection failed timeout exceeded at 14:32,critical
+API gateway responded 200 OK,normal
+Scheduled backup completed successfully,normal
+Connection pool exhausted retrying on node-2,warning
+Service health check passed on node-1,normal
+Health check failed 3 consecutive failures on node-1,critical
+Slow query detected taking 450ms at 14:32,warning
+API gateway responded 200 OK at 14:32,normal
+Service restart completed normally at 14:32,normal
+Database query optimised response 8ms on node-2,normal
+Cache hit ratio 94 percent on node-2,normal
+Retry attempt number 2 for service auth service-api,warning
+API gateway responded 200 OK at 14:32,normal
+Response latency spike detected 180ms at 14:32,warning
+Cache hit ratio 94 percent at 14:32,normal
+Disk usage high 78 percent,warning
+User authentication successful at 14:32,normal
+CPU throttling critical node crash imminent,critical
+Database connection pool near limit 85 percent on node-2,warning
+Cache hit ratio 94 percent on node-1,normal
+User authentication successful,normal
+Service health check passed,normal
+Service restart completed normally service-api,normal
+API gateway responded 200 OK,normal
+Request processed successfully in 12ms on node-2,normal
+Connection timeout on service auth ERROR on node-2,critical
+Memory usage approaching threshold 72 percent,warning
+Database query optimised response 8ms on node-2,normal
+Request processed successfully in 12ms on node-1,normal
+Connection pool exhausted retrying on node-2,warning
+API gateway responded 200 OK,normal
+Configuration reload successful on node-1,normal
+Cache hit ratio 94 percent on node-1,normal
+Request processed successfully in 12ms,normal
+Database connection pool near limit 85 percent service-api,warning
+Scheduled backup completed successfully,normal
+Request processed successfully in 12ms on node-2,normal
+Memory overflow container restarting on node-2,critical
+Network interface down packet loss 100 percent at 14:32,critical
+Scheduled backup completed successfully,normal
+CPU throttling critical node crash imminent,critical
+Slow query detected taking 450ms at 14:32,warning
+Service restart completed normally on node-1,normal
+Disk usage high 78 percent,warning
+Response latency spike detected 180ms,warning
+Service restart completed normally on node-1,normal
+Database query optimised response 8ms at 14:32,normal
+High memory pressure swap usage increased,warning
+Network interface down packet loss 100 percent,critical
+Service health check passed,normal
+High memory pressure swap usage increased at 14:32,warning
+Scheduled backup completed successfully on node-1,normal
+Service crashed exit code 137 OOM killed at 14:32,critical
+Configuration reload successful at 14:32,normal
+CPU throttling starting at 68 percent on node-2,warning
+Load balancer health check OK on node-2,normal
+CPU throttling starting at 68 percent on node-1,warning
+Scheduled backup completed successfully service-api,normal
+Service restart completed normally on node-1,normal
+Load balancer health check OK,normal
+Scheduled backup completed successfully on node-2,normal
+Database connection pool near limit 85 percent,warning
+User authentication successful,normal
+Load balancer health check OK service-api,normal
+Database connection pool near limit 85 percent service-api,warning
+Service health check passed on node-1,normal
+User authentication successful on node-1,normal
+Service restart completed normally on node-1,normal
+Load balancer health check OK on node-1,normal
+Scheduled backup completed successfully at 14:32,normal
+API gateway responded 200 OK at 14:32,normal
+Connection timeout on service auth ERROR service-api,critical
+Service restart completed normally at 14:32,normal
+Service restart completed normally at 14:32,normal
+Cache hit ratio 94 percent,normal
+CPU throttling starting at 68 percent on node-1,warning
+Database query optimised response 8ms,normal
+Network interface down packet loss 100 percent on node-2,critical
+Response latency spike detected 180ms on node-2,warning
+Database connection pool near limit 85 percent at 14:32,warning
+Service health check passed at 14:32,normal
+Response latency spike detected 180ms on node-2,warning
+Disk usage high 78 percent on node-1,warning
+Request processed successfully in 12ms,normal
+Response latency spike detected 180ms on node-2,warning
+Service crashed exit code 137 OOM killed on node-1,critical
+Configuration reload successful at 14:32,normal
+Service crashed exit code 137 OOM killed,critical
+Scheduled backup completed successfully on node-1,normal
+Configuration reload successful service-api,normal
+Memory overflow container restarting,critical
+CPU throttling starting at 68 percent on node-1,warning
+Database query optimised response 8ms on node-2,normal
+Slow query detected taking 450ms on node-1,warning
+High memory pressure swap usage increased at 14:32,warning
+Service health check passed,normal
+Disk usage high 78 percent on node-1,warning
+Configuration reload successful service-api,normal
+Service restart completed normally,normal
+Service restart completed normally,normal
+Request processed successfully in 12ms,normal
+Service restart completed normally,normal
+Slow query detected taking 450ms service-api,warning
+Cache hit ratio 94 percent,normal
+Configuration reload successful on node-1,normal
+Scheduled backup completed successfully on node-1,normal
+Database query optimised response 8ms service-api,normal
+Scheduled backup completed successfully service-api,normal
+CPU throttling critical node crash imminent on node-1,critical
+Cache hit ratio 94 percent on node-1,normal
+Configuration reload successful on node-2,normal
+Service health check passed at 14:32,normal
+Load balancer health check OK on node-1,normal
+Disk usage high 78 percent,warning
+Network interface down packet loss 100 percent on node-1,critical
+Connection pool exhausted retrying at 14:32,warning
+Load balancer health check OK,normal
+Database connection failed timeout exceeded,critical
+Database query optimised response 8ms at 14:32,normal
+User authentication successful at 14:32,normal
+Load balancer health check OK at 14:32,normal
+Disk IO exceeded safe limit critical failure on node-1,critical
+Network interface down packet loss 100 percent on node-1,critical
+Cache hit ratio 94 percent,normal
+Database connection pool near limit 85 percent,warning
+Database query optimised response 8ms service-api,normal
+Service restart completed normally on node-1,normal
+Scheduled backup completed successfully at 14:32,normal
+Scheduled backup completed successfully,normal
+High memory pressure swap usage increased on node-1,warning
+Service health check passed on node-2,normal
+CPU throttling starting at 68 percent,warning
+API gateway responded 200 OK service-api,normal
+Service health check passed at 14:32,normal
+API gateway responded 200 OK,normal
+Network interface down packet loss 100 percent on node-2,critical
+Memory overflow container restarting on node-1,critical
+Scheduled backup completed successfully on node-1,normal
+Network interface down packet loss 100 percent,critical
+Service restart completed normally,normal
+Service restart completed normally,normal
+API gateway responded 200 OK on node-2,normal
+Scheduled backup completed successfully on node-1,normal
+API gateway responded 200 OK,normal
+Service restart completed normally,normal
+Service health check passed on node-2,normal
+Database query optimised response 8ms at 14:32,normal
+Service restart completed normally,normal
+API gateway responded 200 OK,normal
+User authentication successful on node-2,normal
+Connection pool exhausted retrying,warning
+High memory pressure swap usage increased on node-2,warning
+Configuration reload successful on node-1,normal
+Database query optimised response 8ms,normal
+API gateway responded 200 OK on node-1,normal
+Health check failed 3 consecutive failures on node-2,critical
+Cache hit ratio 94 percent at 14:32,normal
+API gateway responded 200 OK service-api,normal
+Load balancer health check OK on node-2,normal
+User authentication successful service-api,normal
+Database query optimised response 8ms on node-2,normal
+Scheduled backup completed successfully service-api,normal
+User authentication successful on node-1,normal
+Connection pool exhausted retrying,warning
+Network interface down packet loss 100 percent on node-2,critical
+Load balancer health check OK on node-1,normal
+Configuration reload successful service-api,normal
+Load balancer health check OK at 14:32,normal
+Service health check passed,normal
+Request processed successfully in 12ms on node-1,normal
+CPU throttling starting at 68 percent on node-2,warning
+Service health check passed on node-2,normal
+Database query optimised response 8ms at 14:32,normal
+Kernel panic detected system unstable service-api,critical
+Request processed successfully in 12ms on node-2,normal
+Fatal error segmentation fault core dumped,critical
+Service restart completed normally at 14:32,normal
+API gateway responded 200 OK on node-2,normal
+High memory pressure swap usage increased,warning
+Configuration reload successful service-api,normal
+Service crashed exit code 137 OOM killed at 14:32,critical
+Service health check passed at 14:32,normal
+Configuration reload successful at 14:32,normal
+Database query optimised response 8ms at 14:32,normal
+Service health check passed service-api,normal
+Response latency spike detected 180ms,warning
+Traffic spike detected 3x normal baseline at 14:32,warning
+Scheduled backup completed successfully on node-1,normal
+Memory usage approaching threshold 72 percent on node-2,warning
+API gateway responded 200 OK service-api,normal
+Cache hit ratio 94 percent on node-2,normal
+Fatal error segmentation fault core dumped at 14:32,critical
+User authentication successful on node-2,normal
+Kernel panic detected system unstable service-api,critical
+Load balancer health check OK at 14:32,normal
+Request processed successfully in 12ms,normal
+Configuration reload successful,normal
+Slow query detected taking 450ms,warning
+Cache hit ratio 94 percent,normal
+Retry attempt number 2 for service auth,warning
+High memory pressure swap usage increased at 14:32,warning
+API gateway responded 200 OK service-api,normal
+Service restart completed normally,normal
+Retry attempt number 2 for service auth,warning
+Service restart completed normally on node-2,normal
+Slow query detected taking 450ms on node-1,warning
+Network interface down packet loss 100 percent at 14:32,critical
+Kernel panic detected system unstable service-api,critical
+Database query optimised response 8ms,normal
+Health check failed 3 consecutive failures on node-2,critical
+Load balancer health check OK,normal
+Database query optimised response 8ms on node-1,normal
+Load balancer health check OK,normal
+User authentication successful service-api,normal
+Scheduled backup completed successfully,normal
+Load balancer health check OK,normal
+Retry attempt number 2 for service auth service-api,warning
+Configuration reload successful,normal
+Load balancer health check OK,normal
+User authentication successful,normal
+Traffic spike detected 3x normal baseline on node-2,warning
+Database connection failed timeout exceeded on node-2,critical
+Database connection pool near limit 85 percent on node-2,warning
+User authentication successful on node-1,normal
+Cache hit ratio 94 percent service-api,normal
+Connection pool exhausted retrying,warning
+Service restart completed normally service-api,normal
+Database query optimised response 8ms,normal
+CPU throttling starting at 68 percent,warning
+User authentication successful on node-2,normal
+Service health check passed at 14:32,normal
+User authentication successful on node-1,normal
+Database query optimised response 8ms,normal
+API gateway responded 200 OK service-api,normal
+Configuration reload successful,normal
+Configuration reload successful at 14:32,normal
+Service restart completed normally,normal
+Disk usage high 78 percent,warning
+Load balancer health check OK on node-1,normal
+Scheduled backup completed successfully,normal
+API gateway responded 200 OK on node-1,normal
+Scheduled backup completed successfully,normal
+Service health check passed,normal
+Health check failed 3 consecutive failures on node-2,critical
+Service restart completed normally at 14:32,normal
+Retry attempt number 2 for service auth on node-1,warning
+Scheduled backup completed successfully at 14:32,normal
+API gateway responded 200 OK on node-2,normal
+Retry attempt number 2 for service auth at 14:32,warning
+Traffic spike detected 3x normal baseline on node-1,warning
+Disk IO exceeded safe limit critical failure at 14:32,critical
+Configuration reload successful service-api,normal
+Request processed successfully in 12ms on node-2,normal
+Service health check passed,normal
+Fatal error segmentation fault core dumped on node-2,critical
+Response latency spike detected 180ms,warning
+Connection timeout on service auth ERROR on node-1,critical
+Retry attempt number 2 for service auth,warning
+Service restart completed normally,normal
+High memory pressure swap usage increased on node-2,warning
+Scheduled backup completed successfully service-api,normal
+Load balancer health check OK at 14:32,normal
+Load balancer health check OK on node-1,normal
+Database query optimised response 8ms,normal
+Scheduled backup completed successfully on node-2,normal
+User authentication successful at 14:32,normal
+Service crashed exit code 137 OOM killed on node-2,critical
+Slow query detected taking 450ms service-api,warning
+User authentication successful,normal
+Service crashed exit code 137 OOM killed,critical
+Database connection pool near limit 85 percent at 14:32,warning
+Load balancer health check OK,normal
+Connection pool exhausted retrying at 14:32,warning
+Load balancer health check OK,normal
+Service restart completed normally,normal
+Disk IO exceeded safe limit critical failure service-api,critical
+API gateway responded 200 OK,normal
+Fatal error segmentation fault core dumped,critical
+Load balancer health check OK at 14:32,normal
+Configuration reload successful,normal
+Scheduled backup completed successfully,normal
+Database query optimised response 8ms on node-1,normal
+Service restart completed normally at 14:32,normal
+Service restart completed normally,normal
+Request processed successfully in 12ms,normal
+Retry attempt number 2 for service auth,warning
+Service health check passed at 14:32,normal
+Load balancer health check OK,normal
+Network interface down packet loss 100 percent on node-1,critical
+Disk usage high 78 percent at 14:32,warning
+Scheduled backup completed successfully service-api,normal
+Connection timeout on service auth ERROR on node-1,critical
+User authentication successful at 14:32,normal
+User authentication successful,normal
+Service health check passed on node-2,normal
+Fatal error segmentation fault core dumped on node-1,critical
+Service restart completed normally,normal
+Traffic spike detected 3x normal baseline,warning
+Network interface down packet loss 100 percent service-api,critical
+API gateway responded 200 OK on node-2,normal
+Request processed successfully in 12ms at 14:32,normal
+Service restart completed normally on node-2,normal
+Connection pool exhausted retrying on node-2,warning
+Database connection failed timeout exceeded,critical
+Configuration reload successful on node-2,normal
+Fatal error segmentation fault core dumped on node-1,critical
+Cache hit ratio 94 percent,normal
+User authentication successful at 14:32,normal
+User authentication successful on node-1,normal
+Configuration reload successful,normal
+User authentication successful on node-1,normal
+Service health check passed on node-1,normal
+High memory pressure swap usage increased,warning
+Retry attempt number 2 for service auth on node-1,warning
+Configuration reload successful on node-1,normal
+Service crashed exit code 137 OOM killed at 14:32,critical
+Service health check passed on node-1,normal
+Configuration reload successful,normal
+User authentication successful on node-2,normal
+Memory usage approaching threshold 72 percent on node-1,warning
+Traffic spike detected 3x normal baseline on node-1,warning
+Cache hit ratio 94 percent,normal
+Traffic spike detected 3x normal baseline,warning
+User authentication successful,normal
+Cache hit ratio 94 percent on node-1,normal
+Service restart completed normally on node-1,normal
+Retry attempt number 2 for service auth service-api,warning
+Service health check passed on node-2,normal
+Request processed successfully in 12ms,normal
+Database query optimised response 8ms,normal
+Service crashed exit code 137 OOM killed on node-2,critical
+Load balancer health check OK on node-1,normal
+Service crashed exit code 137 OOM killed at 14:32,critical
+Slow query detected taking 450ms service-api,warning
+Database query optimised response 8ms service-api,normal
+Database connection pool near limit 85 percent on node-2,warning
+CPU throttling starting at 68 percent,warning
+Traffic spike detected 3x normal baseline service-api,warning
+CPU throttling starting at 68 percent,warning
+Load balancer health check OK on node-1,normal
+CPU throttling critical node crash imminent service-api,critical
+Health check failed 3 consecutive failures on node-2,critical
+Fatal error segmentation fault core dumped on node-2,critical
+Memory overflow container restarting service-api,critical
+User authentication successful on node-2,normal
+Retry attempt number 2 for service auth service-api,warning
+Response latency spike detected 180ms on node-2,warning
+Fatal error segmentation fault core dumped,critical
+Service restart completed normally,normal
+Configuration reload successful on node-2,normal
+Disk usage high 78 percent,warning
+API gateway responded 200 OK,normal
+CPU throttling starting at 68 percent,warning
+Disk usage high 78 percent service-api,warning
+Configuration reload successful,normal
+User authentication successful,normal
+Configuration reload successful on node-1,normal
+Disk usage high 78 percent at 14:32,warning
+Memory usage approaching threshold 72 percent on node-1,warning
+Connection timeout on service auth ERROR at 14:32,critical
+Health check failed 3 consecutive failures service-api,critical
+Service crashed exit code 137 OOM killed on node-2,critical
+Traffic spike detected 3x normal baseline on node-2,warning
+Network interface down packet loss 100 percent service-api,critical
+Service health check passed service-api,normal
+Database connection pool near limit 85 percent,warning
+Load balancer health check OK on node-2,normal
+Load balancer health check OK,normal
+Load balancer health check OK on node-2,normal
+Cache hit ratio 94 percent on node-2,normal
+Request processed successfully in 12ms on node-1,normal
+Load balancer health check OK on node-1,normal
+Fatal error segmentation fault core dumped on node-1,critical
+Load balancer health check OK service-api,normal
+Load balancer health check OK,normal
+CPU throttling starting at 68 percent on node-2,warning
+Scheduled backup completed successfully service-api,normal
+High memory pressure swap usage increased,warning
+Slow query detected taking 450ms on node-2,warning
+Memory overflow container restarting at 14:32,critical
+Database query optimised response 8ms,normal
+API gateway responded 200 OK,normal
+Response latency spike detected 180ms on node-1,warning
+Configuration reload successful on node-1,normal
+Service health check passed on node-1,normal
+Retry attempt number 2 for service auth at 14:32,warning
+Service health check passed at 14:32,normal
+Cache hit ratio 94 percent on node-1,normal
+Load balancer health check OK at 14:32,normal
+Request processed successfully in 12ms on node-2,normal
+Response latency spike detected 180ms,warning
+Disk usage high 78 percent,warning
+Service health check passed,normal
+User authentication successful on node-2,normal
+Scheduled backup completed successfully on node-2,normal
+User authentication successful on node-2,normal
+Disk IO exceeded safe limit critical failure,critical
+Service restart completed normally,normal
+User authentication successful,normal
+API gateway responded 200 OK at 14:32,normal
+Service restart completed normally service-api,normal
+Service health check passed on node-2,normal
+Fatal error segmentation fault core dumped,critical
+API gateway responded 200 OK,normal
+Database query optimised response 8ms,normal
+User authentication successful on node-2,normal
+Connection pool exhausted retrying on node-2,warning
+Response latency spike detected 180ms,warning
+Slow query detected taking 450ms service-api,warning
+API gateway responded 200 OK service-api,normal
+Service health check passed service-api,normal
+Traffic spike detected 3x normal baseline,warning
+Retry attempt number 2 for service auth,warning
+Service restart completed normally service-api,normal
+Service health check passed,normal
+User authentication successful service-api,normal
+Request processed successfully in 12ms,normal
+Database query optimised response 8ms on node-1,normal
+API gateway responded 200 OK on node-2,normal
+Configuration reload successful,normal
+Database query optimised response 8ms,normal
+Configuration reload successful at 14:32,normal
+Configuration reload successful,normal
+Service health check passed,normal
+Traffic spike detected 3x normal baseline service-api,warning
+Load balancer health check OK service-api,normal
+Request processed successfully in 12ms service-api,normal
+Database query optimised response 8ms service-api,normal
+Load balancer health check OK service-api,normal
+API gateway responded 200 OK at 14:32,normal
+Database query optimised response 8ms,normal
+Disk IO exceeded safe limit critical failure,critical
+Database query optimised response 8ms on node-2,normal
+Request processed successfully in 12ms on node-1,normal
+API gateway responded 200 OK at 14:32,normal
+Scheduled backup completed successfully on node-1,normal
+Retry attempt number 2 for service auth on node-2,warning
+Service health check passed on node-2,normal
+Service restart completed normally on node-1,normal
+Database connection pool near limit 85 percent at 14:32,warning
+API gateway responded 200 OK at 14:32,normal
+Configuration reload successful,normal
+Request processed successfully in 12ms,normal
+Slow query detected taking 450ms at 14:32,warning
+Disk usage high 78 percent on node-2,warning
+Database connection pool near limit 85 percent on node-2,warning
+Load balancer health check OK,normal
+Scheduled backup completed successfully at 14:32,normal
+Traffic spike detected 3x normal baseline service-api,warning
+CPU throttling starting at 68 percent on node-1,warning
+User authentication successful on node-2,normal
+Retry attempt number 2 for service auth on node-2,warning
+Traffic spike detected 3x normal baseline service-api,warning
+Cache hit ratio 94 percent,normal
+Configuration reload successful,normal
+High memory pressure swap usage increased at 14:32,warning
+Configuration reload successful at 14:32,normal
+Service restart completed normally,normal
+Memory overflow container restarting,critical
+Disk IO exceeded safe limit critical failure on node-1,critical
+Cache hit ratio 94 percent on node-1,normal
+Database connection pool near limit 85 percent on node-2,warning
+Load balancer health check OK on node-1,normal
+Service health check passed on node-1,normal
+Database query optimised response 8ms at 14:32,normal
+Disk usage high 78 percent,warning
+Memory overflow container restarting on node-1,critical
+Load balancer health check OK on node-2,normal
+Connection pool exhausted retrying on node-2,warning
+Database query optimised response 8ms,normal
+Service crashed exit code 137 OOM killed on node-2,critical
+User authentication successful,normal
+Retry attempt number 2 for service auth,warning
+CPU throttling starting at 68 percent at 14:32,warning
+Service restart completed normally,normal
+User authentication successful on node-2,normal
+Cache hit ratio 94 percent at 14:32,normal
+Slow query detected taking 450ms,warning
+Scheduled backup completed successfully service-api,normal
+API gateway responded 200 OK on node-1,normal
+Service health check passed on node-2,normal
+Scheduled backup completed successfully at 14:32,normal
+Scheduled backup completed successfully on node-2,normal
+Service health check passed on node-2,normal
+Service restart completed normally at 14:32,normal
+Load balancer health check OK,normal
+User authentication successful on node-1,normal
+User authentication successful,normal
+Response latency spike detected 180ms service-api,warning
+Service crashed exit code 137 OOM killed,critical
+Connection timeout on service auth ERROR on node-2,critical
+Request processed successfully in 12ms on node-1,normal
+Service restart completed normally on node-2,normal
+Request processed successfully in 12ms,normal
+Database query optimised response 8ms on node-1,normal
+High memory pressure swap usage increased service-api,warning
+Kernel panic detected system unstable at 14:32,critical
+Database query optimised response 8ms on node-1,normal
+Fatal error segmentation fault core dumped,critical
+Disk usage high 78 percent on node-1,warning
+Service restart completed normally,normal
+Service health check passed,normal
+High memory pressure swap usage increased,warning
+Slow query detected taking 450ms,warning
+Cache hit ratio 94 percent on node-1,normal
+Connection pool exhausted retrying on node-2,warning
+Scheduled backup completed successfully service-api,normal
+Retry attempt number 2 for service auth on node-2,warning
+Memory usage approaching threshold 72 percent on node-2,warning
+Slow query detected taking 450ms,warning
+CPU throttling starting at 68 percent service-api,warning
+Response latency spike detected 180ms,warning
+Traffic spike detected 3x normal baseline on node-2,warning
+Network interface down packet loss 100 percent on node-1,critical
+Service health check passed,normal
+User authentication successful,normal
+API gateway responded 200 OK,normal
+Cache hit ratio 94 percent on node-1,normal
+Service restart completed normally service-api,normal
+User authentication successful on node-1,normal
+Response latency spike detected 180ms on node-2,warning
+CPU throttling critical node crash imminent on node-1,critical
+Database query optimised response 8ms,normal
+Slow query detected taking 450ms on node-2,warning
+Request processed successfully in 12ms on node-1,normal
+API gateway responded 200 OK on node-2,normal
+Service health check passed on node-1,normal
+API gateway responded 200 OK,normal
+Service crashed exit code 137 OOM killed on node-2,critical
+API gateway responded 200 OK on node-1,normal
+User authentication successful on node-2,normal
+API gateway responded 200 OK at 14:32,normal
+Connection timeout on service auth ERROR,critical
+Load balancer health check OK,normal
+Load balancer health check OK,normal
+Service health check passed,normal
+Service crashed exit code 137 OOM killed,critical
+Retry attempt number 2 for service auth service-api,warning
+API gateway responded 200 OK service-api,normal
+Load balancer health check OK,normal
+Database connection pool near limit 85 percent,warning
+Response latency spike detected 180ms at 14:32,warning
+Configuration reload successful on node-1,normal
+Traffic spike detected 3x normal baseline on node-2,warning
+Traffic spike detected 3x normal baseline service-api,warning
+Traffic spike detected 3x normal baseline,warning
+CPU throttling starting at 68 percent on node-2,warning
+Configuration reload successful,normal
+Request processed successfully in 12ms at 14:32,normal
+Service health check passed at 14:32,normal
+Database query optimised response 8ms on node-1,normal
+Network interface down packet loss 100 percent on node-1,critical
+Scheduled backup completed successfully on node-1,normal
+Scheduled backup completed successfully at 14:32,normal
+CPU throttling starting at 68 percent,warning
+Service crashed exit code 137 OOM killed,critical
+Service health check passed on node-1,normal
+Disk usage high 78 percent,warning
+Memory overflow container restarting on node-2,critical
+Connection pool exhausted retrying service-api,warning
+User authentication successful,normal
+Database query optimised response 8ms on node-1,normal
+User authentication successful,normal
+API gateway responded 200 OK on node-1,normal
+Memory usage approaching threshold 72 percent on node-2,warning
+User authentication successful,normal
+Load balancer health check OK,normal
+Connection timeout on service auth ERROR service-api,critical
+Disk usage high 78 percent,warning
+Scheduled backup completed successfully on node-1,normal
+Load balancer health check OK,normal
+Database connection pool near limit 85 percent,warning
+Memory usage approaching threshold 72 percent,warning
+Service health check passed,normal
+CPU throttling starting at 68 percent,warning
+High memory pressure swap usage increased on node-1,warning
+Database query optimised response 8ms on node-1,normal
+Fatal error segmentation fault core dumped,critical
+Load balancer health check OK,normal
+Connection pool exhausted retrying on node-2,warning
+Request processed successfully in 12ms at 14:32,normal
+Load balancer health check OK on node-2,normal
+Configuration reload successful,normal
+Database query optimised response 8ms,normal
+Traffic spike detected 3x normal baseline,warning
+Response latency spike detected 180ms,warning
+CPU throttling starting at 68 percent service-api,warning
+API gateway responded 200 OK service-api,normal
+Traffic spike detected 3x normal baseline on node-1,warning
+Response latency spike detected 180ms at 14:32,warning
+API gateway responded 200 OK on node-2,normal
+Memory usage approaching threshold 72 percent service-api,warning
+Disk usage high 78 percent,warning
+API gateway responded 200 OK on node-2,normal
+Disk usage high 78 percent on node-2,warning
+CPU throttling starting at 68 percent service-api,warning
+User authentication successful at 14:32,normal
+Load balancer health check OK at 14:32,normal
+Connection timeout on service auth ERROR service-api,critical
+Cache hit ratio 94 percent,normal
+User authentication successful at 14:32,normal
+Cache hit ratio 94 percent at 14:32,normal
+Cache hit ratio 94 percent at 14:32,normal
+Cache hit ratio 94 percent,normal
+Response latency spike detected 180ms,warning
+Service restart completed normally,normal
+Memory usage approaching threshold 72 percent service-api,warning
+CPU throttling critical node crash imminent at 14:32,critical
+High memory pressure swap usage increased,warning
+Scheduled backup completed successfully service-api,normal
+Service restart completed normally,normal
+Memory usage approaching threshold 72 percent,warning
+Disk IO exceeded safe limit critical failure at 14:32,critical
+Database connection pool near limit 85 percent service-api,warning
+Service restart completed normally at 14:32,normal
+Load balancer health check OK at 14:32,normal
+Response latency spike detected 180ms on node-2,warning
+Slow query detected taking 450ms on node-1,warning
+Connection pool exhausted retrying on node-1,warning
+Memory overflow container restarting,critical
+API gateway responded 200 OK,normal
+High memory pressure swap usage increased at 14:32,warning
+Service health check passed at 14:32,normal
+User authentication successful service-api,normal
+Configuration reload successful,normal
+Configuration reload successful on node-1,normal
+User authentication successful,normal
+Service crashed exit code 137 OOM killed at 14:32,critical
+Configuration reload successful,normal
+Disk usage high 78 percent,warning
+Configuration reload successful on node-1,normal
+Service health check passed at 14:32,normal
+API gateway responded 200 OK at 14:32,normal
+Connection pool exhausted retrying at 14:32,warning
+Traffic spike detected 3x normal baseline on node-2,warning
+Service restart completed normally on node-1,normal
+Slow query detected taking 450ms,warning
+Service restart completed normally at 14:32,normal
+Database connection failed timeout exceeded at 14:32,critical
+Database query optimised response 8ms on node-2,normal
+Fatal error segmentation fault core dumped service-api,critical
+CPU throttling starting at 68 percent,warning
+Database query optimised response 8ms service-api,normal
+API gateway responded 200 OK service-api,normal
+Load balancer health check OK,normal
+Cache hit ratio 94 percent,normal
+High memory pressure swap usage increased on node-1,warning
+API gateway responded 200 OK on node-2,normal
+Configuration reload successful,normal
+Load balancer health check OK,normal
+Configuration reload successful at 14:32,normal
+Fatal error segmentation fault core dumped on node-1,critical
+Database query optimised response 8ms,normal
+Request processed successfully in 12ms on node-1,normal
+Slow query detected taking 450ms service-api,warning
+User authentication successful,normal
+Cache hit ratio 94 percent service-api,normal
+Slow query detected taking 450ms on node-2,warning
+User authentication successful on node-2,normal
+Cache hit ratio 94 percent,normal
+Scheduled backup completed successfully service-api,normal
+Database connection failed timeout exceeded at 14:32,critical
+Request processed successfully in 12ms on node-1,normal
+API gateway responded 200 OK service-api,normal
+Fatal error segmentation fault core dumped on node-1,critical
+User authentication successful,normal
+Configuration reload successful on node-1,normal
+Database connection pool near limit 85 percent service-api,warning
+Load balancer health check OK,normal
+API gateway responded 200 OK on node-2,normal
+Connection timeout on service auth ERROR on node-1,critical
+Scheduled backup completed successfully,normal
+Slow query detected taking 450ms on node-2,warning
+Memory usage approaching threshold 72 percent on node-2,warning
+Load balancer health check OK,normal
+Slow query detected taking 450ms service-api,warning
+Scheduled backup completed successfully on node-1,normal
+Cache hit ratio 94 percent,normal
+Scheduled backup completed successfully,normal
+User authentication successful on node-1,normal
+Request processed successfully in 12ms,normal
+Slow query detected taking 450ms on node-2,warning
+Configuration reload successful on node-1,normal
+Kernel panic detected system unstable on node-1,critical
+Scheduled backup completed successfully service-api,normal
+Database query optimised response 8ms at 14:32,normal
+User authentication successful at 14:32,normal
+Retry attempt number 2 for service auth on node-1,warning
+Database connection failed timeout exceeded on node-1,critical
+Request processed successfully in 12ms at 14:32,normal
+Load balancer health check OK,normal
+Connection pool exhausted retrying on node-2,warning
+API gateway responded 200 OK service-api,normal
+Traffic spike detected 3x normal baseline service-api,warning
+Disk usage high 78 percent on node-2,warning
+Memory usage approaching threshold 72 percent,warning
+Scheduled backup completed successfully on node-1,normal
+Fatal error segmentation fault core dumped at 14:32,critical
+Database query optimised response 8ms on node-2,normal
+Configuration reload successful on node-1,normal
+Service health check passed,normal
+Memory overflow container restarting service-api,critical
+Configuration reload successful at 14:32,normal
+High memory pressure swap usage increased,warning
+Cache hit ratio 94 percent,normal
+User authentication successful at 14:32,normal
+Service crashed exit code 137 OOM killed on node-1,critical
+Service restart completed normally,normal
+Request processed successfully in 12ms on node-2,normal
+Memory usage approaching threshold 72 percent on node-1,warning
+User authentication successful at 14:32,normal
+Request processed successfully in 12ms at 14:32,normal
+Cache hit ratio 94 percent at 14:32,normal
+User authentication successful on node-2,normal
+Cache hit ratio 94 percent,normal
+Memory overflow container restarting on node-1,critical
+Scheduled backup completed successfully at 14:32,normal
+Database connection pool near limit 85 percent on node-1,warning
+High memory pressure swap usage increased on node-2,warning
+Request processed successfully in 12ms at 14:32,normal
+Scheduled backup completed successfully on node-1,normal
+API gateway responded 200 OK,normal
+Fatal error segmentation fault core dumped on node-2,critical
+Disk usage high 78 percent at 14:32,warning
+Memory usage approaching threshold 72 percent at 14:32,warning
+Database query optimised response 8ms service-api,normal
+Request processed successfully in 12ms,normal
+User authentication successful,normal
+User authentication successful on node-1,normal
+Request processed successfully in 12ms,normal
+Cache hit ratio 94 percent on node-1,normal
+Request processed successfully in 12ms at 14:32,normal
+Request processed successfully in 12ms at 14:32,normal
+Configuration reload successful on node-2,normal
+Request processed successfully in 12ms service-api,normal
+CPU throttling starting at 68 percent on node-2,warning
+Database query optimised response 8ms,normal
+API gateway responded 200 OK on node-2,normal
+Memory usage approaching threshold 72 percent on node-1,warning
+Configuration reload successful,normal
+API gateway responded 200 OK,normal
+CPU throttling starting at 68 percent service-api,warning
+Configuration reload successful,normal
+Slow query detected taking 450ms service-api,warning
+Service health check passed,normal
+Scheduled backup completed successfully service-api,normal
+Request processed successfully in 12ms service-api,normal
+Memory overflow container restarting,critical
+Configuration reload successful service-api,normal
+Database connection failed timeout exceeded service-api,critical
+Request processed successfully in 12ms on node-2,normal
+Request processed successfully in 12ms on node-1,normal
+CPU throttling starting at 68 percent,warning
+High memory pressure swap usage increased service-api,warning
+Request processed successfully in 12ms on node-2,normal
+Health check failed 3 consecutive failures on node-2,critical
+Request processed successfully in 12ms on node-1,normal
+Memory usage approaching threshold 72 percent,warning
+Service health check passed on node-1,normal
+Service restart completed normally,normal
+Scheduled backup completed successfully at 14:32,normal
+Connection pool exhausted retrying service-api,warning
+Health check failed 3 consecutive failures at 14:32,critical
+Scheduled backup completed successfully service-api,normal
+Service restart completed normally on node-1,normal
+Configuration reload successful,normal
+API gateway responded 200 OK at 14:32,normal
+Service crashed exit code 137 OOM killed service-api,critical
+Health check failed 3 consecutive failures on node-2,critical
+Fatal error segmentation fault core dumped,critical
+Service crashed exit code 137 OOM killed on node-1,critical
+Response latency spike detected 180ms service-api,warning
+Response latency spike detected 180ms,warning
+Service restart completed normally on node-2,normal
+CPU throttling critical node crash imminent,critical
+Service restart completed normally on node-1,normal
+CPU throttling critical node crash imminent on node-2,critical
+Scheduled backup completed successfully,normal
+Disk IO exceeded safe limit critical failure on node-1,critical
+Database connection failed timeout exceeded at 14:32,critical
+API gateway responded 200 OK at 14:32,normal
+Traffic spike detected 3x normal baseline on node-1,warning
+Cache hit ratio 94 percent on node-2,normal
+Scheduled backup completed successfully on node-1,normal
+API gateway responded 200 OK at 14:32,normal
+Slow query detected taking 450ms at 14:32,warning
+Scheduled backup completed successfully on node-1,normal
+Traffic spike detected 3x normal baseline,warning
+Fatal error segmentation fault core dumped service-api,critical
+API gateway responded 200 OK,normal
+Load balancer health check OK on node-2,normal
+Service restart completed normally,normal
+Kernel panic detected system unstable at 14:32,critical
+Memory overflow container restarting,critical
+User authentication successful on node-1,normal
+Memory usage approaching threshold 72 percent,warning
+Database query optimised response 8ms,normal
+User authentication successful,normal
+Configuration reload successful,normal
+Disk IO exceeded safe limit critical failure on node-2,critical
+Database connection pool near limit 85 percent on node-2,warning
+API gateway responded 200 OK on node-2,normal
+Request processed successfully in 12ms at 14:32,normal
+Connection pool exhausted retrying service-api,warning
+High memory pressure swap usage increased on node-1,warning
+API gateway responded 200 OK,normal
+CPU throttling critical node crash imminent service-api,critical
+Cache hit ratio 94 percent on node-1,normal
+Request processed successfully in 12ms service-api,normal
+Service restart completed normally service-api,normal
+API gateway responded 200 OK,normal
+Cache hit ratio 94 percent at 14:32,normal
+API gateway responded 200 OK service-api,normal
+Service health check passed on node-2,normal
+Database query optimised response 8ms on node-2,normal
+Kernel panic detected system unstable,critical
+Service restart completed normally service-api,normal
+High memory pressure swap usage increased on node-1,warning
+Request processed successfully in 12ms,normal
+Configuration reload successful service-api,normal
+Request processed successfully in 12ms,normal
+Database query optimised response 8ms on node-2,normal
+Memory usage approaching threshold 72 percent on node-2,warning
+Load balancer health check OK,normal
+Load balancer health check OK on node-2,normal
+Service restart completed normally service-api,normal
+Database connection failed timeout exceeded service-api,critical
+Configuration reload successful service-api,normal
+Retry attempt number 2 for service auth on node-1,warning
+Slow query detected taking 450ms at 14:32,warning
+API gateway responded 200 OK on node-1,normal
+Traffic spike detected 3x normal baseline service-api,warning
+Service crashed exit code 137 OOM killed service-api,critical
+Configuration reload successful on node-2,normal
+User authentication successful on node-2,normal
+Database connection pool near limit 85 percent on node-2,warning
+User authentication successful,normal
+Database query optimised response 8ms,normal
+User authentication successful service-api,normal
+Scheduled backup completed successfully,normal
+Database query optimised response 8ms,normal
+Response latency spike detected 180ms,warning
+Response latency spike detected 180ms,warning
+Load balancer health check OK on node-2,normal
+Database query optimised response 8ms at 14:32,normal
+User authentication successful,normal
+CPU throttling starting at 68 percent,warning
+Request processed successfully in 12ms at 14:32,normal
+Cache hit ratio 94 percent on node-1,normal
+Cache hit ratio 94 percent at 14:32,normal
+Kernel panic detected system unstable service-api,critical
+Slow query detected taking 450ms,warning
+CPU throttling critical node crash imminent,critical
+Service restart completed normally,normal
+Request processed successfully in 12ms at 14:32,normal
+Service restart completed normally service-api,normal
+High memory pressure swap usage increased on node-1,warning
+Scheduled backup completed successfully,normal
+User authentication successful on node-1,normal
+Memory overflow container restarting,critical
+Kernel panic detected system unstable,critical
+Configuration reload successful at 14:32,normal
+Load balancer health check OK on node-1,normal
+Scheduled backup completed successfully service-api,normal
+Traffic spike detected 3x normal baseline on node-1,warning
+Memory overflow container restarting,critical
+Network interface down packet loss 100 percent at 14:32,critical
+Database query optimised response 8ms,normal
+CPU throttling starting at 68 percent service-api,warning
+Connection timeout on service auth ERROR,critical
+Service restart completed normally,normal
+Service health check passed on node-1,normal
+Disk usage high 78 percent service-api,warning
+Memory overflow container restarting,critical
+Service health check passed on node-1,normal
+Cache hit ratio 94 percent on node-2,normal
+Scheduled backup completed successfully,normal
+Load balancer health check OK,normal
+Scheduled backup completed successfully at 14:32,normal
+Service restart completed normally at 14:32,normal
+Database query optimised response 8ms on node-1,normal
+Disk usage high 78 percent service-api,warning
+Slow query detected taking 450ms,warning
+Cache hit ratio 94 percent,normal
+Scheduled backup completed successfully,normal
+Database query optimised response 8ms,normal
+Scheduled backup completed successfully on node-1,normal
+API gateway responded 200 OK on node-2,normal
+Service health check passed,normal
+API gateway responded 200 OK,normal
+Scheduled backup completed successfully,normal
+Database query optimised response 8ms on node-2,normal
+Load balancer health check OK service-api,normal
+Service health check passed,normal
+Cache hit ratio 94 percent,normal
+Traffic spike detected 3x normal baseline service-api,warning
+Health check failed 3 consecutive failures,critical
+Request processed successfully in 12ms at 14:32,normal
+Request processed successfully in 12ms,normal
+Configuration reload successful service-api,normal
+Network interface down packet loss 100 percent at 14:32,critical
+Slow query detected taking 450ms at 14:32,warning
+Load balancer health check OK on node-2,normal
+CPU throttling critical node crash imminent service-api,critical
+Request processed successfully in 12ms on node-1,normal
+High memory pressure swap usage increased service-api,warning
+Configuration reload successful on node-1,normal
+Database connection pool near limit 85 percent,warning
+Load balancer health check OK on node-1,normal
+User authentication successful,normal
+User authentication successful on node-2,normal
+Retry attempt number 2 for service auth service-api,warning
+Response latency spike detected 180ms,warning
+Slow query detected taking 450ms,warning
+Request processed successfully in 12ms service-api,normal
+Service health check passed at 14:32,normal
+Fatal error segmentation fault core dumped,critical
+Scheduled backup completed successfully,normal
+Traffic spike detected 3x normal baseline,warning
+Response latency spike detected 180ms on node-2,warning
+Service crashed exit code 137 OOM killed service-api,critical
+Database query optimised response 8ms service-api,normal
+Service restart completed normally,normal
+API gateway responded 200 OK,normal
+User authentication successful on node-2,normal
+High memory pressure swap usage increased on node-1,warning
+High memory pressure swap usage increased on node-1,warning
+Configuration reload successful on node-2,normal
+API gateway responded 200 OK on node-1,normal
+API gateway responded 200 OK at 14:32,normal
+Service health check passed,normal
+Request processed successfully in 12ms on node-2,normal
+Service restart completed normally,normal
+Service health check passed,normal
+Service crashed exit code 137 OOM killed,critical
+CPU throttling starting at 68 percent on node-1,warning
+Disk usage high 78 percent on node-2,warning
+Connection timeout on service auth ERROR at 14:32,critical
+Connection pool exhausted retrying,warning
+API gateway responded 200 OK at 14:32,normal
+Service restart completed normally service-api,normal
+Configuration reload successful on node-1,normal
+Database connection pool near limit 85 percent,warning
+Memory usage approaching threshold 72 percent,warning
+Cache hit ratio 94 percent,normal
+Disk usage high 78 percent,warning
+High memory pressure swap usage increased on node-2,warning
+Request processed successfully in 12ms,normal
+Disk usage high 78 percent at 14:32,warning
+Load balancer health check OK on node-2,normal
+Connection pool exhausted retrying,warning
+Scheduled backup completed successfully,normal
+Connection timeout on service auth ERROR,critical
+Network interface down packet loss 100 percent at 14:32,critical
+Request processed successfully in 12ms service-api,normal
+Scheduled backup completed successfully on node-1,normal
+Disk IO exceeded safe limit critical failure on node-2,critical
+Load balancer health check OK,normal
+High memory pressure swap usage increased service-api,warning
+Request processed successfully in 12ms,normal
+Response latency spike detected 180ms service-api,warning
+Service health check passed on node-1,normal
+User authentication successful at 14:32,normal
+Disk usage high 78 percent,warning
+Service health check passed at 14:32,normal
+Scheduled backup completed successfully at 14:32,normal
+Connection pool exhausted retrying service-api,warning
+Kernel panic detected system unstable,critical
+Fatal error segmentation fault core dumped,critical
+Database query optimised response 8ms,normal
+Disk usage high 78 percent on node-1,warning
+Request processed successfully in 12ms at 14:32,normal
+Configuration reload successful,normal
+Configuration reload successful service-api,normal
+API gateway responded 200 OK service-api,normal
+Load balancer health check OK,normal
+Service restart completed normally,normal
+Database query optimised response 8ms,normal
+API gateway responded 200 OK on node-2,normal
+Database query optimised response 8ms,normal
+CPU throttling starting at 68 percent,warning
+User authentication successful,normal
+Request processed successfully in 12ms on node-1,normal
+Configuration reload successful,normal
+Kernel panic detected system unstable,critical
+Scheduled backup completed successfully on node-1,normal
+Kernel panic detected system unstable on node-2,critical
+Cache hit ratio 94 percent on node-2,normal
+Kernel panic detected system unstable on node-2,critical
+User authentication successful on node-1,normal
+User authentication successful,normal
+Disk IO exceeded safe limit critical failure on node-1,critical
+User authentication successful on node-2,normal
+Request processed successfully in 12ms,normal

@@ -1,0 +1,135 @@
+# Kubernetes Deployment for AIM-SHIELD
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aim-shield-backend
+  labels:
+    app: aim-shield
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: aim-shield
+      component: backend
+  template:
+    metadata:
+      labels:
+        app: aim-shield
+        component: backend
+    spec:
+      containers:
+      - name: backend
+        image: aim-shield:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+          name: http
+        env:
+        - name: FLASK_ENV
+          value: "production"
+        - name: PYTHONUNBUFFERED
+          value: "1"
+        livenessProbe:
+          httpGet:
+            path: /api/health
+            port: 5000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /api/health
+            port: 5000
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        volumeMounts:
+        - name: data
+          mountPath: /app/backend/data
+      volumes:
+      - name: data
+        emptyDir: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: aim-shield-backend-svc
+  labels:
+    app: aim-shield
+spec:
+  selector:
+    app: aim-shield
+    component: backend
+  ports:
+  - port: 5000
+    targetPort: 5000
+    name: http
+  type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aim-shield-frontend
+  labels:
+    app: aim-shield
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: aim-shield
+      component: frontend
+  template:
+    metadata:
+      labels:
+        app: aim-shield
+        component: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+          name: http
+        volumeMounts:
+        - name: config
+          mountPath: /etc/nginx/nginx.conf
+          subPath: nginx.conf
+        - name: html
+          mountPath: /usr/share/nginx/html
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 10
+      volumes:
+      - name: config
+        configMap:
+          name: nginx-config
+      - name: html
+        configMap:
+          name: frontend-html
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: aim-shield-frontend-svc
+  labels:
+    app: aim-shield
+spec:
+  selector:
+    app: aim-shield
+    component: frontend
+  ports:
+  - port: 80
+    targetPort: 80
+    name: http
+  type: LoadBalancer

@@ -1,0 +1,9 @@
+flask
+flask-cors
+flask-socketio
+python-socketio
+python-engineio
+numpy
+pandas
+scikit-learn
+python-dotenv
